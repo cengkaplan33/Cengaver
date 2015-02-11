@@ -13,8 +13,8 @@ namespace Cengaver.Administration
     public partial class TranslationUpdateRequest : ServiceRequest
     {
         public String TargetLanguageID { get; set; }
-        public JsDictionary<String, String> Translations { get; set; }
+        public JsDictionary<String,String> Translations { get; set; }
     }
-
+    
 }
 

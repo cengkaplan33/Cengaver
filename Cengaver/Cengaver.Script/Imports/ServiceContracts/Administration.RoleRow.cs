@@ -14,16 +14,14 @@ namespace Cengaver.Administration
     {
         public Int32? RoleId { get; set; }
         public String RoleName { get; set; }
-
+    
         [Imported, PreserveMemberCase]
         public static class Fields
         {
-            [InlineConstant]
-            public const string RoleId = "RoleId";
-            [InlineConstant]
-            public const string RoleName = "RoleName";
+            [InlineConstant] public const string RoleId = "RoleId";
+            [InlineConstant] public const string RoleName = "RoleName";
         }
     }
-
+    
 }
 

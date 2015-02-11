@@ -14,6 +14,6 @@ namespace Cengaver.Administration
     {
         public Int32? UserID { get; set; }
     }
-
+    
 }
 

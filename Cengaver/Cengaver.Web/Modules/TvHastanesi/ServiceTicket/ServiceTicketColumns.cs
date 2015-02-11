@@ -9,9 +9,9 @@ namespace Cengaver.TvHastanesi.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [ColumnsScript("TvHastanesi.ServiceTickets")]
-    [BasedOnRow(typeof(Entities.ServiceTicketsRow))]
-    public class ServiceTicketsColumns
+    [ColumnsScript("TvHastanesi.ServiceTicket")]
+    [BasedOnRow(typeof(Entities.ServiceTicketRow))]
+    public class ServiceTicketColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 ServiceTicketId { get; set; }
@@ -38,8 +38,6 @@ namespace Cengaver.TvHastanesi.Forms
         public Int32 OperationId { get; set; }
         public Int32 StageId { get; set; }
         public String Description { get; set; }
-
-        [EditLink(ItemType = "TvHastanesi.Customer", IdField = "CustomerId"), Width(150)]
         public Int32 CustomerId { get; set; }
         public String InvoiceNumber { get; set; }
         public String RecordDate { get; set; }

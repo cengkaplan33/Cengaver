@@ -1,13 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = Serenity.LocalText.Get("Db.TvHastanesi.ServiceTickets.EntityPlural");
+    ViewBag.Title = Serenity.LocalText.Get("Db.TvHastanesi.ServiceTicket.EntityPlural");
 }
 
 <div id="GridDiv"></div>
 
 <script type="text/javascript">
     jQuery(function () {
-        new Cengaver.TvHastanesi.ServiceTicketsGrid($('#GridDiv'), {}).init();
+        new Cengaver.TvHastanesi.ServiceTicketGrid($('#GridDiv'), {}).init();
 
         Q.initFullHeightGridPage($('#GridDiv'));
     });

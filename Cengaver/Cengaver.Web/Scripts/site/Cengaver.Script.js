@@ -120,6 +120,13 @@
 	$Cengaver_Administration_RoleDialog.__typeName = 'Cengaver.Administration.RoleDialog';
 	global.Cengaver.Administration.RoleDialog = $Cengaver_Administration_RoleDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.Administration.RoleForm
+	var $Cengaver_Administration_RoleForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_Administration_RoleForm.__typeName = 'Cengaver.Administration.RoleForm';
+	global.Cengaver.Administration.RoleForm = $Cengaver_Administration_RoleForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.Administration.RoleGrid
 	var $Cengaver_Administration_RoleGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
@@ -171,13 +178,6 @@
 		return Q.serviceRequest('Administration/Role/List', request, onSuccess, options);
 	};
 	global.Cengaver.Administration.RoleService = $Cengaver_Administration_RoleService;
-	////////////////////////////////////////////////////////////////////////////////
-	// Cengaver.Administration.TranslationForm
-	var $Cengaver_Administration_TranslationForm = function(idPrefix) {
-		Serenity.PrefixedContext.call(this, idPrefix);
-	};
-	$Cengaver_Administration_TranslationForm.__typeName = 'Cengaver.Administration.TranslationForm';
-	global.Cengaver.Administration.TranslationForm = $Cengaver_Administration_TranslationForm;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.Administration.TranslationGrid
 	var $Cengaver_Administration_TranslationGrid = function(container) {
@@ -1124,12 +1124,40 @@
 	$Cengaver_TvHastanesi_CityDialog.__typeName = 'Cengaver.TvHastanesi.CityDialog';
 	global.Cengaver.TvHastanesi.CityDialog = $Cengaver_TvHastanesi_CityDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CityForm
+	var $Cengaver_TvHastanesi_CityForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_CityForm.__typeName = 'Cengaver.TvHastanesi.CityForm';
+	global.Cengaver.TvHastanesi.CityForm = $Cengaver_TvHastanesi_CityForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CityGrid
 	var $Cengaver_TvHastanesi_CityGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
 	};
 	$Cengaver_TvHastanesi_CityGrid.__typeName = 'Cengaver.TvHastanesi.CityGrid';
 	global.Cengaver.TvHastanesi.CityGrid = $Cengaver_TvHastanesi_CityGrid;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CityService
+	var $Cengaver_TvHastanesi_CityService = function() {
+	};
+	$Cengaver_TvHastanesi_CityService.__typeName = 'Cengaver.TvHastanesi.CityService';
+	$Cengaver_TvHastanesi_CityService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/City/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CityService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/City/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CityService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/City/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CityService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/City/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CityService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/City/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.CityService = $Cengaver_TvHastanesi_CityService;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CountyDialog
 	var $Cengaver_TvHastanesi_CountyDialog = function() {
@@ -1138,6 +1166,22 @@
 	$Cengaver_TvHastanesi_CountyDialog.__typeName = 'Cengaver.TvHastanesi.CountyDialog';
 	global.Cengaver.TvHastanesi.CountyDialog = $Cengaver_TvHastanesi_CountyDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CountyEditor
+	var $Cengaver_TvHastanesi_CountyEditor = function(hidden) {
+		this.$cityEditorID = null;
+		this.$cityID = null;
+		ss.makeGenericType(Serenity.LookupEditorBase$1, [Object]).call(this, hidden);
+	};
+	$Cengaver_TvHastanesi_CountyEditor.__typeName = 'Cengaver.TvHastanesi.CountyEditor';
+	global.Cengaver.TvHastanesi.CountyEditor = $Cengaver_TvHastanesi_CountyEditor;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CountyForm
+	var $Cengaver_TvHastanesi_CountyForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_CountyForm.__typeName = 'Cengaver.TvHastanesi.CountyForm';
+	global.Cengaver.TvHastanesi.CountyForm = $Cengaver_TvHastanesi_CountyForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CountyGrid
 	var $Cengaver_TvHastanesi_CountyGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
@@ -1145,9 +1189,35 @@
 	$Cengaver_TvHastanesi_CountyGrid.__typeName = 'Cengaver.TvHastanesi.CountyGrid';
 	global.Cengaver.TvHastanesi.CountyGrid = $Cengaver_TvHastanesi_CountyGrid;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CountyService
+	var $Cengaver_TvHastanesi_CountyService = function() {
+	};
+	$Cengaver_TvHastanesi_CountyService.__typeName = 'Cengaver.TvHastanesi.CountyService';
+	$Cengaver_TvHastanesi_CountyService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/County/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CountyService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/County/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CountyService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/County/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CountyService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/County/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CountyService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/County/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.CountyService = $Cengaver_TvHastanesi_CountyService;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CustomerDialog
 	var $Cengaver_TvHastanesi_CustomerDialog = function(op) {
+		this.$form = null;
 		ss.makeGenericType(Serenity.EntityDialog$1, [Object]).call(this);
+		this.$form = new $Cengaver_TvHastanesi_CustomerForm(this.get_idPrefix());
+		Serenity.WX.change(this.$form.get_emailAddress(), ss.mkdel(this, function(e) {
+			Q.alert('email address changed' + this.$form.get_emailAddress().get_value());
+		}));
 		//jQueryEventHandler changeSiteId = delegate(jQueryEvent e)
 		//{
 		//    new UserTypeEditor(this.ById("UserTypeId"), new UserTypeEditorOptions() { SiteId = int.Parse(B2CSiteSettingEditor.From(this.ById("SiteId")).Value.ToString()) });
@@ -1165,12 +1235,43 @@
 	$Cengaver_TvHastanesi_CustomerEditor.__typeName = 'Cengaver.TvHastanesi.CustomerEditor';
 	global.Cengaver.TvHastanesi.CustomerEditor = $Cengaver_TvHastanesi_CustomerEditor;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CustomerForm
+	var $Cengaver_TvHastanesi_CustomerForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_CustomerForm.__typeName = 'Cengaver.TvHastanesi.CustomerForm';
+	global.Cengaver.TvHastanesi.CustomerForm = $Cengaver_TvHastanesi_CustomerForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CustomerGrid
 	var $Cengaver_TvHastanesi_CustomerGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
 	};
 	$Cengaver_TvHastanesi_CustomerGrid.__typeName = 'Cengaver.TvHastanesi.CustomerGrid';
 	global.Cengaver.TvHastanesi.CustomerGrid = $Cengaver_TvHastanesi_CustomerGrid;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.CustomerService
+	var $Cengaver_TvHastanesi_CustomerService = function() {
+	};
+	$Cengaver_TvHastanesi_CustomerService.__typeName = 'Cengaver.TvHastanesi.CustomerService';
+	$Cengaver_TvHastanesi_CustomerService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Customer/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CustomerService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Customer/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CustomerService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Customer/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CustomerService.undelete = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Customer/Undelete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CustomerService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Customer/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_CustomerService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Customer/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.CustomerService = $Cengaver_TvHastanesi_CustomerService;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.EditorItem
 	var $Cengaver_TvHastanesi_EditorItem = function() {
@@ -1188,6 +1289,13 @@
 	$Cengaver_TvHastanesi_MenuDialog.__typeName = 'Cengaver.TvHastanesi.MenuDialog';
 	global.Cengaver.TvHastanesi.MenuDialog = $Cengaver_TvHastanesi_MenuDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.MenuForm
+	var $Cengaver_TvHastanesi_MenuForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_MenuForm.__typeName = 'Cengaver.TvHastanesi.MenuForm';
+	global.Cengaver.TvHastanesi.MenuForm = $Cengaver_TvHastanesi_MenuForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.MenuGrid
 	var $Cengaver_TvHastanesi_MenuGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
@@ -1195,19 +1303,74 @@
 	$Cengaver_TvHastanesi_MenuGrid.__typeName = 'Cengaver.TvHastanesi.MenuGrid';
 	global.Cengaver.TvHastanesi.MenuGrid = $Cengaver_TvHastanesi_MenuGrid;
 	////////////////////////////////////////////////////////////////////////////////
-	// Cengaver.TvHastanesi.ServiceTicketsDialog
-	var $Cengaver_TvHastanesi_ServiceTicketsDialog = function() {
+	// Cengaver.TvHastanesi.MenuService
+	var $Cengaver_TvHastanesi_MenuService = function() {
+	};
+	$Cengaver_TvHastanesi_MenuService.__typeName = 'Cengaver.TvHastanesi.MenuService';
+	$Cengaver_TvHastanesi_MenuService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Menu/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_MenuService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Menu/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_MenuService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Menu/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_MenuService.undelete = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Menu/Undelete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_MenuService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Menu/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_MenuService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Menu/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.MenuService = $Cengaver_TvHastanesi_MenuService;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceTicketDialog
+	var $Cengaver_TvHastanesi_ServiceTicketDialog = function() {
 		ss.makeGenericType(Serenity.EntityDialog$1, [Object]).call(this);
 	};
-	$Cengaver_TvHastanesi_ServiceTicketsDialog.__typeName = 'Cengaver.TvHastanesi.ServiceTicketsDialog';
-	global.Cengaver.TvHastanesi.ServiceTicketsDialog = $Cengaver_TvHastanesi_ServiceTicketsDialog;
+	$Cengaver_TvHastanesi_ServiceTicketDialog.__typeName = 'Cengaver.TvHastanesi.ServiceTicketDialog';
+	global.Cengaver.TvHastanesi.ServiceTicketDialog = $Cengaver_TvHastanesi_ServiceTicketDialog;
 	////////////////////////////////////////////////////////////////////////////////
-	// Cengaver.TvHastanesi.ServiceTicketsGrid
-	var $Cengaver_TvHastanesi_ServiceTicketsGrid = function(container) {
+	// Cengaver.TvHastanesi.ServiceTicketGrid
+	var $Cengaver_TvHastanesi_ServiceTicketGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
 	};
-	$Cengaver_TvHastanesi_ServiceTicketsGrid.__typeName = 'Cengaver.TvHastanesi.ServiceTicketsGrid';
-	global.Cengaver.TvHastanesi.ServiceTicketsGrid = $Cengaver_TvHastanesi_ServiceTicketsGrid;
+	$Cengaver_TvHastanesi_ServiceTicketGrid.__typeName = 'Cengaver.TvHastanesi.ServiceTicketGrid';
+	global.Cengaver.TvHastanesi.ServiceTicketGrid = $Cengaver_TvHastanesi_ServiceTicketGrid;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceTicketsForm
+	var $Cengaver_TvHastanesi_ServiceTicketsForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsForm.__typeName = 'Cengaver.TvHastanesi.ServiceTicketsForm';
+	global.Cengaver.TvHastanesi.ServiceTicketsForm = $Cengaver_TvHastanesi_ServiceTicketsForm;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceTicketsService
+	var $Cengaver_TvHastanesi_ServiceTicketsService = function() {
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsService.__typeName = 'Cengaver.TvHastanesi.ServiceTicketsService';
+	$Cengaver_TvHastanesi_ServiceTicketsService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceTickets/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceTickets/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceTickets/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsService.undelete = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceTickets/Undelete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceTickets/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceTicketsService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceTickets/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.ServiceTicketsService = $Cengaver_TvHastanesi_ServiceTicketsService;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.UnitDialog
 	var $Cengaver_TvHastanesi_UnitDialog = function() {
@@ -1216,12 +1379,43 @@
 	$Cengaver_TvHastanesi_UnitDialog.__typeName = 'Cengaver.TvHastanesi.UnitDialog';
 	global.Cengaver.TvHastanesi.UnitDialog = $Cengaver_TvHastanesi_UnitDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.UnitForm
+	var $Cengaver_TvHastanesi_UnitForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_UnitForm.__typeName = 'Cengaver.TvHastanesi.UnitForm';
+	global.Cengaver.TvHastanesi.UnitForm = $Cengaver_TvHastanesi_UnitForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.UnitGrid
 	var $Cengaver_TvHastanesi_UnitGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
 	};
 	$Cengaver_TvHastanesi_UnitGrid.__typeName = 'Cengaver.TvHastanesi.UnitGrid';
 	global.Cengaver.TvHastanesi.UnitGrid = $Cengaver_TvHastanesi_UnitGrid;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.UnitService
+	var $Cengaver_TvHastanesi_UnitService = function() {
+	};
+	$Cengaver_TvHastanesi_UnitService.__typeName = 'Cengaver.TvHastanesi.UnitService';
+	$Cengaver_TvHastanesi_UnitService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Unit/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_UnitService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Unit/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_UnitService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Unit/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_UnitService.undelete = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Unit/Undelete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_UnitService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Unit/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_UnitService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Unit/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.UnitService = $Cengaver_TvHastanesi_UnitService;
 	ss.initClass($Cengaver_ScriptInitialization, $asm, {});
 	ss.initClass($Cengaver_Administration_LanguageDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog, Serenity.IAsyncInit]);
 	ss.initClass($Cengaver_Administration_LanguageForm, $asm, {
@@ -1324,6 +1518,11 @@
 			this.toolbar.findButton('lock-button').toggleClass('disabled', this.get_isNewOrDeleted());
 		}
 	}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog, Serenity.IAsyncInit]);
+	ss.initClass($Cengaver_Administration_RoleForm, $asm, {
+		get_roleName: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'RoleName');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_Administration_RoleGrid, $asm, {
 		getDefaultSortBy: function() {
 			var $t1 = [];
@@ -1354,17 +1553,6 @@
 	}, ss.makeGenericType(Serenity.TemplatedDialog$1, [Object]), [Serenity.IDialog]);
 	ss.initClass($Cengaver_Administration_RolePermissionService, $asm, {});
 	ss.initClass($Cengaver_Administration_RoleService, $asm, {});
-	ss.initClass($Cengaver_Administration_TranslationForm, $asm, {
-		get_textKey: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'TextKey');
-		},
-		get_languageId: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'LanguageId');
-		},
-		get_translation: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'Translation');
-		}
-	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_Administration_TranslationGrid, $asm, {
 		onClick: function(e, row, cell) {
 			ss.makeGenericType(Serenity.DataGrid$2, [Object, Object]).prototype.onClick.call(this, e, row, cell);
@@ -2024,6 +2212,9 @@
 		get_productName: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'ProductName');
 		},
+		get_productImage: function() {
+			return this.byId(Serenity.ImageUploadEditor).call(this, 'ProductImage');
+		},
 		get_discontinued: function() {
 			return this.byId(Serenity.BooleanEditor).call(this, 'Discontinued');
 		},
@@ -2098,6 +2289,9 @@
 	ss.initClass($Cengaver_Northwind_ShipperForm, $asm, {
 		get_companyName: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'CompanyName');
+		},
+		get_phone: function() {
+			return this.byId($Cengaver_Northwind_PhoneEditor).call(this, 'Phone');
 		}
 	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_Northwind_ShipperGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid, Serenity.IAsyncInit]);
@@ -2199,19 +2393,287 @@
 	}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid, Serenity.IAsyncInit]);
 	ss.initClass($Cengaver_Northwind_TerritoryService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_CityDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_CityForm, $asm, {
+		get_city: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'City');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_CityGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_CityService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_CountyDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_CountyEditor, $asm, {
+		getLookupKey: function() {
+			return 'TvHastanesi.County';
+		},
+		destroy: function() {
+			this.$unbindFromCityEditor();
+			ss.makeGenericType(Serenity.LookupEditorBase$2, [Object, Object]).prototype.destroy.call(this);
+		},
+		getItems: function(lookup) {
+			return Enumerable.from(lookup.get_items()).where(ss.mkdel(this, function(x) {
+				return ss.referenceEquals(x.CityId, this.get_cityID());
+			}));
+		},
+		$bindToCityEditor: function() {
+			if (Q.isEmptyOrNull(this.get_cityEditorID())) {
+				return;
+			}
+			var cityEditor = Serenity.WX.tryGetWidget(Serenity.LookupEditor).call(null, Q.findElementWithRelativeId(this.get_element(), this.get_cityEditorID()));
+			if (ss.isValue(cityEditor)) {
+				var self = this;
+				cityEditor.get_element().bind('change.' + this.uniqueName, ss.mkdel(this, function() {
+					this.set_cityID(Serenity.IdExtensions.convertToId(cityEditor.get_value()));
+				}));
+			}
+		},
+		$unbindFromCityEditor: function() {
+			if (Q.isEmptyOrNull(this.get_cityEditorID())) {
+				return;
+			}
+			var cityEditor = Serenity.WX.tryGetWidget(Serenity.LookupEditor).call(null, Q.findElementWithRelativeId(this.get_element(), this.get_cityEditorID()));
+			if (ss.isValue(cityEditor)) {
+				cityEditor.get_element().unbind('.' + this.uniqueName);
+			}
+		},
+		get_cityEditorID: function() {
+			return this.$cityEditorID;
+		},
+		set_cityEditorID: function(value) {
+			if (!ss.referenceEquals(this.$cityEditorID, value)) {
+				this.$unbindFromCityEditor();
+				this.$cityEditorID = value;
+				this.$bindToCityEditor();
+			}
+		},
+		get_cityID: function() {
+			return this.$cityID;
+		},
+		set_cityID: function(value) {
+			if (!ss.referenceEquals(this.$cityID, value)) {
+				this.$cityID = value;
+				this.set_value(null);
+				this.updateItems();
+			}
+		}
+	}, ss.makeGenericType(Serenity.LookupEditorBase$1, [Object]), [Serenity.IStringValue]);
+	ss.initClass($Cengaver_TvHastanesi_CountyForm, $asm, {
+		get_cityId: function() {
+			return this.byId(Serenity.LookupEditor).call(this, 'CityId');
+		},
+		get_county: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'County');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_CountyGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_CountyService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_CustomerDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
 	ss.initClass($Cengaver_TvHastanesi_CustomerEditor, $asm, {}, ss.makeGenericType(Serenity.LookupEditorBase$2, [Object, Object]), [Serenity.IStringValue]);
+	ss.initClass($Cengaver_TvHastanesi_CustomerForm, $asm, {
+		get_insertUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'InsertUserId');
+		},
+		get_insertDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'InsertDate');
+		},
+		get_isActive: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'IsActive');
+		},
+		get_updateUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'UpdateUserId');
+		},
+		get_updateDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'UpdateDate');
+		},
+		get_name: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Name');
+		},
+		get_surname: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Surname');
+		},
+		get_identificationNumber: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'IdentificationNumber');
+		},
+		get_address: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Address');
+		},
+		get_cityId: function() {
+			return this.byId(Serenity.LookupEditor).call(this, 'CityId');
+		},
+		get_countyId: function() {
+			return this.byId(Serenity.LookupEditor).call(this, 'CountyId');
+		},
+		get_phoneNumber: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'PhoneNumber');
+		},
+		get_emailAddress: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'EmailAddress');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_CustomerGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_CustomerService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_EditorItem, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_MenuDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_MenuForm, $asm, {
+		get_menu: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Menu');
+		},
+		get_displayOrder: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'DisplayOrder');
+		},
+		get_firmId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'FirmId');
+		},
+		get_webSiteId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'WebSiteId');
+		},
+		get_path: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Path');
+		},
+		get_url: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Url');
+		},
+		get_insertUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'InsertUserId');
+		},
+		get_insertDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'InsertDate');
+		},
+		get_isActive: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'IsActive');
+		},
+		get_updateUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'UpdateUserId');
+		},
+		get_updateDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'UpdateDate');
+		},
+		get_parentId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'ParentId');
+		},
+		get_rootId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'RootId');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_MenuGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
-	ss.initClass($Cengaver_TvHastanesi_ServiceTicketsDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
-	ss.initClass($Cengaver_TvHastanesi_ServiceTicketsGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_MenuService, $asm, {});
+	ss.initClass($Cengaver_TvHastanesi_ServiceTicketDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_ServiceTicketGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_ServiceTicketsForm, $asm, {
+		get_receiveDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'ReceiveDate');
+		},
+		get_productSerialNumber: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'ProductSerialNumber');
+		},
+		get_insertUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'InsertUserId');
+		},
+		get_insertDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'InsertDate');
+		},
+		get_productTypeId: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'ProductTypeId');
+		},
+		get_isActive: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'IsActive');
+		},
+		get_productMark: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'ProductMark');
+		},
+		get_productModel: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'ProductModel');
+		},
+		get_updateUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'UpdateUserId');
+		},
+		get_updateDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'UpdateDate');
+		},
+		get_productDesctiption: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'ProductDesctiption');
+		},
+		get_malFunction: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'MalFunction');
+		},
+		get_technicianNote: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'TechnicianNote');
+		},
+		get_repairCost: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'RepairCost');
+		},
+		get_laborCost: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'LaborCost');
+		},
+		get_pieceCost: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'PieceCost');
+		},
+		get_totalCost: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'TotalCost');
+		},
+		get_paymentTypeId: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'PaymentTypeId');
+		},
+		get_deliveryDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'DeliveryDate');
+		},
+		get_operationId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'OperationId');
+		},
+		get_stageId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'StageId');
+		},
+		get_description: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Description');
+		},
+		get_customerId: function() {
+			return this.byId(Serenity.LookupEditor).call(this, 'CustomerId');
+		},
+		get_invoiceNumber: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'InvoiceNumber');
+		},
+		get_recordDate: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'RecordDate');
+		}
+	}, Serenity.PrefixedContext);
+	ss.initClass($Cengaver_TvHastanesi_ServiceTicketsService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_UnitDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_UnitForm, $asm, {
+		get_unit: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Unit');
+		},
+		get_unitTypeId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'UnitTypeId');
+		},
+		get_path: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Path');
+		},
+		get_insertUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'InsertUserId');
+		},
+		get_insertDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'InsertDate');
+		},
+		get_isActive: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'IsActive');
+		},
+		get_updateUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'UpdateUserId');
+		},
+		get_updateDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'UpdateDate');
+		},
+		get_managerId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'ManagerId');
+		},
+		get_firmId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'FirmId');
+		},
+		get_parentId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'ParentId');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_UnitGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_UnitService, $asm, {});
 	ss.setMetadata($Cengaver_Administration_LanguageDialog, { attr: [new Serenity.IdPropertyAttribute('Id'), new Serenity.NamePropertyAttribute('LanguageName'), new Serenity.FormKeyAttribute('Administration.Language'), new Serenity.LocalTextPrefixAttribute('Administration.Language'), new Serenity.ServiceAttribute('Administration/Language')] });
 	ss.setMetadata($Cengaver_Administration_LanguageGrid, { attr: [new Serenity.ColumnsKeyAttribute('Administration.Language'), new Serenity.IdPropertyAttribute('Id'), new Serenity.NamePropertyAttribute('LanguageName'), new Serenity.DialogTypeAttribute($Cengaver_Administration_LanguageDialog), new Serenity.LocalTextPrefixAttribute('Administration.Language'), new Serenity.ServiceAttribute('Administration/Language')] });
 	ss.setMetadata($Cengaver_Administration_PermissionCheckEditor, { attr: [new Serenity.EditorAttribute()] });
@@ -2253,14 +2715,15 @@
 	ss.setMetadata($Cengaver_TvHastanesi_CityDialog, { attr: [new Serenity.IdPropertyAttribute('CityId'), new Serenity.NamePropertyAttribute('City'), new Serenity.FormKeyAttribute('TvHastanesi.City'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.City'), new Serenity.ServiceAttribute('TvHastanesi/City')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CityGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.City'), new Serenity.IdPropertyAttribute('CityId'), new Serenity.NamePropertyAttribute('City'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CityDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.City'), new Serenity.ServiceAttribute('TvHastanesi/City')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CountyDialog, { attr: [new Serenity.IdPropertyAttribute('CountyId'), new Serenity.NamePropertyAttribute('County'), new Serenity.FormKeyAttribute('TvHastanesi.County'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.County'), new Serenity.ServiceAttribute('TvHastanesi/County')] });
+	ss.setMetadata($Cengaver_TvHastanesi_CountyEditor, { attr: [new Serenity.EditorAttribute()], members: [{ attr: [new Serenity.ComponentModel.OptionAttribute()], name: 'CityEditorID', type: 16, returnType: String, getter: { name: 'get_CityEditorID', type: 8, sname: 'get_cityEditorID', returnType: String, params: [] }, setter: { name: 'set_CityEditorID', type: 8, sname: 'set_cityEditorID', returnType: Object, params: [String] } }] });
 	ss.setMetadata($Cengaver_TvHastanesi_CountyGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.County'), new Serenity.IdPropertyAttribute('CountyId'), new Serenity.NamePropertyAttribute('County'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CountyDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.County'), new Serenity.ServiceAttribute('TvHastanesi/County')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CustomerDialog, { attr: [new Serenity.IdPropertyAttribute('CustomerId'), new Serenity.NamePropertyAttribute('Name'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Customer'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Customer'), new Serenity.ServiceAttribute('TvHastanesi/Customer')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CustomerEditor, { attr: [new Serenity.EditorAttribute(), new System.ComponentModel.DisplayNameAttribute('Kampüs')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CustomerGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Customer'), new Serenity.IdPropertyAttribute('CustomerId'), new Serenity.NamePropertyAttribute('Name'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CustomerDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Customer'), new Serenity.ServiceAttribute('TvHastanesi/Customer')] });
 	ss.setMetadata($Cengaver_TvHastanesi_MenuDialog, { attr: [new Serenity.IdPropertyAttribute('MenuId'), new Serenity.NamePropertyAttribute('Menu'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Menu'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Menu'), new Serenity.ServiceAttribute('TvHastanesi/Menu')] });
 	ss.setMetadata($Cengaver_TvHastanesi_MenuGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Menu'), new Serenity.IdPropertyAttribute('MenuId'), new Serenity.NamePropertyAttribute('Menu'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_MenuDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Menu'), new Serenity.ServiceAttribute('TvHastanesi/Menu')] });
-	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketsDialog, { attr: [new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.ServiceTickets'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTickets'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTickets')] });
-	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketsGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.ServiceTickets'), new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_ServiceTicketsDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTickets'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTickets')] });
+	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketDialog, { attr: [new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.ServiceTicket'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTicket'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTicket')] });
+	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.ServiceTicket'), new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_ServiceTicketDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTicket'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTicket')] });
 	ss.setMetadata($Cengaver_TvHastanesi_UnitDialog, { attr: [new Serenity.IdPropertyAttribute('UnitId'), new Serenity.NamePropertyAttribute('Unit'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Unit'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Unit'), new Serenity.ServiceAttribute('TvHastanesi/Unit')] });
 	ss.setMetadata($Cengaver_TvHastanesi_UnitGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Unit'), new Serenity.IdPropertyAttribute('UnitId'), new Serenity.NamePropertyAttribute('Unit'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_UnitDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Unit'), new Serenity.ServiceAttribute('TvHastanesi/Unit')] });
 	(function() {

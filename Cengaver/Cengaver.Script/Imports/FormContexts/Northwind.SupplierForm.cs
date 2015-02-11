@@ -8,11 +8,12 @@ namespace Cengaver.Northwind
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.Northwind;
 
     public partial class SupplierForm : PrefixedContext
     {
-        public SupplierForm(string idPrefix) : base(idPrefix) { }
-
+        public SupplierForm(string idPrefix) : base(idPrefix) {}
+    
         public StringEditor CompanyName { get { return ById<StringEditor>("CompanyName"); } }
         public StringEditor ContactName { get { return ById<StringEditor>("ContactName"); } }
         public StringEditor ContactTitle { get { return ById<StringEditor>("ContactTitle"); } }

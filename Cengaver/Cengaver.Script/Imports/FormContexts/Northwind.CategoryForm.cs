@@ -8,11 +8,12 @@ namespace Cengaver.Northwind
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.Northwind;
 
     public partial class CategoryForm : PrefixedContext
     {
-        public CategoryForm(string idPrefix) : base(idPrefix) { }
-
+        public CategoryForm(string idPrefix) : base(idPrefix) {}
+    
         public StringEditor CategoryName { get { return ById<StringEditor>("CategoryName"); } }
         public StringEditor Description { get { return ById<StringEditor>("Description"); } }
     }

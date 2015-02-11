@@ -25,7 +25,7 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.CountyId[this] = value; }
         }
 
-        [DisplayName("City Id"), NotNull, ForeignKey("TvH__Cities", "CityId"), LeftJoin("jCity")]
+        [DisplayName("City Id"), NotNull, ForeignKey("TvH__Cities", "CityId"), LeftJoin("jCity"), LookupInclude]
         public Int32? CityId
         {
             get { return Fields.CityId[this]; }

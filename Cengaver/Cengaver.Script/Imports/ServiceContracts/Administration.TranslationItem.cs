@@ -17,6 +17,6 @@ namespace Cengaver.Administration
         public String TargetText { get; set; }
         public String CustomText { get; set; }
     }
-
+    
 }
 

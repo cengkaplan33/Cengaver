@@ -7,9 +7,9 @@ namespace Cengaver.TvHastanesi.Repositories
     using Serenity.Services;
     using System;
     using System.Data;
-    using MyRow = Entities.ServiceTicketsRow;
+    using MyRow = Entities.ServiceTicketRow;
 
-    public class ServiceTicketsRepository
+    public class ServiceTicketRepository
     {
         private static MyRow.RowFields fld { get { return MyRow.Fields; } }
 

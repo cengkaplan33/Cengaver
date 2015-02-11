@@ -6,12 +6,12 @@ namespace Cengaver.TvHastanesi.Endpoints
     using Serenity.Services;
     using System.Data;
     using System.Web.Mvc;
-    using MyRepository = Repositories.ServiceTicketsRepository;
-    using MyRow = Entities.ServiceTicketsRow;
+    using MyRepository = Repositories.ServiceTicketRepository;
+    using MyRow = Entities.ServiceTicketRow;
 
-    [RoutePrefix("Services/TvHastanesi/ServiceTickets"), Route("{action}")]
-    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.General)]
-    public class ServiceTicketsController : ServiceEndpoint
+    [RoutePrefix("Services/TvHastanesi/ServiceTicket"), Route("{action}")]
+    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize("rrrrr")]
+    public class ServiceTicketController : ServiceEndpoint
     {
         [HttpPost]
         public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)

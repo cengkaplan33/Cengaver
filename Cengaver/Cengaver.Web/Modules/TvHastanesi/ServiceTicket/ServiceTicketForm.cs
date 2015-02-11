@@ -9,9 +9,9 @@ namespace Cengaver.TvHastanesi.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [FormScript("TvHastanesi.ServiceTickets")]
-    [BasedOnRow(typeof(Entities.ServiceTicketsRow))]
-    public class ServiceTicketsForm
+    [FormScript("TvHastanesi.ServiceTicket")]
+    [BasedOnRow(typeof(Entities.ServiceTicketRow))]
+    public class ServiceTicketForm
     {
         public DateTime ReceiveDate { get; set; }
         public String ProductSerialNumber { get; set; }
@@ -35,8 +35,6 @@ namespace Cengaver.TvHastanesi.Forms
         public Int32 OperationId { get; set; }
         public Int32 StageId { get; set; }
         public String Description { get; set; }
-
-        [LookupEditor(typeof(Entities.CustomerRow))]
         public Int32 CustomerId { get; set; }
         public String InvoiceNumber { get; set; }
         public String RecordDate { get; set; }

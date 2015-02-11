@@ -8,11 +8,12 @@ namespace Cengaver.Administration
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.Northwind;
 
     public partial class UserForm : PrefixedContext
     {
-        public UserForm(string idPrefix) : base(idPrefix) { }
-
+        public UserForm(string idPrefix) : base(idPrefix) {}
+    
         public StringEditor Username { get { return ById<StringEditor>("Username"); } }
         public StringEditor DisplayName { get { return ById<StringEditor>("DisplayName"); } }
         public EmailEditor Email { get { return ById<EmailEditor>("Email"); } }

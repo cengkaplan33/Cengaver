@@ -8,11 +8,12 @@ namespace Cengaver.Northwind
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.Northwind;
 
     public partial class TerritoryForm : PrefixedContext
     {
-        public TerritoryForm(string idPrefix) : base(idPrefix) { }
-
+        public TerritoryForm(string idPrefix) : base(idPrefix) {}
+    
         public StringEditor TerritoryID { get { return ById<StringEditor>("TerritoryID"); } }
         public StringEditor TerritoryDescription { get { return ById<StringEditor>("TerritoryDescription"); } }
         public LookupEditor RegionID { get { return ById<LookupEditor>("RegionID"); } }

@@ -23,7 +23,7 @@ using Administration = Cengaver.Administration.Pages;
 
 [assembly: NavigationMenu(2000, "TvHastanesi", icon: "icon-settings")]
 [assembly: Serenity.Navigation.NavigationLink(2001, "TvHastanesi/Customer", typeof(Cengaver.TvHastanesi.Pages.CustomerController))]
-[assembly: Serenity.Navigation.NavigationLink(2002, "TvHastanesi/ServiceTicket", typeof(Cengaver.TvHastanesi.Pages.ServiceTicketsController))]
+[assembly: Serenity.Navigation.NavigationLink(2002, "TvHastanesi/ServiceTicket", typeof(Cengaver.TvHastanesi.Pages.ServiceTicketController))]
 [assembly: Serenity.Navigation.NavigationLink(3001, "TvHastanesi/Unit", typeof(Cengaver.TvHastanesi.Pages.UnitController))]
 [assembly: Serenity.Navigation.NavigationLink(3002, "TvHastanesi/City", typeof(Cengaver.TvHastanesi.Pages.CityController))]
 [assembly: Serenity.Navigation.NavigationLink(3003, "TvHastanesi/County", typeof(Cengaver.TvHastanesi.Pages.CountyController))]

@@ -17,14 +17,6 @@ namespace Cengaver.TvHastanesi
         }
     }
 
-    // Please remove this partial class or the first line below, after you run ScriptContexts.tt
-    [Imported, Serializable, PreserveMemberCase] 
-    public partial class CustomerRow
-    {
-        public Int32? CustomerId;
-        public String Name;
-    }
-
     public partial class EditorItem
     {
         public Int32 id;

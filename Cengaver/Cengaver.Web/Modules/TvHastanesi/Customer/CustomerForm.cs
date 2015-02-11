@@ -26,7 +26,7 @@ namespace Cengaver.TvHastanesi.Forms
         [LookupEditor(typeof(Entities.CityRow))]
         public Int32 CityId { get; set; }
 
-        [LookupEditor(typeof(Entities.CountyRow))]
+        [CountyEditor(CityEditorID = "CityId")]
         public Int32 CountyId { get; set; }
         public String PhoneNumber { get; set; }
         public String EmailAddress { get; set; }

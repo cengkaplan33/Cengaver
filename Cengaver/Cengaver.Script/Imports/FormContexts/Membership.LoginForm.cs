@@ -8,11 +8,12 @@ namespace Cengaver.Membership
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.Northwind;
 
     public partial class LoginForm : PrefixedContext
     {
-        public LoginForm(string idPrefix) : base(idPrefix) { }
-
+        public LoginForm(string idPrefix) : base(idPrefix) {}
+    
         public StringEditor Username { get { return ById<StringEditor>("Username"); } }
         public PasswordEditor Password { get { return ById<PasswordEditor>("Password"); } }
     }

@@ -15,18 +15,15 @@ namespace Cengaver.Administration
         public Int32? Id { get; set; }
         public String LanguageId { get; set; }
         public String LanguageName { get; set; }
-
+    
         [Imported, PreserveMemberCase]
         public static class Fields
         {
-            [InlineConstant]
-            public const string Id = "Id";
-            [InlineConstant]
-            public const string LanguageId = "LanguageId";
-            [InlineConstant]
-            public const string LanguageName = "LanguageName";
+            [InlineConstant] public const string Id = "Id";
+            [InlineConstant] public const string LanguageId = "LanguageId";
+            [InlineConstant] public const string LanguageName = "LanguageName";
         }
     }
-
+    
 }
 

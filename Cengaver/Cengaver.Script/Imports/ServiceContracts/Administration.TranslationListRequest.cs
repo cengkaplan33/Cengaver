@@ -15,6 +15,6 @@ namespace Cengaver.Administration
         public String SourceLanguageID { get; set; }
         public String TargetLanguageID { get; set; }
     }
-
+    
 }
 

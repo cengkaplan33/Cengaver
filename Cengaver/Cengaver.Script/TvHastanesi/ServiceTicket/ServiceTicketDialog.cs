@@ -6,8 +6,8 @@ namespace Cengaver.TvHastanesi
     using System.Collections.Generic;
 
     [IdProperty("ServiceTicketId"), NameProperty("ProductSerialNumber"), IsActiveProperty("IsActive")]
-    [FormKey("TvHastanesi.ServiceTickets"), LocalTextPrefix("TvHastanesi.ServiceTickets"), Service("TvHastanesi/ServiceTickets")]
-    public class ServiceTicketsDialog : EntityDialog<ServiceTicketsRow>
+    [FormKey("TvHastanesi.ServiceTicket"), LocalTextPrefix("TvHastanesi.ServiceTicket"), Service("TvHastanesi/ServiceTicket")]
+    public class ServiceTicketDialog : EntityDialog<ServiceTicketRow>
     {
     }
 }

@@ -43,7 +43,7 @@
     <Compile Include="Imports\FormContexts\Administration.LanguageForm.cs">
       <DependentUpon>FormContexts.tt</DependentUpon>
     </Compile>
-    <Compile Include="Imports\FormContexts\Administration.TranslationForm.cs">
+    <Compile Include="Imports\FormContexts\Administration.RoleForm.cs">
       <DependentUpon>FormContexts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\FormContexts\Administration.UserForm.cs">
@@ -89,6 +89,24 @@
       <DependentUpon>FormContexts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\FormContexts\Northwind.TerritoryForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.CityForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.CountyForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.CustomerForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.MenuForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.ServiceTicketsForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.UnitForm.cs">
       <DependentUpon>FormContexts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\Administration.LanguageRow.cs">
@@ -164,6 +182,12 @@
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\Administration.UserService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\Marmara.Common.Pages.FileController.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\Marmara.Common.Pages.UploadResponse.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\Membership.LoginRequest.cs">
@@ -247,6 +271,42 @@
     <Compile Include="Imports\ServiceContracts\Northwind.TerritoryService.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.CityRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.CityService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.CountyRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.CountyService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.CustomerRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.CustomerService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.MenuRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.MenuService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceTicketsRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceTicketsService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.UnitRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.UnitService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
     <Compile Include="Membership\LoginPanel.cs" />
     <Compile Include="Northwind\Shared\PhoneEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -287,16 +347,17 @@
     <Compile Include="Administration\UserPermission\UserPermissionDialog.cs" />
     <Compile Include="TvHastanesi\City\CityDialog.cs" />
     <Compile Include="TvHastanesi\City\CityGrid.cs" />
+    <Compile Include="TvHastanesi\County\CountyEditor.cs" />
     <Compile Include="TvHastanesi\County\CountyDialog.cs" />
     <Compile Include="TvHastanesi\County\CountyGrid.cs" />
     <Compile Include="TvHastanesi\Customer\CustomerDialog.cs" />
     <Compile Include="TvHastanesi\Customer\CustomerGrid.cs" />
     <Compile Include="TvHastanesi\Menu\MenuDialog.cs" />
     <Compile Include="TvHastanesi\Menu\MenuGrid.cs" />
-    <Compile Include="TvHastanesi\ServiceTickets\ServiceTicketsDialog.cs" />
-    <Compile Include="TvHastanesi\ServiceTickets\ServiceTicketsGrid.cs" />
     <Compile Include="TvHastanesi\Unit\UnitDialog.cs" />
     <Compile Include="TvHastanesi\Unit\UnitGrid.cs" />
+    <Compile Include="TvHastanesi\ServiceTicket\ServiceTicketGrid.cs" />
+    <Compile Include="TvHastanesi\ServiceTicket\ServiceTicketDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Imports\FormContexts\FormContexts.log">
@@ -339,27 +400,29 @@
     <Reference Include="Saltarelle.Web">
       <HintPath>..\..\packages\Saltarelle.Web.3.1.0\lib\Saltarelle.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Serenity.Script.Core, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Serenity.Script.1.4.6\lib\net20\Serenity.Script.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Serenity.Script.Imports, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Serenity.Script.1.4.6\lib\net20\Serenity.Script.Imports.dll</HintPath>
-    </Reference>
-    <Reference Include="Serenity.Script.UI, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Serenity.Script.1.4.6\lib\net20\Serenity.Script.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.6.2\tools\Saltarelle.Compiler.targets')" />
-  <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.2.6.2\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.6.2\tools\Saltarelle.Compiler.targets')" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Serenity\Serenity.Script.Core\Serenity.Script.Core.csproj">
+      <Project>{55fcc86f-c622-4909-819f-19ddd5263579}</Project>
+      <Name>Serenity.Script.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Serenity\Serenity.Script.Imports\Serenity.Script.Imports.csproj">
+      <Project>{1e32ed5b-d96e-41d9-b532-577005b0ddb0}</Project>
+      <Name>Serenity.Script.Imports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Serenity\Serenity.Script.UI\Serenity.Script.UI.csproj">
+      <Project>{56e9e208-55d9-4a50-a5b9-6eb22df6af0e}</Project>
+      <Name>Serenity.Script.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)Serenity\tools\Saltarelle\Saltarelle.Compiler.targets" />
+  <Import Project="$(SolutionDir)Serenity\tools\Submodule\Serenity.Submodule.Script.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   -->
-  <Target Name="AfterBuild">
+  <Target Name="CopyGeneratedScriptToWeb" AfterTargets="BuildScript">
     <Copy SourceFiles="$(TargetDir)$(AssemblyName).js" DestinationFiles="$(SolutionDir)Cengaver\Cengaver.Web\Scripts\site\$(AssemblyName).js">
     </Copy>
   </Target>

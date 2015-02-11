@@ -11,10 +11,10 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__ServiceTickets"), InstanceName("TvH__ServiceTickets"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.General)]
-    [ModifyPermission(PermissionKeys.General)]
+    [ReadPermission("rrrrr")]
+    [ModifyPermission("rrrrr")]
     [JsonConverter(typeof(JsonRowConverter))]
-    public sealed class ServiceTicketsRow : Row, IIdRow, INameRow
+    public sealed class ServiceTicketRow : Row, IIdRow, INameRow
     {
         [DisplayName("Service Ticket Id"), Identity]
         public Int32? ServiceTicketId
@@ -210,7 +210,7 @@ namespace Cengaver.TvHastanesi.Entities
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public ServiceTicketsRow()
+        public ServiceTicketRow()
             : base(Fields)
         {
         }
@@ -247,7 +247,7 @@ namespace Cengaver.TvHastanesi.Entities
             public RowFields()
                 : base("TvH__ServiceTickets")
             {
-                LocalTextPrefix = "TvHastanesi.ServiceTickets";
+                LocalTextPrefix = "TvHastanesi.ServiceTicket";
             }
         }
     }

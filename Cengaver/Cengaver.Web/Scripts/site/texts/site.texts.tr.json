@@ -138,6 +138,8 @@
     "Navigation.Northwind/Suppliers": "Tedarikçiler",
     "Navigation.Northwind/Territories": "Alt Bölgeler",
     "Navigation.SiteTitle": "Cengaver",
+    "Navigation.Northwind/Customers": "Müşteriler",
+    "Navigation.TvHastanesi/Customer": "Müşteriler",	
     "Permission.Administration:Security": "Yönetim: Kullanıcı, Rol Yönetimi ve Haklandırma",
     "Permission.Administration:Translation": "Yönetim: Diller ve Çeviriler",
     "Permission.Northwind:Customer:Delete": "Northwind: Müşteriler - Silme",

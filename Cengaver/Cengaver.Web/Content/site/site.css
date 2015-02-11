@@ -1292,3 +1292,44 @@ a,
 .s-CustomerDialog .s-PropertyGrid .categories {
   height: 260px;
 }
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-ServiceTicketDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-ServiceTicketDialog .tab-pane {
+  height: auto;
+}
+.s-ServiceTicketDialog .caption {
+  width: 150px;
+}
+.s-ServiceTicketDialog .editor {
+  width: 400px;
+}
+.s-ServiceTicketDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-ServiceTicketDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-ServiceTicketDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-ServiceTicketDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-ServiceTicketDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-ServiceTicketDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-ServiceTicketDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-ServiceTicketDialog .s-PropertyGrid .categories {
+  height: 260px;
+}

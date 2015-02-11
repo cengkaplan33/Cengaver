@@ -8,11 +8,12 @@ namespace Cengaver.Northwind
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.Northwind;
 
     public partial class OrderForm : PrefixedContext
     {
-        public OrderForm(string idPrefix) : base(idPrefix) { }
-
+        public OrderForm(string idPrefix) : base(idPrefix) {}
+    
         public StringEditor CustomerID { get { return ById<StringEditor>("CustomerID"); } }
         public IntegerEditor EmployeeID { get { return ById<IntegerEditor>("EmployeeID"); } }
         public DateEditor OrderDate { get { return ById<DateEditor>("OrderDate"); } }

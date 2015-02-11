@@ -1,0 +1,58 @@
+﻿<div class="container" style="margin-bottom: 8px;">
+    <div class="row">
+        <div class="col-md-3">
+            <a href= "@Url.Content("~/ana-sayfa")">
+                <img src="@Url.Content("~/Content/themes/Meca/TvHastanesiLogo.png")" alt="Ana Sayfa" title="Ana Sayfa" style="max-width:280px;" />
+            </a>
+        </div>
+        <div class="col-md-6 " style="">
+            <div class="searchContainer">
+                <script type="text/javascript">
+                    //$(document).ready(function () {
+                    //    new Sinerji.B2CSearchProductWidgetHandler();
+                    //});
+                </script>
+                <input id="searchBox" type="text" />
+                <input id="searchIcon" type="image" src="@Href("~/content/img/search.png")" style="width: 20px; height: 20px;
+                    border: 0;" />
+                
+            </div>
+        </div>
+        <div class="col-md-3">
+        
+            <div id="shoppingCartContainer" class="pull-right" style="margin-top: 20px; max-height:50px;
+                margin-right: 20px; position: relative; ">
+                <div  style="float:left;">
+                    <img src="" style="max-width:30px; margin-right:5px;" />
+                </div>
+                <div style="float:right; padding-top:7px;">
+                    <a id="scCount" href="@Url.Content("~/sepet")" style="display:block;">Sepetim (0)</a>
+                </div>
+                <div id="shoppingCartContent" style="position: absolute; width: 350px; min-height: 200px;
+                    background-color: #fff; padding: 10px; border: 1px solid #ddd; display: none;
+                    z-index: 100; top: 25px; right:0;">
+                    <div id="shoppingCartItems">
+                        <div id="shoppingCartList">
+                    
+                    </div>
+                        <div class="row">
+                        <div class="col-md-12 text-right">
+                        <span style="font-size:14px;"><b>Toplam</b></span><br />
+                            <span id="totalPrice" style="color: Red; font-size:18px;"></span>
+                        </div>
+                    </div>
+                        <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-12">
+                            <a href="@Url.Content("~/sepet")" class="btn btn-primary btn-sm pull-right">Sepetim</a> 
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+                <div id="shoppingCartnotification" style="display:none;">
+                        Sepetinizde ürün bulunmamaktadır.
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

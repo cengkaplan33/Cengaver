@@ -1,0 +1,15 @@
+
+@{
+    ViewBag.Title = Serenity.LocalText.Get("Db.Northwind.CustomerDemographic.EntityPlural");
+}
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new Cengaver.Northwind.CustomerDemographicGrid($('#GridDiv'), {
+        });
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>

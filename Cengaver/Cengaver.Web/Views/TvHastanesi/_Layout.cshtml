@@ -1,0 +1,105 @@
+﻿@{
+  
+    var header = Html.Partial("~/Views/TvHastanesi/_Header.cshtml");
+    var footer = Html.Partial("~/Views/TvHastanesi/_Footer.cshtml"); //, new Surat.Site.Services.B2CFooterService().GetB2CFooterGroupAndLinkList());
+
+    var currentThemeName = "meca";
+    var customThemePath = "~/content/themes/customThemePath/css/customThemePath.css";
+    customThemePath = customThemePath.Replace("customThemePath", currentThemeName);
+    ////var client = new WebClient();
+    ////var currentThemeName = Json.Decode(client.DownloadString("http://localhost/b2c/services/thememanagement/getcurrenttheme"));
+    //var res = new Surat.Site.Services.B2CThemeService().GetCurrentTheme();
+    //bool IsAccessRightCmsPageEditor = false;
+    //int siteId = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["B2CSiteId"]);
+    //int contentLayoutType = Convert.ToInt32(ViewBag.ContentLayoutType);
+
+    //if (Model.Key == "ana-sayfa")
+    //{
+    //    B2C.Web.Helpers.SeoHelper.Title = SiteManager.SiteSetting.SeoSiteTitle;
+    //    B2C.Web.Helpers.SeoHelper.Description = SiteManager.SiteSetting.SeoDescription;
+    //    B2C.Web.Helpers.SeoHelper.Keyword = SiteManager.SiteSetting.SeoKeyword;
+    //}
+    
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @*<meta name="description" content="@B2C.Web.Helpers.SeoHelper.Description" />
+    <meta name="keyword" content="@B2C.Web.Helpers.SeoHelper.Keyword" />*@
+    <meta name="author" content="" />
+    <meta name="robots" content="index,follow" />
+    <title> @ViewBag.Title </title> @*@B2C.Web.Helpers.SeoHelper.Title</title>*@
+
+    <link href="@Url.Content(customThemePath)" rel="stylesheet" type="text/css" />
+    @Html.Stylesheet("~/Content/bootstrap.css")
+    <script type="text/javascript">
+
+        //$(document).ready(function () {
+        //    var pathname = window.location.href;
+        //    if (pathname.indexOf('urun-detay') == -1) {
+        //        new Sinerji.B2CShowShoppingCartWidgetHandlerBS(1);
+        //    }
+
+
+        //});
+    </script>
+</head>
+<body>
+    <div class="container theme-container">
+        <div class="row">
+            <div class="header col-md-12"> @header </div>
+            <div class="body col-md-12"> @RenderBody() </div>
+            <div class="footer col-md-12"> @footer </div>        
+        </div>
+    </div>
+    
+
+        <script src="@Url.Content("~/Scripts/jquery-2.1.1.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.metisMenu.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
+
+        @{
+            //TODO::
+            //Html.IncreaseScriptPriority();
+
+            //Html.IncludeJQ("blockUI");
+            Html.Script("~/js/jquery/jquery.json.js");
+
+            //Html.IncludeUI("autocomplete", "sortable", "tabs");
+            //Html.IncludeUI("dialog", "draggable", "datepicker");
+
+            Html.Script("~/js/sharp/mscorlib.debug.js");
+            Html.Script("~/js/sharp/Sinerji.Core.js");
+    //Html.IncludeJQ("autoNumeric", "event.drag", "validate", "validate.pi", "slick.grid", "pnotify", "qtip", "fullcalendar", "jqprint", "maskedinput", "highlight", "alphaNumeric.tr", "session");
+    //Html.IncludeNT("forms", "autoComplete", "autoSearch", "slickGrid", "slickRemoteView", "slickPager", "toolButtonBar");
+
+    //TODO:: kapatıldı
+    //Html.IncludeDynamic("RegisteredScripts");
+    //Html.IncludeLocalText("Site");
+    //Html.IncludeLocalInit();
+        }
+        @*//todo::serenity için
+            <script src="~/DynJS.axd/@HtmlScriptExtensions.GetLocalTextInclude(this.Html, "Site")"></script>
+            <script src="~/DynJS.axd/@DynamicScriptManager.GetScriptInclude("RegisteredScripts")"></script>*@
+        @{
+
+    //TODO:: kapatıldı
+    @*<div style="display: none">@Html.GenerateScriptIncludes()</div>*@
+
+        }
+        <script type="text/javascript">
+            //$(document).ready(function () {
+            //    $("#closeLeftPanel").click(function () {
+            //        $.panelslider.close();
+            //    });
+            //});
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/TvHastanesi/_Body.cshtml";
+    ViewBag.Title = "Bilgisayar-Tablet - Televizyon Hastanesi";
+    ViewBag.PageId = "PublicComputerPage";
+    var slider = Cengaver.SiteInitialization.PublicSiteSetting.SliderByPageName[ViewBag.PageId];
+}
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        @{
+            var index = 0;
+            var itemClass = "active";
+            foreach (var item in slider.Items)
+            {
+                <li data-target="#carousel-example-generic" data-slide-to="@index" class="@itemClass"></li>
+                index++;
+                itemClass = "";
+            }
+        }
+        @*<li data-target="#carousel-example-generic" data-slide-to="5"></li>*@
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        @{
+
+            itemClass = "active";
+            foreach (var item in slider.Items)
+            {
+                <div class="item @itemClass ">
+                    <img src="@Href(item.FilePath)" alt="@(item.Name +"-"+item.Tag)" />
+                    <div class="carousel-caption">
+                        <h3>@item.Title</h3>
+                        <p>@item.Description</p>
+                    </div>
+                </div>
+                itemClass = "";
+            }
+        }
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div> <!-- Carousel -->
+<div class="clear"> </div>

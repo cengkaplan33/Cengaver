@@ -1,0 +1,13 @@
+.theme-image-ssl {  background-image : url("../image/ssl.png"); height: 50px; width: 50px; background-size: 50px; }
+.theme-image-logo {  background-image : url("../image/TvHastanesiLogo.png");  }
+.theme-image-visamastercard {  background-image : url("../image/visamastercard.png");  height: 30px; width: 120px; background-repeat: no-repeat; }
+
+
+.header .header-top.navbar { min-height: 20px;  margin-bottom: 0px; }
+.header .header-top.navbar .navbar-nav > li > a { padding-top: 4px; padding-bottom: 4px; }
+
+li { list-style-type:none; }
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img { width: 100% !important; height: 400px !important; } 
+
+.clear { clear: both; display: block; }

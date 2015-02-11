@@ -1,0 +1,57 @@
+﻿<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      @*<a class="navbar-brand" href="@Url.Content("~/ana-sayfa")">Hoş geldiniz</a>*@
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        @*@Html.Partial("/Views/Shared/bootstrap/Header/_ChangeLayout.cshtml")
+        @Html.Partial("/Views/Shared/bootstrap/Header/_ChangeTheme.cshtml")*@
+
+        @if (true)
+        {
+            <li><a href="@Url.Content("~/giris")"><span class="glyphicon glyphicon-log-in"></span> Giriş </a></li>
+        }
+        else
+        {
+            string displayName = "";
+            var userId = 12; // SecurityHelper.ActualUserIdOrNull;
+            if (userId != null)
+            {
+                displayName ="Ömer KAPLAN";
+                //displayName = Surat.Web.Security.UserCache.ById(userId.Value).DisplayName;
+                //Hoşgeldin @(displayName.Length > 28 ? (displayName.Substring(0, 25) + "...") : displayName)
+
+                @*if (SecurityHelper.HasRight(new AccessRight("CmsPageEditor")))
+                {
+                    <li><a id="left-panel-link" href="#left-panel">Tema & Eklenti Yönetimi</a></li>
+                }*@
+            <li><a href="@Url.Content("~/uye")"><span class=""></span>Bilgilerim (@displayName)</a></li>
+            <li><a href="@Url.Content("~/uye/siparislerim")"><span class=""></span>Sipariş Takibi</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Listelerim <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="@Url.Content("~/favorilerim")">Favori Ürünlerim</a></li>
+                </ul>
+            </li>
+            <li><a href="@Url.Content("~/cikis")"><span class=""></span> Çıkış</a></li>
+            }
+        }
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

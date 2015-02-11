@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = Serenity.LocalText.Get("Db.TvHastanesi.Unit.EntityPlural");
+}
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new Cengaver.TvHastanesi.UnitGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>

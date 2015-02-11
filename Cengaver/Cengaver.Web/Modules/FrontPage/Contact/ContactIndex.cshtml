@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/TvHastanesi/_Body.cshtml";
+    ViewBag.Title = "İletişim- Televizyon Hastanesi";
+    ViewBag.PageId = "PublicContactPage";
+}
+
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    function init_map() {
+        var myOptions = { zoom: 15, center: new google.maps.LatLng(37.916309, 40.218749), mapTypeId: google.maps.MapTypeId.ROADMAP };
+        map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+        marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(37.916309, 40.218749) });
+        infowindow = new google.maps.InfoWindow({ content: "<b>Tv Hastanesi</b><br/>Kurt ismail pa&#351;a 7.sok <br/> gen&ccedil; kalan apt.alt&#305; no:9 <br/> Yeni&#351;ehir / Diyarbak&#305;r <br/> Tel: 0412 224 39 79 " });
+        google.maps.event.addListener(marker, "click", function () { infowindow.open(map, marker); });
+        infowindow.open(map, marker);
+    } google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+<style>
+    #gmap_canvas img {
+        max-width: none !important;
+        background: none !important;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-4">
+        <table>
+            <tr>
+                <td colspan="2"><h3> Televizyon Hastanesi</h3></td>
+            </tr>
+            <tr>
+                <td><b> Adres : </b></td>
+                <td> Kurt ismail paşa 7.sok genç kalan apt.altı no:9 <br />Yenişehir / Diyarbakır <br />Tel: 0412 224 39 79</td>
+            </tr>
+            <tr>
+                <td><b> Telefon : </b></td>
+                <td> 0412 224 39 79</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-8">
+        <div style="overflow:hidden;height:500px;width:700px;">
+            <div id="gmap_canvas" style="height:500px;width:700px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

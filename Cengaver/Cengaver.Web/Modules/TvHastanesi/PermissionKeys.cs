@@ -23,5 +23,6 @@ namespace Cengaver.TvHastanesi
          */
 
         public const string General = "Cengaver:TvHastanesi:General";
+        public const string Admin = "Cengaver:TvHastanesi:Admin";
     }
 }

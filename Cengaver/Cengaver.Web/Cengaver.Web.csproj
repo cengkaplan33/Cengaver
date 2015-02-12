@@ -14,7 +14,7 @@
     <RootNamespace>Cengaver</RootNamespace>
     <AssemblyName>Cengaver.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -531,6 +531,7 @@
     <Content Include="Modules\FrontPage\MaintenanceProduct\MaintenanceProductIndex.cshtml" />
     <Content Include="Modules\FrontPage\Phone\PhoneIndex.cshtml" />
     <Content Include="Modules\FrontPage\_ViewStart.cshtml" />
+    <None Include="Properties\PublishProfiles\Cengaver_TvHastanesi.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Readme.CodeGenerator.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1029,7 +1030,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1692/</IISUrl>
+          <IISUrl>http://localhost/TvHastanesi</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

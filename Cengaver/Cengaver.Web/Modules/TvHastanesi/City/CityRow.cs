@@ -11,8 +11,8 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__Cities"), InstanceName("TvH__Cities"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.General)]
-    [ModifyPermission(PermissionKeys.General)]
+    [DeletePermission(PermissionKeys.Admin)]
+    [ModifyPermission(PermissionKeys.Admin)]
     [JsonConverter(typeof(JsonRowConverter))]
     [LookupScript("TvHastanesi.City")]
     public sealed class CityRow : Row, IIdRow, INameRow

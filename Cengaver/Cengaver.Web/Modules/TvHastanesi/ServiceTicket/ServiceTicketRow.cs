@@ -11,8 +11,8 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__ServiceTickets"), InstanceName("TvH__ServiceTickets"), TwoLevelCached]
-    [ReadPermission("rrrrr")]
-    [ModifyPermission("rrrrr")]
+    [DeletePermission(PermissionKeys.General)]
+    [ModifyPermission(PermissionKeys.General)]
     [JsonConverter(typeof(JsonRowConverter))]
     public sealed class ServiceTicketRow : Row, IIdRow, INameRow
     {

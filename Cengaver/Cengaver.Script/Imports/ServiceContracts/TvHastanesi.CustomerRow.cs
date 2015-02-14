@@ -13,11 +13,6 @@ namespace Cengaver.TvHastanesi
     public partial class CustomerRow
     {
         public Int32? CustomerId { get; set; }
-        public Int32? InsertUserId { get; set; }
-        public String InsertDate { get; set; }
-        public Boolean? IsActive { get; set; }
-        public Int32? UpdateUserId { get; set; }
-        public String UpdateDate { get; set; }
         public String Name { get; set; }
         public String Surname { get; set; }
         public String IdentificationNumber { get; set; }
@@ -29,16 +24,16 @@ namespace Cengaver.TvHastanesi
         public String City { get; set; }
         public Int32? CountyCityId { get; set; }
         public String County { get; set; }
+        public Int32? InsertUserId { get; set; }
+        public String InsertDate { get; set; }
+        public Int32? UpdateUserId { get; set; }
+        public String UpdateDate { get; set; }
+        public Int16? IsActive { get; set; }
     
         [Imported, PreserveMemberCase]
         public static class Fields
         {
             [InlineConstant] public const string CustomerId = "CustomerId";
-            [InlineConstant] public const string InsertUserId = "InsertUserId";
-            [InlineConstant] public const string InsertDate = "InsertDate";
-            [InlineConstant] public const string IsActive = "IsActive";
-            [InlineConstant] public const string UpdateUserId = "UpdateUserId";
-            [InlineConstant] public const string UpdateDate = "UpdateDate";
             [InlineConstant] public const string Name = "Name";
             [InlineConstant] public const string Surname = "Surname";
             [InlineConstant] public const string IdentificationNumber = "IdentificationNumber";
@@ -50,6 +45,11 @@ namespace Cengaver.TvHastanesi
             [InlineConstant] public const string City = "City";
             [InlineConstant] public const string CountyCityId = "CountyCityId";
             [InlineConstant] public const string County = "County";
+            [InlineConstant] public const string InsertUserId = "InsertUserId";
+            [InlineConstant] public const string InsertDate = "InsertDate";
+            [InlineConstant] public const string UpdateUserId = "UpdateUserId";
+            [InlineConstant] public const string UpdateDate = "UpdateDate";
+            [InlineConstant] public const string IsActive = "IsActive";
         }
     }
     

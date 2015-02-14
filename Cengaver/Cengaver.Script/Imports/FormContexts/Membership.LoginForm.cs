@@ -8,6 +8,7 @@ namespace Cengaver.Membership
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Cengaver.TvHastanesi;
     using Cengaver.Northwind;
 
     public partial class LoginForm : PrefixedContext

@@ -10,19 +10,14 @@ namespace Cengaver.TvHastanesi
     using System.Runtime.CompilerServices;
 
     [Imported, Serializable, PreserveMemberCase]
-    public partial class ServiceTicketsRow
+    public partial class ServiceTicketRow
     {
         public Int32? ServiceTicketId { get; set; }
         public String ReceiveDate { get; set; }
         public String ProductSerialNumber { get; set; }
-        public Int32? InsertUserId { get; set; }
-        public String InsertDate { get; set; }
         public Int16? ProductTypeId { get; set; }
-        public Boolean? IsActive { get; set; }
         public String ProductMark { get; set; }
         public String ProductModel { get; set; }
-        public Int32? UpdateUserId { get; set; }
-        public String UpdateDate { get; set; }
         public String ProductDesctiption { get; set; }
         public String MalFunction { get; set; }
         public String TechnicianNote { get; set; }
@@ -38,6 +33,11 @@ namespace Cengaver.TvHastanesi
         public Int32? CustomerId { get; set; }
         public String InvoiceNumber { get; set; }
         public String RecordDate { get; set; }
+        public Int32? InsertUserId { get; set; }
+        public String InsertDate { get; set; }
+        public Int32? UpdateUserId { get; set; }
+        public String UpdateDate { get; set; }
+        public Int16? IsActive { get; set; }
     
         [Imported, PreserveMemberCase]
         public static class Fields
@@ -45,14 +45,9 @@ namespace Cengaver.TvHastanesi
             [InlineConstant] public const string ServiceTicketId = "ServiceTicketId";
             [InlineConstant] public const string ReceiveDate = "ReceiveDate";
             [InlineConstant] public const string ProductSerialNumber = "ProductSerialNumber";
-            [InlineConstant] public const string InsertUserId = "InsertUserId";
-            [InlineConstant] public const string InsertDate = "InsertDate";
             [InlineConstant] public const string ProductTypeId = "ProductTypeId";
-            [InlineConstant] public const string IsActive = "IsActive";
             [InlineConstant] public const string ProductMark = "ProductMark";
             [InlineConstant] public const string ProductModel = "ProductModel";
-            [InlineConstant] public const string UpdateUserId = "UpdateUserId";
-            [InlineConstant] public const string UpdateDate = "UpdateDate";
             [InlineConstant] public const string ProductDesctiption = "ProductDesctiption";
             [InlineConstant] public const string MalFunction = "MalFunction";
             [InlineConstant] public const string TechnicianNote = "TechnicianNote";
@@ -68,6 +63,11 @@ namespace Cengaver.TvHastanesi
             [InlineConstant] public const string CustomerId = "CustomerId";
             [InlineConstant] public const string InvoiceNumber = "InvoiceNumber";
             [InlineConstant] public const string RecordDate = "RecordDate";
+            [InlineConstant] public const string InsertUserId = "InsertUserId";
+            [InlineConstant] public const string InsertDate = "InsertDate";
+            [InlineConstant] public const string UpdateUserId = "UpdateUserId";
+            [InlineConstant] public const string UpdateDate = "UpdateDate";
+            [InlineConstant] public const string IsActive = "IsActive";
         }
     }
     

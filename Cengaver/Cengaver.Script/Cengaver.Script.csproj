@@ -103,7 +103,7 @@
     <Compile Include="Imports\FormContexts\TvHastanesi.MenuForm.cs">
       <DependentUpon>FormContexts.tt</DependentUpon>
     </Compile>
-    <Compile Include="Imports\FormContexts\TvHastanesi.ServiceTicketsForm.cs">
+    <Compile Include="Imports\FormContexts\TvHastanesi.ServiceTicketForm.cs">
       <DependentUpon>FormContexts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\FormContexts\TvHastanesi.UnitForm.cs">
@@ -295,10 +295,10 @@
     <Compile Include="Imports\ServiceContracts\TvHastanesi.MenuService.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
-    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceTicketsRow.cs">
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceTicketRow.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
-    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceTicketsService.cs">
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceTicketService.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\TvHastanesi.UnitRow.cs">

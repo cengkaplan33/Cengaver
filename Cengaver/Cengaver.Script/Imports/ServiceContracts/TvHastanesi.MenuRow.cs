@@ -19,13 +19,13 @@ namespace Cengaver.TvHastanesi
         public Int32? WebSiteId { get; set; }
         public String Path { get; set; }
         public String Url { get; set; }
-        public Int32? InsertUserId { get; set; }
-        public String InsertDate { get; set; }
-        public Boolean? IsActive { get; set; }
-        public Int32? UpdateUserId { get; set; }
-        public String UpdateDate { get; set; }
         public Int32? ParentId { get; set; }
         public Int32? RootId { get; set; }
+        public Int32? InsertUserId { get; set; }
+        public String InsertDate { get; set; }
+        public Int32? UpdateUserId { get; set; }
+        public String UpdateDate { get; set; }
+        public Int16? IsActive { get; set; }
     
         [Imported, PreserveMemberCase]
         public static class Fields
@@ -37,13 +37,13 @@ namespace Cengaver.TvHastanesi
             [InlineConstant] public const string WebSiteId = "WebSiteId";
             [InlineConstant] public const string Path = "Path";
             [InlineConstant] public const string Url = "Url";
-            [InlineConstant] public const string InsertUserId = "InsertUserId";
-            [InlineConstant] public const string InsertDate = "InsertDate";
-            [InlineConstant] public const string IsActive = "IsActive";
-            [InlineConstant] public const string UpdateUserId = "UpdateUserId";
-            [InlineConstant] public const string UpdateDate = "UpdateDate";
             [InlineConstant] public const string ParentId = "ParentId";
             [InlineConstant] public const string RootId = "RootId";
+            [InlineConstant] public const string InsertUserId = "InsertUserId";
+            [InlineConstant] public const string InsertDate = "InsertDate";
+            [InlineConstant] public const string UpdateUserId = "UpdateUserId";
+            [InlineConstant] public const string UpdateDate = "UpdateDate";
+            [InlineConstant] public const string IsActive = "IsActive";
         }
     }
     

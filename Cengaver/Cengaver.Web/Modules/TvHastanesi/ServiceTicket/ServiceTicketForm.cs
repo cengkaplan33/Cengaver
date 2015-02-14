@@ -13,6 +13,8 @@ namespace Cengaver.TvHastanesi.Forms
     [BasedOnRow(typeof(Entities.ServiceTicketRow))]
     public class ServiceTicketForm
     {
+
+[Category("General")]
         public DateTime ReceiveDate { get; set; }
         public String ProductSerialNumber { get; set; }
         public Int16 ProductTypeId { get; set; }

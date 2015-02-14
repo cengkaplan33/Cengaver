@@ -66,7 +66,7 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.CountyId[this] = value; }
         }
 
-        [DisplayName("Phone Number"), Size(13)]
+        [DisplayName("Phone Number"), Size(15)]
         public String PhoneNumber
         {
             get { return Fields.PhoneNumber[this]; }

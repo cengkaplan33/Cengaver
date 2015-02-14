@@ -7,7 +7,7 @@
     [RoutePrefix("TvHastanesi/Menu"), Route("{action=index}")]
     public class MenuController : Controller
     {
-        [PageAuthorize(PermissionKeys.General)]
+        [PageAuthorize(PermissionKeys.Admin)]
         public ActionResult Index()
         {
             return View("~/Modules/TvHastanesi/Menu/MenuIndex.cshtml");

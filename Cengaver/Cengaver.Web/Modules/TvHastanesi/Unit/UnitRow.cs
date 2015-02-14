@@ -14,7 +14,7 @@ namespace Cengaver.TvHastanesi.Entities
     [DeletePermission(PermissionKeys.Admin)]
     [ModifyPermission(PermissionKeys.Admin)]
     [JsonConverter(typeof(JsonRowConverter))]
-    public sealed class UnitRow : Row, IIdRow, INameRow
+    public sealed class UnitRow : Administration.Entities.LoggingRow, IIdRow, INameRow
     {
         [DisplayName("Unit Id"), Identity]
         public Int32? UnitId
@@ -42,41 +42,6 @@ namespace Cengaver.TvHastanesi.Entities
         {
             get { return Fields.Path[this]; }
             set { Fields.Path[this] = value; }
-        }
-
-        [DisplayName("Insert User Id"), NotNull]
-        public Int32? InsertUserId
-        {
-            get { return Fields.InsertUserId[this]; }
-            set { Fields.InsertUserId[this] = value; }
-        }
-
-        [DisplayName("Insert Date"), NotNull]
-        public DateTime? InsertDate
-        {
-            get { return Fields.InsertDate[this]; }
-            set { Fields.InsertDate[this] = value; }
-        }
-
-        [DisplayName("Is Active"), NotNull]
-        public Boolean? IsActive
-        {
-            get { return Fields.IsActive[this]; }
-            set { Fields.IsActive[this] = value; }
-        }
-
-        [DisplayName("Update User Id")]
-        public Int32? UpdateUserId
-        {
-            get { return Fields.UpdateUserId[this]; }
-            set { Fields.UpdateUserId[this] = value; }
-        }
-
-        [DisplayName("Update Date")]
-        public DateTime? UpdateDate
-        {
-            get { return Fields.UpdateDate[this]; }
-            set { Fields.UpdateDate[this] = value; }
         }
 
         [DisplayName("Manager Id")]
@@ -117,17 +82,12 @@ namespace Cengaver.TvHastanesi.Entities
         {
         }
 
-        public class RowFields : RowFieldsBase
+        public class RowFields : Administration.Entities.LoggingRow.LoggingRowFields
         {
             public readonly Int32Field UnitId;
             public readonly StringField Unit;
             public readonly Int32Field UnitTypeId;
             public readonly StringField Path;
-            public readonly Int32Field InsertUserId;
-            public readonly DateTimeField InsertDate;
-            public readonly BooleanField IsActive;
-            public readonly Int32Field UpdateUserId;
-            public readonly DateTimeField UpdateDate;
             public readonly Int32Field ManagerId;
             public readonly Int32Field FirmId;
             public readonly Int32Field ParentId;

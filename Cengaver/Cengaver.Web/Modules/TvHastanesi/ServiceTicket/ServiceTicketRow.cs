@@ -14,7 +14,7 @@ namespace Cengaver.TvHastanesi.Entities
     [DeletePermission(PermissionKeys.General)]
     [ModifyPermission(PermissionKeys.General)]
     [JsonConverter(typeof(JsonRowConverter))]
-    public sealed class ServiceTicketRow : Row, IIdRow, INameRow
+    public sealed class ServiceTicketRow : Cengaver.Administration.Entities.LoggingRow, IIdRow, INameRow
     {
         [DisplayName("Service Ticket Id"), Identity]
         public Int32? ServiceTicketId
@@ -37,32 +37,11 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.ProductSerialNumber[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull]
-        public Int32? InsertUserId
-        {
-            get { return Fields.InsertUserId[this]; }
-            set { Fields.InsertUserId[this] = value; }
-        }
-
-        [DisplayName("Insert Date"), NotNull]
-        public DateTime? InsertDate
-        {
-            get { return Fields.InsertDate[this]; }
-            set { Fields.InsertDate[this] = value; }
-        }
-
         [DisplayName("Product Type Id"), NotNull]
         public Int16? ProductTypeId
         {
             get { return Fields.ProductTypeId[this]; }
             set { Fields.ProductTypeId[this] = value; }
-        }
-
-        [DisplayName("Is Active"), NotNull]
-        public Boolean? IsActive
-        {
-            get { return Fields.IsActive[this]; }
-            set { Fields.IsActive[this] = value; }
         }
 
         [DisplayName("Product Mark"), Size(10)]
@@ -77,21 +56,7 @@ namespace Cengaver.TvHastanesi.Entities
         {
             get { return Fields.ProductModel[this]; }
             set { Fields.ProductModel[this] = value; }
-        }
-
-        [DisplayName("Update User Id")]
-        public Int32? UpdateUserId
-        {
-            get { return Fields.UpdateUserId[this]; }
-            set { Fields.UpdateUserId[this] = value; }
-        }
-
-        [DisplayName("Update Date")]
-        public DateTime? UpdateDate
-        {
-            get { return Fields.UpdateDate[this]; }
-            set { Fields.UpdateDate[this] = value; }
-        }
+        } 
 
         [DisplayName("Product Desctiption"), Size(200)]
         public String ProductDesctiption
@@ -215,19 +180,14 @@ namespace Cengaver.TvHastanesi.Entities
         {
         }
 
-        public class RowFields : RowFieldsBase
+        public class RowFields : Administration.Entities.LoggingRow.LoggingRowFields
         {
             public readonly Int32Field ServiceTicketId;
             public readonly DateTimeField ReceiveDate;
             public readonly StringField ProductSerialNumber;
-            public readonly Int32Field InsertUserId;
-            public readonly DateTimeField InsertDate;
             public readonly Int16Field ProductTypeId;
-            public readonly BooleanField IsActive;
             public readonly StringField ProductMark;
             public readonly StringField ProductModel;
-            public readonly Int32Field UpdateUserId;
-            public readonly DateTimeField UpdateDate;
             public readonly StringField ProductDesctiption;
             public readonly StringField MalFunction;
             public readonly StringField TechnicianNote;

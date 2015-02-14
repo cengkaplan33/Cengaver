@@ -1,8 +1,4 @@
-﻿
-
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "TvHastanesi/ServiceTicket", typeof(Cengaver.TvHastanesi.Pages.ServiceTicketController))]
-
-namespace Cengaver.TvHastanesi.Pages
+﻿namespace Cengaver.TvHastanesi.Pages
 {
     using Serenity;
     using Serenity.Web;
@@ -11,7 +7,7 @@ namespace Cengaver.TvHastanesi.Pages
     [RoutePrefix("TvHastanesi/ServiceTicket"), Route("{action=index}")]
     public class ServiceTicketController : Controller
     {
-        [PageAuthorize("rrrrr")]
+        [PageAuthorize(PermissionKeys.General)]
         public ActionResult Index()
         {
             return View("~/Modules/TvHastanesi/ServiceTicket/ServiceTicketIndex.cshtml");

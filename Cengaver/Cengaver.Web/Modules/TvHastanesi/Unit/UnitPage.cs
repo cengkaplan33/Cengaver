@@ -7,7 +7,7 @@
     [RoutePrefix("TvHastanesi/Unit"), Route("{action=index}")]
     public class UnitController : Controller
     {
-        [PageAuthorize(PermissionKeys.General)]
+        [PageAuthorize(PermissionKeys.Admin)]
         public ActionResult Index()
         {
             return View("~/Modules/TvHastanesi/Unit/UnitIndex.cshtml");

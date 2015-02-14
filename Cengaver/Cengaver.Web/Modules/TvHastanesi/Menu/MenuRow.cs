@@ -14,7 +14,7 @@ namespace Cengaver.TvHastanesi.Entities
     [DeletePermission(PermissionKeys.Admin)]
     [ModifyPermission(PermissionKeys.Admin)]
     [JsonConverter(typeof(JsonRowConverter))]
-    public sealed class MenuRow : Row, IIdRow, INameRow
+    public sealed class MenuRow : Administration.Entities.LoggingRow, IIdRow, INameRow
     {
         [DisplayName("Menu Id"), Identity]
         public Int32? MenuId
@@ -65,41 +65,6 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.Url[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull]
-        public Int32? InsertUserId
-        {
-            get { return Fields.InsertUserId[this]; }
-            set { Fields.InsertUserId[this] = value; }
-        }
-
-        [DisplayName("Insert Date"), NotNull]
-        public DateTime? InsertDate
-        {
-            get { return Fields.InsertDate[this]; }
-            set { Fields.InsertDate[this] = value; }
-        }
-
-        [DisplayName("Is Active"), NotNull]
-        public Boolean? IsActive
-        {
-            get { return Fields.IsActive[this]; }
-            set { Fields.IsActive[this] = value; }
-        }
-
-        [DisplayName("Update User Id")]
-        public Int32? UpdateUserId
-        {
-            get { return Fields.UpdateUserId[this]; }
-            set { Fields.UpdateUserId[this] = value; }
-        }
-
-        [DisplayName("Update Date")]
-        public DateTime? UpdateDate
-        {
-            get { return Fields.UpdateDate[this]; }
-            set { Fields.UpdateDate[this] = value; }
-        }
-
         [DisplayName("Parent Id")]
         public Int32? ParentId
         {
@@ -131,7 +96,7 @@ namespace Cengaver.TvHastanesi.Entities
         {
         }
 
-        public class RowFields : RowFieldsBase
+        public class RowFields : Administration.Entities.LoggingRow.LoggingRowFields
         {
             public readonly Int32Field MenuId;
             public readonly StringField Menu;
@@ -140,11 +105,6 @@ namespace Cengaver.TvHastanesi.Entities
             public readonly Int32Field WebSiteId;
             public readonly StringField Path;
             public readonly StringField Url;
-            public readonly Int32Field InsertUserId;
-            public readonly DateTimeField InsertDate;
-            public readonly BooleanField IsActive;
-            public readonly Int32Field UpdateUserId;
-            public readonly DateTimeField UpdateDate;
             public readonly Int32Field ParentId;
             public readonly Int32Field RootId;
 

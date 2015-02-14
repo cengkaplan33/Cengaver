@@ -15,11 +15,6 @@ namespace Cengaver.TvHastanesi.Forms
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 CustomerId { get; set; }
-        public Int32 InsertUserId { get; set; }
-        public DateTime InsertDate { get; set; }
-        public Boolean IsActive { get; set; }
-        public Int32 UpdateUserId { get; set; }
-        public DateTime UpdateDate { get; set; }
         [EditLink]
         public String Name { get; set; }
         public String Surname { get; set; }
@@ -33,5 +28,12 @@ namespace Cengaver.TvHastanesi.Forms
         public Int32 CountyId { get; set; }
         public String PhoneNumber { get; set; }
         public String EmailAddress { get; set; }
+
+
+        //public Int32 InsertUserId { get; set; }
+        //public DateTime InsertDate { get; set; }
+        //public Boolean IsActive { get; set; }
+        //public Int32 UpdateUserId { get; set; }
+        //public DateTime UpdateDate { get; set; }
     }
 }

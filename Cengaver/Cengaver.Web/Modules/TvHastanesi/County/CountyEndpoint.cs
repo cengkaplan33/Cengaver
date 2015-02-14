@@ -10,7 +10,7 @@ namespace Cengaver.TvHastanesi.Endpoints
     using MyRow = Entities.CountyRow;
 
     [RoutePrefix("Services/TvHastanesi/County"), Route("{action}")]
-    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.General)]
+    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.Admin)]
     public class CountyController : ServiceEndpoint
     {
         [HttpPost]

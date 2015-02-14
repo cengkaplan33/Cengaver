@@ -1215,15 +1215,15 @@
 		this.$form = null;
 		ss.makeGenericType(Serenity.EntityDialog$1, [Object]).call(this);
 		this.$form = new $Cengaver_TvHastanesi_CustomerForm(this.get_idPrefix());
-		Serenity.WX.change(this.$form.get_emailAddress(), ss.mkdel(this, function(e) {
-			Q.alert('email address changed' + this.$form.get_emailAddress().get_value());
-		}));
+		Serenity.WX.change(this.$form.get_emailAddress(), function(e) {
+			//Q.Alert("email address changed" + form.EmailAddress.Value);
+		});
 		//jQueryEventHandler changeSiteId = delegate(jQueryEvent e)
 		//{
 		//    new UserTypeEditor(this.ById("UserTypeId"), new UserTypeEditorOptions() { SiteId = int.Parse(B2CSiteSettingEditor.From(this.ById("SiteId")).Value.ToString()) });
 		//};
 		//this.ById("SiteId").bind("change", changeSiteId).bind("updateDependents", changeSiteId);
-		new $Cengaver_TvHastanesi_CustomerEditor(this.byId$1('UpdateUserId'));
+		//new CustomerEditor(this.ById("UpdateUserId"));
 	};
 	$Cengaver_TvHastanesi_CustomerDialog.__typeName = 'Cengaver.TvHastanesi.CustomerDialog';
 	global.Cengaver.TvHastanesi.CustomerDialog = $Cengaver_TvHastanesi_CustomerDialog;

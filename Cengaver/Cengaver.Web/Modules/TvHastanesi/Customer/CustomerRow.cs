@@ -15,48 +15,13 @@ namespace Cengaver.TvHastanesi.Entities
     [ModifyPermission(PermissionKeys.General)]
     [JsonConverter(typeof(JsonRowConverter))]
     [LookupScript("TvHastanesi.Customer")]
-    public sealed class CustomerRow : Row, IIdRow, INameRow
+    public sealed class CustomerRow : Administration.Entities.LoggingRow, IIdRow, INameRow
     {
         [DisplayName("Customer Id"), Identity]
         public Int32? CustomerId
         {
             get { return Fields.CustomerId[this]; }
             set { Fields.CustomerId[this] = value; }
-        }
-
-        [DisplayName("Insert User Id"), NotNull]
-        public Int32? InsertUserId
-        {
-            get { return Fields.InsertUserId[this]; }
-            set { Fields.InsertUserId[this] = value; }
-        }
-
-        [DisplayName("Insert Date"), NotNull]
-        public DateTime? InsertDate
-        {
-            get { return Fields.InsertDate[this]; }
-            set { Fields.InsertDate[this] = value; }
-        }
-
-        [DisplayName("Is Active"), NotNull]
-        public Boolean? IsActive
-        {
-            get { return Fields.IsActive[this]; }
-            set { Fields.IsActive[this] = value; }
-        }
-
-        [DisplayName("Update User Id")]
-        public Int32? UpdateUserId
-        {
-            get { return Fields.UpdateUserId[this]; }
-            set { Fields.UpdateUserId[this] = value; }
-        }
-
-        [DisplayName("Update Date")]
-        public DateTime? UpdateDate
-        {
-            get { return Fields.UpdateDate[this]; }
-            set { Fields.UpdateDate[this] = value; }
         }
 
         [DisplayName("Name"), Size(15), QuickSearch]
@@ -153,14 +118,9 @@ namespace Cengaver.TvHastanesi.Entities
         {
         }
 
-        public class RowFields : RowFieldsBase
+        public class RowFields : Administration.Entities.LoggingRow.LoggingRowFields
         {
             public readonly Int32Field CustomerId;
-            public readonly Int32Field InsertUserId;
-            public readonly DateTimeField InsertDate;
-            public readonly BooleanField IsActive;
-            public readonly Int32Field UpdateUserId;
-            public readonly DateTimeField UpdateDate;
             public readonly StringField Name;
             public readonly StringField Surname;
             public readonly StringField IdentificationNumber;

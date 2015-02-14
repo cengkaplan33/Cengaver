@@ -19,7 +19,7 @@ namespace Cengaver.TvHastanesi
             form = new CustomerForm(this.IdPrefix);
             form.EmailAddress.Change(e =>
             {
-                Q.Alert("email address changed" + form.EmailAddress.Value);
+                //Q.Alert("email address changed" + form.EmailAddress.Value);
             });
 
             //jQueryEventHandler changeSiteId = delegate(jQueryEvent e)
@@ -29,7 +29,7 @@ namespace Cengaver.TvHastanesi
 
             //this.ById("SiteId").bind("change", changeSiteId).bind("updateDependents", changeSiteId);
 
-            new CustomerEditor(this.ById("UpdateUserId"));
+            //new CustomerEditor(this.ById("UpdateUserId"));
         }
     }
 

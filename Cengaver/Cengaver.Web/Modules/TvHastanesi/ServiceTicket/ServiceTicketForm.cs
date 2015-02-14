@@ -15,14 +15,9 @@ namespace Cengaver.TvHastanesi.Forms
     {
         public DateTime ReceiveDate { get; set; }
         public String ProductSerialNumber { get; set; }
-        public Int32 InsertUserId { get; set; }
-        public DateTime InsertDate { get; set; }
         public Int16 ProductTypeId { get; set; }
-        public Boolean IsActive { get; set; }
         public String ProductMark { get; set; }
         public String ProductModel { get; set; }
-        public Int32 UpdateUserId { get; set; }
-        public DateTime UpdateDate { get; set; }
         public String ProductDesctiption { get; set; }
         public String MalFunction { get; set; }
         public String TechnicianNote { get; set; }
@@ -38,5 +33,12 @@ namespace Cengaver.TvHastanesi.Forms
         public Int32 CustomerId { get; set; }
         public String InvoiceNumber { get; set; }
         public String RecordDate { get; set; }
+
+
+        //public Int32 InsertUserId { get; set; }
+        //public DateTime InsertDate { get; set; }
+        //public Boolean IsActive { get; set; }
+        //public Int32 UpdateUserId { get; set; }
+        //public DateTime UpdateDate { get; set; }
     }
 }

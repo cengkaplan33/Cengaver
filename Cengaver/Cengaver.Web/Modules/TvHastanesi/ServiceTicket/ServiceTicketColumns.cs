@@ -19,7 +19,6 @@ namespace Cengaver.TvHastanesi.Forms
         [EditLink]
         public String ProductSerialNumber { get; set; }
         public Int16 ProductTypeId { get; set; }
-        public Boolean IsActive { get; set; }
         public String ProductMark { get; set; }
         public String ProductModel { get; set; }
         public String ProductDesctiption { get; set; }

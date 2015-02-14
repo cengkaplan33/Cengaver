@@ -10,7 +10,7 @@ namespace Cengaver.TvHastanesi.Endpoints
     using MyRow = Entities.MenuRow;
 
     [RoutePrefix("Services/TvHastanesi/Menu"), Route("{action}")]
-    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.General)]
+    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.Admin)]
     public class MenuController : ServiceEndpoint
     {
         [HttpPost]

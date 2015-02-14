@@ -18,15 +18,14 @@
             @*@Html.Partial("/Views/Shared/bootstrap/Header/_ChangeLayout.cshtml")
                 @Html.Partial("/Views/Shared/bootstrap/Header/_ChangeTheme.cshtml")*@
 
-            @if (true)
+            @if (User.Identity.IsAuthenticated)
             {
-                <li><a href="@Url.Content("~/dashboard")"><span class="glyphicon glyphicon-log-in"></span> Giriş </a></li>
-                @*<li><a href="@Url.Content("~/yeni-uye")"><span class="glyphicon glyphicon-user"></span> Yeni Üye</a></li>
-                    <li><a href="@Url.Content("~/giris")"><span class="glyphicon glyphicon-log-in"></span> Üye Girişi</a></li>*@
+                <li><a href="@Url.Content("~/dashboard")" >  Hoşgeldin @User.Identity.Name </a></li>
             }
             else
             {
-                string displayName = "";
+                 <li><a href="@Url.Content("~/dashboard")"> <span class="glyphicon glyphicon-log-in"></span> Giriş </a></li>
+                @*string displayName = "";
                 var userId = 12; // SecurityHelper.ActualUserIdOrNull;
                 if (userId != null)
                 {
@@ -34,10 +33,10 @@
                     //displayName = Surat.Web.Security.UserCache.ById(userId.Value).DisplayName;
                     //Hoşgeldin @(displayName.Length > 28 ? (displayName.Substring(0, 25) + "...") : displayName)
 
-                    @*if (SecurityHelper.HasRight(new AccessRight("CmsPageEditor")))
+                     if (SecurityHelper.HasRight(new AccessRight("CmsPageEditor")))
                         {
                             <li><a id="left-panel-link" href="#left-panel">Tema & Eklenti Yönetimi</a></li>
-                        }*@
+                        } 
                     <li><a href="@Url.Content("~/uye")"><span class=""></span>Bilgilerim (@displayName)</a></li>
                     <li><a href="@Url.Content("~/uye/siparislerim")"><span class=""></span>Sipariş Takibi</a></li>
                     <li class="dropdown">
@@ -47,7 +46,7 @@
                         </ul>
                     </li>
                     <li><a href="@Url.Content("~/cikis")"><span class=""></span> Çıkış</a></li>
-                }
+                }*@
             }
 
         </ul>

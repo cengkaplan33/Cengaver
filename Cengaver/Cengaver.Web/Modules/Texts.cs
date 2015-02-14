@@ -31,7 +31,7 @@ namespace Cengaver
             {
                 public static class Login
                 {
-                    public static LocalText FormTitle = "Welcome to SERENE (Serenity Application Template)";
+                    public static LocalText FormTitle = "Welcome to TvHastanesi (Administration Panel)";
                     public static LocalText SignInButton = "Sign In";
                 }
             }
@@ -47,7 +47,7 @@ namespace Cengaver
         {
             public static class Dashboard
             {
-                public static LocalText WelcomeMessage = "Welcome to SERENE home page. " +
+                public static LocalText WelcomeMessage = "Welcome to TvHastanesi home page. " +
                     "Use the navigation on left to browse other pages...";
             }
 

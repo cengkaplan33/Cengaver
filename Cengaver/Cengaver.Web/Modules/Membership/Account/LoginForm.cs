@@ -12,9 +12,9 @@ namespace Cengaver.Membership.Forms
     [BasedOnRow(typeof(Administration.Entities.UserRow))]
     public class LoginForm
     {
-        [Placeholder("default username is 'admin'")]
+        [Placeholder("username")]
         public String Username { get; set; }
-        [PasswordEditor, Placeholder("default password for admin user is 'serenity'"), Required(true)]
+        [PasswordEditor, Placeholder("password"), Required(true)]
         public String Password { get; set; }
     }
 }

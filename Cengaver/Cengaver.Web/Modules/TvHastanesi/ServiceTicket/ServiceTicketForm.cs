@@ -13,34 +13,32 @@ namespace Cengaver.TvHastanesi.Forms
     [BasedOnRow(typeof(Entities.ServiceTicketRow))]
     public class ServiceTicketForm
     {
-
-[Category("General")]
-        public DateTime ReceiveDate { get; set; }
+        [Category("ProductInfo")]
         public String ProductSerialNumber { get; set; }
         public Int16 ProductTypeId { get; set; }
         public String ProductMark { get; set; }
         public String ProductModel { get; set; }
         public String ProductDesctiption { get; set; }
+
+        [Category("General")]
+        public String InvoiceNumber { get; set; }
+        public DateTime ReceiveDate { get; set; }
+        public DateTime DeliveryDate { get; set; }
+        public Int32 OperationId { get; set; }    //Hizmet TİPİ
+        public Int32 StageId { get; set; }        //SERVİS TİPİ
+        public String Description { get; set; }
+        public Int32 CustomerId { get; set; }
+        //public String RecordDate { get; set; }        //böyle bir alan yok
+
+        [Category("Note")]
         public String MalFunction { get; set; }
         public String TechnicianNote { get; set; }
+
+        [Category("Cost")]
         public Decimal RepairCost { get; set; }
         public Decimal LaborCost { get; set; }
         public Decimal PieceCost { get; set; }
         public String TotalCost { get; set; }
         public Int16 PaymentTypeId { get; set; }
-        public DateTime DeliveryDate { get; set; }
-        public Int32 OperationId { get; set; }
-        public Int32 StageId { get; set; }
-        public String Description { get; set; }
-        public Int32 CustomerId { get; set; }
-        public String InvoiceNumber { get; set; }
-        public String RecordDate { get; set; }
-
-
-        //public Int32 InsertUserId { get; set; }
-        //public DateTime InsertDate { get; set; }
-        //public Boolean IsActive { get; set; }
-        //public Int32 UpdateUserId { get; set; }
-        //public DateTime UpdateDate { get; set; }
     }
 }

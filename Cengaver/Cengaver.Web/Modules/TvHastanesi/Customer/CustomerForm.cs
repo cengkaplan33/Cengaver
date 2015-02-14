@@ -13,25 +13,25 @@ namespace Cengaver.TvHastanesi.Forms
     [BasedOnRow(typeof(Entities.CustomerRow))]
     public class CustomerForm
     {
+        [Required]
         public String Name { get; set; }
+        [Required]
         public String Surname { get; set; }
-
-        [NumberFormatter]
         public String IdentificationNumber { get; set; }
     
         [TextAreaEditor]
         public String Address { get; set; }
 
-        [LookupEditor(typeof(Entities.CityRow))]
+        [LookupEditor(typeof(Entities.CityRow)), Required]
         public Int32 CityId { get; set; }
 
-        [CountyEditor(CityEditorID = "CityId")]
+        [CountyEditor(CityEditorID = "CityId"), Required]
         public Int32 CountyId { get; set; }
 
-        [PhoneEditor]
+        [PhoneEditor, Required]
         public String PhoneNumber { get; set; }
 
-        //[EmailEditor]
+        [EmailEditor]
         public String EmailAddress { get; set; }
 
 

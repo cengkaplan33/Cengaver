@@ -2491,7 +2491,7 @@
 			return this.byId(Serenity.PhoneEditor).call(this, 'PhoneNumber');
 		},
 		get_emailAddress: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'EmailAddress');
+			return this.byId(Serenity.EmailEditor).call(this, 'EmailAddress');
 		}
 	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_CustomerGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
@@ -2528,9 +2528,6 @@
 	ss.initClass($Cengaver_TvHastanesi_MenuService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_ServiceTicketDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
 	ss.initClass($Cengaver_TvHastanesi_ServiceTicketForm, $asm, {
-		get_receiveDate: function() {
-			return this.byId(Serenity.DateEditor).call(this, 'ReceiveDate');
-		},
 		get_productSerialNumber: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'ProductSerialNumber');
 		},
@@ -2545,6 +2542,27 @@
 		},
 		get_productDesctiption: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'ProductDesctiption');
+		},
+		get_invoiceNumber: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'InvoiceNumber');
+		},
+		get_receiveDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'ReceiveDate');
+		},
+		get_deliveryDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'DeliveryDate');
+		},
+		get_operationId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'OperationId');
+		},
+		get_stageId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'StageId');
+		},
+		get_description: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Description');
+		},
+		get_customerId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'CustomerId');
 		},
 		get_malFunction: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'MalFunction');
@@ -2566,27 +2584,6 @@
 		},
 		get_paymentTypeId: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'PaymentTypeId');
-		},
-		get_deliveryDate: function() {
-			return this.byId(Serenity.DateEditor).call(this, 'DeliveryDate');
-		},
-		get_operationId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'OperationId');
-		},
-		get_stageId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'StageId');
-		},
-		get_description: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'Description');
-		},
-		get_customerId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'CustomerId');
-		},
-		get_invoiceNumber: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'InvoiceNumber');
-		},
-		get_recordDate: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'RecordDate');
 		}
 	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_ServiceTicketGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
@@ -2601,21 +2598,6 @@
 		},
 		get_path: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'Path');
-		},
-		get_insertUserId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'InsertUserId');
-		},
-		get_insertDate: function() {
-			return this.byId(Serenity.DateEditor).call(this, 'InsertDate');
-		},
-		get_isActive: function() {
-			return this.byId(Serenity.BooleanEditor).call(this, 'IsActive');
-		},
-		get_updateUserId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'UpdateUserId');
-		},
-		get_updateDate: function() {
-			return this.byId(Serenity.DateEditor).call(this, 'UpdateDate');
 		},
 		get_managerId: function() {
 			return this.byId(Serenity.IntegerEditor).call(this, 'ManagerId');

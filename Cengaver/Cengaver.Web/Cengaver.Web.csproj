@@ -531,6 +531,9 @@
     <Content Include="Modules\FrontPage\MaintenanceProduct\MaintenanceProductIndex.cshtml" />
     <Content Include="Modules\FrontPage\Phone\PhoneIndex.cshtml" />
     <Content Include="Modules\FrontPage\_ViewStart.cshtml" />
+    <Content Include="Content\site\site.TvHastanesi.less" />
+    <Content Include="Modules\TvHastanesi\ServiceTicket\SonyKrediFatura.cshtml" />
+    <Content Include="Modules\TvHastanesi\ServiceTicket\SonyKrediFatura - Copy.cshtml" />
     <None Include="Properties\PublishProfiles\Cengaver_TvHastanesi.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Readme.CodeGenerator.txt" />
@@ -879,6 +882,9 @@
     <Compile Include="Modules\TvHastanesi\Menu\MenuRepository.cs" />
     <Compile Include="Modules\TvHastanesi\Menu\MenuRow.cs" />
     <Compile Include="Modules\TvHastanesi\PermissionKeys.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceTicket\FrontPageEndpoint.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceTicket\SonyKrediFaturaReport.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketRepository.cs" />
     <Compile Include="Modules\TvHastanesi\Unit\UnitColumns.cs" />
     <Compile Include="Modules\TvHastanesi\Unit\UnitEndpoint.cs" />
     <Compile Include="Modules\TvHastanesi\Unit\UnitForm.cs" />
@@ -982,12 +988,13 @@
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketRow.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketColumns.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketForm.cs" />
-    <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketRepository.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketEndpoint.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Modules\TvHastanesi\Report\" />
+    <Folder Include="Views\ServiceTicketReport\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

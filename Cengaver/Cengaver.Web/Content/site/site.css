@@ -867,6 +867,234 @@ div.s-Toolbar .s-PopupToolButton .button-outer > span > b {
 .s-TerritoryDialog .s-PropertyGrid .categories {
   height: 260px;
 }
+.s-CityDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-CityDialog .tab-pane {
+  height: auto;
+}
+.s-CityDialog .caption {
+  width: 150px;
+}
+.s-CityDialog .editor {
+  width: 400px;
+}
+.s-CityDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-CityDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-CityDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-CityDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-CityDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-CityDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-CityDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-CityDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
+.s-CountyDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-CountyDialog .tab-pane {
+  height: auto;
+}
+.s-CountyDialog .caption {
+  width: 150px;
+}
+.s-CountyDialog .editor {
+  width: 400px;
+}
+.s-CountyDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-CountyDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-CountyDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-CountyDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-CountyDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-CountyDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-CountyDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-CountyDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
+.s-UnitDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-UnitDialog .tab-pane {
+  height: auto;
+}
+.s-UnitDialog .caption {
+  width: 150px;
+}
+.s-UnitDialog .editor {
+  width: 400px;
+}
+.s-UnitDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-UnitDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-UnitDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-UnitDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-UnitDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-UnitDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-UnitDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-UnitDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
+.s-MenuDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-MenuDialog .tab-pane {
+  height: auto;
+}
+.s-MenuDialog .caption {
+  width: 150px;
+}
+.s-MenuDialog .editor {
+  width: 400px;
+}
+.s-MenuDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-MenuDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-MenuDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-MenuDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-MenuDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-MenuDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-MenuDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-MenuDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
+.s-CustomerDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-CustomerDialog .tab-pane {
+  height: auto;
+}
+.s-CustomerDialog .caption {
+  width: 150px;
+}
+.s-CustomerDialog .editor {
+  width: 400px;
+}
+.s-CustomerDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-CustomerDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-CustomerDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-CustomerDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-CustomerDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-CustomerDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-CustomerDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-CustomerDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
+.s-ServiceTicketDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-ServiceTicketDialog .tab-pane {
+  height: auto;
+}
+.s-ServiceTicketDialog .caption {
+  width: 150px;
+}
+.s-ServiceTicketDialog .editor {
+  width: 400px;
+}
+.s-ServiceTicketDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-ServiceTicketDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-ServiceTicketDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-ServiceTicketDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-ServiceTicketDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-ServiceTicketDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-ServiceTicketDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-ServiceTicketDialog .s-PropertyGrid .categories {
+  height: 500px;
+}
 a,
 .slick-cell > a {
   color: #0000be;
@@ -1045,291 +1273,4 @@ a,
 .theme-selection .theme-light {
   background-color: #ccc;
   border-color: #2f79aa;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-CityDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-CityDialog .tab-pane {
-  height: auto;
-}
-.s-CityDialog .caption {
-  width: 150px;
-}
-.s-CityDialog .editor {
-  width: 400px;
-}
-.s-CityDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-CityDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-CityDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-CityDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-CityDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-CityDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-CityDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-CityDialog .s-PropertyGrid .categories {
-  height: 260px;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-CountyDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-CountyDialog .tab-pane {
-  height: auto;
-}
-.s-CountyDialog .caption {
-  width: 150px;
-}
-.s-CountyDialog .editor {
-  width: 400px;
-}
-.s-CountyDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-CountyDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-CountyDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-CountyDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-CountyDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-CountyDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-CountyDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-CountyDialog .s-PropertyGrid .categories {
-  height: 260px;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-UnitDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-UnitDialog .tab-pane {
-  height: auto;
-}
-.s-UnitDialog .caption {
-  width: 150px;
-}
-.s-UnitDialog .editor {
-  width: 400px;
-}
-.s-UnitDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-UnitDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-UnitDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-UnitDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-UnitDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-UnitDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-UnitDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-UnitDialog .s-PropertyGrid .categories {
-  height: 260px;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-MenuDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-MenuDialog .tab-pane {
-  height: auto;
-}
-.s-MenuDialog .caption {
-  width: 150px;
-}
-.s-MenuDialog .editor {
-  width: 400px;
-}
-.s-MenuDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-MenuDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-MenuDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-MenuDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-MenuDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-MenuDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-MenuDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-MenuDialog .s-PropertyGrid .categories {
-  height: 260px;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-ServiceTicketsDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-ServiceTicketsDialog .tab-pane {
-  height: auto;
-}
-.s-ServiceTicketsDialog .caption {
-  width: 150px;
-}
-.s-ServiceTicketsDialog .editor {
-  width: 400px;
-}
-.s-ServiceTicketsDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-ServiceTicketsDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-ServiceTicketsDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-ServiceTicketsDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-ServiceTicketsDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-ServiceTicketsDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-ServiceTicketsDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-ServiceTicketsDialog .s-PropertyGrid .categories {
-  height: 260px;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-CustomerDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-CustomerDialog .tab-pane {
-  height: auto;
-}
-.s-CustomerDialog .caption {
-  width: 150px;
-}
-.s-CustomerDialog .editor {
-  width: 400px;
-}
-.s-CustomerDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-CustomerDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-CustomerDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-CustomerDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-CustomerDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-CustomerDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-CustomerDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-CustomerDialog .s-PropertyGrid .categories {
-  height: 260px;
-}
-/* ------------------------------------------------------------------------- */
-/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
-/* ------------------------------------------------------------------------- */
-.s-ServiceTicketDialog > .size {
-  min-width: 650px;
-  width: 650px;
-}
-.s-ServiceTicketDialog .tab-pane {
-  height: auto;
-}
-.s-ServiceTicketDialog .caption {
-  width: 150px;
-}
-.s-ServiceTicketDialog .editor {
-  width: 400px;
-}
-.s-ServiceTicketDialog input.editor[type=checkbox] {
-  width: auto;
-}
-.s-ServiceTicketDialog .s-Form .editor.dateQ {
-  width: 383px;
-}
-.s-ServiceTicketDialog .s-Form .editor.emailuser {
-  width: 170px;
-}
-.s-ServiceTicketDialog .s-Form .editor.dateQ.s-DateTimeEditor {
-  width: 323px;
-}
-.s-ServiceTicketDialog .s-Form .editor.s-DateTimeEditor.time {
-  width: 56px;
-  margin-left: 4px;
-}
-.s-ServiceTicketDialog .s-Form .editor.has-inplace-button {
-  width: 378px;
-}
-.s-ServiceTicketDialog .s-Form .emaildomain {
-  width: 215px;
-}
-.s-ServiceTicketDialog .s-PropertyGrid .categories {
-  height: 260px;
 }

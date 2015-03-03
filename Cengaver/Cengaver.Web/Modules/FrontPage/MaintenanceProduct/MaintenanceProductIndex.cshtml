@@ -1,4 +1,5 @@
-﻿
+﻿@model Cengaver.TvHastanesi.Models.MaintenanceProductModel
+
 @{
     Layout = "~/Views/TvHastanesi/_Body.cshtml";
     ViewBag.Title = "Servis Durumu Sorgulama - Televizyon Hastanesi";
@@ -6,4 +7,8 @@
 }
 
 
-bakım modu
+ <br /><br /><br /><br />
+@if(Model != null && Model.ServiceTicket != null )
+{
+    <span> Ürün Seri Numarası :   @Model.ServiceTicket.ProductSerialNumber </span>
+}

@@ -2487,6 +2487,9 @@
 		get_countyId: function() {
 			return this.byId($Cengaver_TvHastanesi_CountyEditor).call(this, 'CountyId');
 		},
+		get_mobileNumber: function() {
+			return this.byId(Serenity.PhoneEditor).call(this, 'MobileNumber');
+		},
 		get_phoneNumber: function() {
 			return this.byId(Serenity.PhoneEditor).call(this, 'PhoneNumber');
 		},
@@ -2526,13 +2529,32 @@
 	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_MenuGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_MenuService, $asm, {});
-	ss.initClass($Cengaver_TvHastanesi_ServiceTicketDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_ServiceTicketDialog, $asm, {
+		afterLoadEntity: function() {
+			ss.makeGenericType(Serenity.EntityDialog$2, [Object, Object]).prototype.afterLoadEntity.call(this);
+			var uretim = this.toolbar.findButton('.s-SonyKrediFaturaButton').toggle(this.get_isEditMode());
+			if (this.get_isEditMode()) {
+				uretim.html('<div class="button-outer"> <a style="display: block;" target="_blank" href="' + Q.resolveUrl('~/TvHastanesi/SonyKrediFaturaReport?serviceTicketId=') + this.get_entityId() + '"> <span class="button-inner" >' + ' Servis Faturası </span></a></div>');
+			}
+		},
+		getToolbarButtons: function() {
+			var buttons = ss.makeGenericType(Serenity.EntityDialog$2, [Object, Object]).prototype.getToolbarButtons.call(this);
+			buttons.push({
+				title: 'Servis Faturası',
+				cssClass: 's-SonyKrediFaturaButton print-preview-button',
+				onClick: function() {
+				}
+			});
+			return buttons;
+		},
+		updateInterface: function() {
+			ss.makeGenericType(Serenity.EntityDialog$2, [Object, Object]).prototype.updateInterface.call(this);
+			this.toolbar.findButton('s-SonyKrediFaturaButton').toggleClass('disabled', this.get_isNewOrDeleted());
+		}
+	}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
 	ss.initClass($Cengaver_TvHastanesi_ServiceTicketForm, $asm, {
 		get_productSerialNumber: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'ProductSerialNumber');
-		},
-		get_productTypeId: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'ProductTypeId');
 		},
 		get_productMark: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'ProductMark');
@@ -2541,13 +2563,28 @@
 			return this.byId(Serenity.StringEditor).call(this, 'ProductModel');
 		},
 		get_productDesctiption: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'ProductDesctiption');
+			return this.byId(Serenity.TextAreaEditor).call(this, 'ProductDesctiption');
+		},
+		get_purchaseDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'PurchaseDate');
+		},
+		get_warrantyIsActive: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'WarrantyIsActive');
+		},
+		get_warrantyCode: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'WarrantyCode');
+		},
+		get_warrantySource: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'WarrantySource');
+		},
+		get_warrantyDefination: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'WarrantyDefination');
 		},
 		get_invoiceNumber: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'InvoiceNumber');
 		},
-		get_receiveDate: function() {
-			return this.byId(Serenity.DateEditor).call(this, 'ReceiveDate');
+		get_recordDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'RecordDate');
 		},
 		get_deliveryDate: function() {
 			return this.byId(Serenity.DateEditor).call(this, 'DeliveryDate');
@@ -2559,16 +2596,40 @@
 			return this.byId(Serenity.IntegerEditor).call(this, 'StageId');
 		},
 		get_description: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'Description');
+			return this.byId(Serenity.TextAreaEditor).call(this, 'Description');
 		},
 		get_customerId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'CustomerId');
+			return this.byId(Serenity.LookupEditor).call(this, 'CustomerId');
+		},
+		get_recordedByUserId: function() {
+			return this.byId(Serenity.LookupEditor).call(this, 'RecordedByUserId');
+		},
+		get_deliveredByUserId: function() {
+			return this.byId(Serenity.LookupEditor).call(this, 'DeliveredByUserId');
 		},
 		get_malFunction: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'MalFunction');
+			return this.byId(Serenity.TextAreaEditor).call(this, 'MalFunction');
+		},
+		get_startDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'StartDate');
+		},
+		get_finishDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'FinishDate');
 		},
 		get_technicianNote: function() {
-			return this.byId(Serenity.StringEditor).call(this, 'TechnicianNote');
+			return this.byId(Serenity.TextAreaEditor).call(this, 'TechnicianNote');
+		},
+		get_stateCode: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'StateCode');
+		},
+		get_symptomCode: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'SymptomCode');
+		},
+		get_malfunctionCode: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'MalfunctionCode');
+		},
+		get_sectionCode: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'SectionCode');
 		},
 		get_repairCost: function() {
 			return this.byId(Serenity.DecimalEditor).call(this, 'RepairCost');

@@ -11,8 +11,8 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__Menus"), InstanceName("TvH__Menus"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.Admin)]
-    [ModifyPermission(PermissionKeys.Admin)]
+    [DeletePermission(PermissionKeys.Developer)]
+    [ModifyPermission(PermissionKeys.Developer)]
     [JsonConverter(typeof(JsonRowConverter))]
     public sealed class MenuRow : Administration.Entities.LoggingRow, IIdRow, INameRow
     {

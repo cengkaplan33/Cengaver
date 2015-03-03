@@ -1,0 +1,789 @@
+﻿@model Cengaver.TvHastanesi.Models.SonyKrediFaturaModel
+
+@{
+    Layout = "";
+}
+
+<html>
+<head>
+    <title>@Model.ServiceTicket.ServiceTicketId (Üretim Sipariş Formu)</title>
+    <style type="text/css" media="all">
+        body, table, td
+        {
+            font-family: Tahoma, Arial, Helvetica;
+            font-size: 10pt;
+        }
+        
+        table.form-info
+        {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+            border: 1px solid #000;
+        }
+        table.form-info th
+        {
+            text-align: left;
+            width:30%;
+            background-color: #eee9e9;
+        }
+        
+        table.form-info thead th
+        {
+            text-align: center;
+            background-color: gray;
+            color: White;
+        }
+        table.form-info td
+        {
+           width:25%; 
+        }
+        table.form-info td, table.form-info th
+        {
+            border: 1px solid #333;
+        }
+        div.full
+        {
+            width: 100%;
+        }
+        
+        div.half
+        {
+            width: 49%;
+            float: left;
+            margin-right: 5px;
+        }
+        div.cuarter
+        {
+            width: 49%;
+            float: left;
+        }
+        div.onethird
+        {
+            width: 33.2%;
+            float: left;
+        }
+        
+        .clear
+        {
+            clear: both;
+            display: block;
+        }
+        
+        .page-break
+        {
+            display: block;
+            page-break-inside: avoid;
+        }
+        
+        .header
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        .box_rotate
+        {
+            -moz-transform: rotate(-90deg); /* FF3.5+ */
+            -o-transform: rotate(-90deg); /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg); /* Saf3.1+, Chrome */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90)"; /* IE8 */
+        }
+        .vertical-th
+        {
+            text-align: center;
+            width: 27px !important;
+        }
+    </style>
+    <style type="text/css" media="print">
+        body, table, td
+        {
+            font-family: Tahoma, Arial, Helvetica;
+            font-size: 7pt;
+        }
+        
+        table.form-info
+        {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+            border: 1px solid #000;
+        }
+        table.form-info th
+        {
+            text-align: left;
+            width:30%;
+            background-color: #eee9e9;
+            -webkit-print-color-adjust: exact;
+        }
+        table.form-info thead th
+        {
+            text-align: center;
+            background-color: gray;
+            color: White;
+            -webkit-print-color-adjust: exact;
+        }
+        table.form-info td
+        {
+              width:25%;
+        }
+        table.form-info td, table.form-info th
+        {
+            border: 1px solid #333;
+            -webkit-print-color-adjust: exact;
+        }
+        div.full
+        {
+            width: 100%;
+        }
+        
+        div.half
+        {
+            width: 49%;
+            float: left;
+            margin-right: 3px;
+        }
+        div.cuarter
+        {
+            width: 49%;
+            float: left;
+        }
+        div.onethird
+        {
+            width: 33.3%;
+            float: left;
+        }
+        
+        .clear
+        {
+            clear: both;
+            display: block;
+        }
+        
+        .page-break
+        {
+            display: block;
+            page-break-inside: avoid;
+        }
+        .header
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 9pt;
+        }
+        .box_rotate
+        {
+            -moz-transform: rotate(-90deg); /* FF3.5+ */
+            -o-transform: rotate(-90deg); /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg); /* Saf3.1+, Chrome */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90)"; /* IE8 */
+        }
+        .vertical-th
+        {
+            text-align: center !important;
+            width: 27px !important;
+        }
+        
+        .horizontal-th-fiyatlandirma
+        {
+            width: 10px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-break">
+        <div class="header">
+        @{var isAdi = Model.ServiceTicket.ServiceTicketId; }
+            @isAdi (Üretim Sipariş Formu)
+        </div>
+        @*Genel Bilgiler*@
+        <div>
+            <div class="half">
+                <table width="100%" border="0" class="form-info info">
+                    <tbody>
+                    <tr >                        
+                            <th >
+                                İşin Adı
+                            </th>
+                            <td >@{ isAdi = Model.ServiceTicket.ServiceTicketId; } 
+                            @isAdi
+                            </td>   
+                            <th >
+                                Sipariş No
+                            </th>
+                            <td >
+                            </td>                  
+                        </tr>
+                        
+                        <tr>
+                        
+                        <th>Yayın No</th>
+                        <td>@Model.ServiceTicket.ServiceTicketId</td>
+                        
+                        
+                        <th>Kayıt No</th>
+                        <td>@{var kayitNo = Model.ServiceTicket.ServiceTicketId; }
+                              @kayitNo
+                              </td>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                Serendip Sipariş No
+                            </th>
+                            <td >@{ var siparisId = Model.ServiceTicket.ServiceTicketId;  } 
+                            @siparisId
+                            </td>
+                            <th></th>
+                            <td></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="half">
+                <table width="100%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th>
+                                Sipariş Tarihi
+                            </th>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Talep Tarihi
+                            </th>
+                            <td>
+                                @{var talepTarihi = Model.ServiceTicket.ServiceTicketId; }
+                                @talepTarihi
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Teslim Tarihi
+                            </th>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        @*Rapor Bilgileri*@
+        <div>
+            <div class="half">
+                <table width="100%" border="0" class="form-info info">
+                    <thead>
+                        <tr>
+                            <th>
+                            </th>
+                            <th colspan="2">
+                                <p>
+                                    İÇ BASKI</p>
+                            </th>
+                            <th colspan="2">
+                                <p>
+                                    EK BASKI</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @{
+	                            <tr>
+		                            <th>
+			                            <p>1111</p>
+		                            </th>
+			                            <td>
+                                            1111
+			                            </td>
+			                            <td>
+                                            1111
+			                            </td>
+			                            <td>
+                                            1111
+			                            </td>
+			                            <td>
+                                            1111
+			                            </td>
+	                            </tr>
+                            
+                        
+                        @*if (rpMfCount > 0)
+                        {
+                            foreach (KeyValuePair<string, List<string>> kvp in Model.Kategoriler["IcDisBaski"])
+                            {
+	                            <tr>
+		                            <th>
+			                            <p>1111</p>
+		                            </th>
+		                          
+		                            @if (values.Count > 2)
+                              {
+			                            <td>
+				                            1111
+			                            </td>
+			                            <td>
+				                            @((Model.ReprintPrintFieldValues.ContainsKey("K" + values[1])) ? rpFv(Model.ReprintPrintFieldValues["K" + values[1]]) : " ")
+			                            </td>
+			                            <td>
+				                            @((Model.ReprintPrintFieldValues.ContainsKey("K" + values[2])) ? rpFv(Model.ReprintPrintFieldValues["K" + values[2]]) : " ")
+			                            </td>
+			                            <td>
+				                            @((Model.ReprintPrintFieldValues.ContainsKey("K" + values[3])) ? rpFv(Model.ReprintPrintFieldValues["K" + values[3]]) : " ")
+			                            </td>
+                              }
+                              else
+                              {
+			                            <td colspan="2">
+				                            1111
+			                            </td>
+			                            <td colspan="2">
+				                            @((values.Count > 1 && Model.ReprintPrintFieldValues.ContainsKey("K" + values[1])) ? rpFv(Model.ReprintPrintFieldValues["K" + values[1]]) : " ")
+			                            </td>
+                              }
+	                            </tr>
+                            }
+                        }*@
+                    }
+                    </tbody>
+                </table>
+                <table width="100%" border="0" class="form-info info">
+                    <thead>
+                        <tr>
+                            <th>
+                            </th>
+                            <th colspan="2">
+                                <p>
+                                    KAPAK BASKI</p>
+                            </th>
+                            <th colspan="2">
+                                <p>
+                                    YAN KAPAK BASKI</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                         <tr>
+                                <th>
+                                    <p>1111</p>
+                                </th>
+                                
+                                    <td colspan="2">
+                                        1111
+                                    </td>
+                                    <td colspan="2">
+                                        1111 1111 1111 
+                                    </td>
+                                    
+                                     
+                                    <td>
+                                        1111
+                                    </td>
+                                    <td>
+                                        1111
+                                    </td>
+                                    <td>
+                                        1111
+                                    </td>
+                                    <td>
+                                        1111
+                                    </td>
+                                    
+                               
+                            </tr> 
+                    
+                    </tbody>
+                </table>
+            </div>
+            <div class="half">
+                <div>
+                    <table width="100%" border="0" class="form-info info">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <p>
+                                        GENEL BİLGİLER</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                             <tr>
+                                    <th>
+                                        <p>111111111111</p>
+                                    </th>
+                                    
+                                        <td>
+                                            111111111111
+                                        </td> 
+                                     
+                                </tr>
+                             
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="cuarter">
+                    <table width="100%" border="0" class="form-info info">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <p>
+                                        DİĞER BİLGİLER</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                                 <tr>
+                                    <th>
+                                        <p>111111111111</p>
+                                    </th>
+                                   
+                                    <td>
+                                        1111 11111111
+                                    </td>
+                                </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                <div style="float: right !important;" class="cuarter">
+                    <table width="100%" border="0" class="form-info info">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <p>
+                                        ALFA İŞLEMLER</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                                <tr>
+                                    <th>
+                                        <p>1111</p>
+                                    </th>
+                                  
+                                    <td>
+                                       1111
+                                    </td>
+                                </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="cuarter">
+                    <table width="100%" border="0" class="form-info info">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <p>
+                                        KAĞIT KG'LARI</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                                <tr>
+                                    <th>
+                                        <p>1111</p>
+                                    </th>
+                                  
+                                    <td>
+                                       1111
+                                    </td>
+                                </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div style="float: right" class="cuarter">
+                    <table width="100%" border="0" class="form-info info">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <p>
+                                        STOK BİLGİLERİ</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                                <tr>
+                                    <th>
+                                        <p>1111</p>
+                                    </th>
+                                  
+                                    <td>
+                                       1111
+                                    </td>
+                                </tr>
+                             
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear">
+                </div>
+                <div>
+                    <table width="100%" border="0" class="form-info info">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <p>
+                                        AÇIKLAMALAR</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 57px;">
+                                <td>
+                                    1111
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        @*Montaj Bilgileri*@
+        <div>
+            <table width="98.4%" border="0" class="form-info info">
+                <thead>
+                    <tr>
+                        <th>
+                            MONTAJ
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="height: 30px;">
+                        <td>
+                            1111
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+        @*Balans Bilgileri*@
+        <div>
+            <table width="98.4%" border="0" class="form-info info">
+                <thead>
+                    <tr>
+                        <th colspan="1">
+                            BALANS BİLGİLERİ
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                            <th>1111
+                            </th>
+                        
+                    </tr>
+                    <tr style="height: 20px;">
+                    
+                            <td>
+                                1111
+                            </td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+        @*Fiyatlandırma*@
+        <div class="full">
+            <table width="98.4%" border="0" class="form-info info">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <p>
+                                FİYATLANDIRMA</p>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="onethird">
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate"> Klp</p>
+                            </th>
+                        </tr>
+                        
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr>
+                           
+                    </tbody>
+                </table>
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Baskı</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Kapak İşlem</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <div class="onethird">
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Cilt</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Klişe</p>
+                            </th>
+                        </tr>
+                        
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Ara Top.</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <div class="onethird">
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate"> Ek İşlemler</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Sevk</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th  class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+                <table width="96%" border="0" class="form-info info">
+                    <tbody>
+                        <tr>
+                            <th  class="vertical-th" rowspan="1">
+                                <p class="box_rotate">
+                                    Kğt</p>
+                            </th>
+                        </tr> 
+                            <tr>
+                                <th class="horizontal-th-fiyatlandirma">1111
+                                </th>
+                                <td>
+                                </td>
+                            </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div style="text-align: center;">
+            <span>Yukarıda teknik şartları belirlenen ürün için birim fiyatımız aşağıdadır. Teknik
+                şartlarda bir değişiklik olursa değişiklik fiyata yansıtılacaktır.</span><br />
+            <span>Siparişiniz için birim fiyat :</span>
+        </div>
+        <div class="clear">
+        </div>
+        <div style="text-align: center;">
+            <span>Bu rapor @DateTime.Now.ToShortDateString() tarihinde, dddddccccc kullanıcısı
+                tarafından alınmıştır.</span></div>
+    </div>
+</body>
+</html>

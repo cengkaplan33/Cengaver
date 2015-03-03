@@ -22,7 +22,9 @@ namespace Cengaver.TvHastanesi
          bu tanımların burada olmasının hiçbir önemi yok.çünkü kullanıldığı yer var ise reflection ile adı alınıyor.
          */
 
-        public const string General = "Cengaver:TvHastanesi:General";
+        public const string ServiceRegistry = "Cengaver:TvHastanesi:ServiceRegistry";
+        public const string Reseller = "Cengaver:TvHastanesi:Reseller";
         public const string Admin = "Cengaver:TvHastanesi:Admin";
+        public const string Developer = "Cengaver:TvHastanesi:Developer";
     }
 }

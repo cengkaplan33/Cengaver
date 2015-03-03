@@ -11,8 +11,8 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__Units"), InstanceName("TvH__Units"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.Admin)]
-    [ModifyPermission(PermissionKeys.Admin)]
+    [DeletePermission(PermissionKeys.Developer)]
+    [ModifyPermission(PermissionKeys.Developer)]
     [JsonConverter(typeof(JsonRowConverter))]
     public sealed class UnitRow : Administration.Entities.LoggingRow, IIdRow, INameRow
     {

@@ -19,6 +19,7 @@ namespace Cengaver.TvHastanesi
         public String Address { get; set; }
         public Int32? CityId { get; set; }
         public Int32? CountyId { get; set; }
+        public String MobileNumber { get; set; }
         public String PhoneNumber { get; set; }
         public String EmailAddress { get; set; }
         public String City { get; set; }
@@ -40,6 +41,7 @@ namespace Cengaver.TvHastanesi
             [InlineConstant] public const string Address = "Address";
             [InlineConstant] public const string CityId = "CityId";
             [InlineConstant] public const string CountyId = "CountyId";
+            [InlineConstant] public const string MobileNumber = "MobileNumber";
             [InlineConstant] public const string PhoneNumber = "PhoneNumber";
             [InlineConstant] public const string EmailAddress = "EmailAddress";
             [InlineConstant] public const string City = "City";

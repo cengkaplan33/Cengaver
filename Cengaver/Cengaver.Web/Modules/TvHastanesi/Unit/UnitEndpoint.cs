@@ -10,7 +10,7 @@ namespace Cengaver.TvHastanesi.Endpoints
     using MyRow = Entities.UnitRow;
 
     [RoutePrefix("Services/TvHastanesi/Unit"), Route("{action}")]
-    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.Admin)]
+    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.Developer)]
     public class UnitController : ServiceEndpoint
     {
         [HttpPost]

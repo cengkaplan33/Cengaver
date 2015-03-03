@@ -7,7 +7,7 @@
     [RoutePrefix("TvHastanesi/ServiceTicket"), Route("{action=index}")]
     public class ServiceTicketController : Controller
     {
-        [PageAuthorize(PermissionKeys.General)]
+        [PageAuthorize(PermissionKeys.ServiceRegistry)]
         public ActionResult Index()
         {
             return View("~/Modules/TvHastanesi/ServiceTicket/ServiceTicketIndex.cshtml");

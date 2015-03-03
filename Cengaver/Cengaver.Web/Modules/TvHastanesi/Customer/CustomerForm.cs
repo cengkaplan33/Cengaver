@@ -18,7 +18,7 @@ namespace Cengaver.TvHastanesi.Forms
         [Required]
         public String Surname { get; set; }
         public String IdentificationNumber { get; set; }
-    
+
         [TextAreaEditor]
         public String Address { get; set; }
 
@@ -27,6 +27,9 @@ namespace Cengaver.TvHastanesi.Forms
 
         [CountyEditor(CityEditorID = "CityId"), Required]
         public Int32 CountyId { get; set; }
+
+        [PhoneEditor, Required]
+        public String MobileNumber { get; set; }
 
         [PhoneEditor, Required]
         public String PhoneNumber { get; set; }

@@ -21,6 +21,7 @@ namespace Cengaver.TvHastanesi
         public TextAreaEditor Address { get { return ById<TextAreaEditor>("Address"); } }
         public LookupEditor CityId { get { return ById<LookupEditor>("CityId"); } }
         public CountyEditor CountyId { get { return ById<CountyEditor>("CountyId"); } }
+        public Serenity.PhoneEditor MobileNumber { get { return ById<Serenity.PhoneEditor>("MobileNumber"); } }
         public Serenity.PhoneEditor PhoneNumber { get { return ById<Serenity.PhoneEditor>("PhoneNumber"); } }
         public EmailEditor EmailAddress { get { return ById<EmailEditor>("EmailAddress"); } }
     }

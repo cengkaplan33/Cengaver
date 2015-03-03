@@ -11,8 +11,8 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__Counties"), InstanceName("TvH__Counties"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.Admin)]
-    [ModifyPermission(PermissionKeys.Admin)]
+    [DeletePermission(PermissionKeys.Developer)]
+    [ModifyPermission(PermissionKeys.Developer)]
     [JsonConverter(typeof(JsonRowConverter))]
     [LookupScript("TvHastanesi.County")]
 

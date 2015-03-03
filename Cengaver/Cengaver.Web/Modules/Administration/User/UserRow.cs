@@ -12,6 +12,7 @@ namespace Cengaver.Administration.Entities
     [ConnectionKey("Default"), DisplayName("Users"), InstanceName("User"), TwoLevelCached]
     [ReadPermission(Administration.PermissionKeys.Security)]
     [ModifyPermission(Administration.PermissionKeys.Security)]
+    [LookupScript("Administration.User")]
     [JsonConverter(typeof(JsonRowConverter))]
     public sealed class UserRow : LoggingRow, IIdRow, INameRow
     {

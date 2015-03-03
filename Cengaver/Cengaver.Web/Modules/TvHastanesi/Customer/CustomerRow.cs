@@ -11,8 +11,8 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__Customers"), InstanceName("TvH__Customers"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.General)]
-    [ModifyPermission(PermissionKeys.General)]
+    [DeletePermission(PermissionKeys.ServiceRegistry)]
+    [ModifyPermission(PermissionKeys.ServiceRegistry)]
     [JsonConverter(typeof(JsonRowConverter))]
     [LookupScript("TvHastanesi.Customer")]
     public sealed class CustomerRow : Administration.Entities.LoggingRow, IIdRow, INameRow
@@ -64,6 +64,13 @@ namespace Cengaver.TvHastanesi.Entities
         {
             get { return Fields.CountyId[this]; }
             set { Fields.CountyId[this] = value; }
+        }
+
+        [DisplayName("Mobile Number"), Size(15)]
+        public String MobileNumber
+        {
+            get { return Fields.MobileNumber[this]; }
+            set { Fields.MobileNumber[this] = value; }
         }
 
         [DisplayName("Phone Number"), Size(15)]
@@ -127,6 +134,7 @@ namespace Cengaver.TvHastanesi.Entities
             public readonly StringField Address;
             public readonly Int32Field CityId;
             public readonly Int32Field CountyId;
+            public readonly StringField MobileNumber;
             public readonly StringField PhoneNumber;
             public readonly StringField EmailAddress;
 

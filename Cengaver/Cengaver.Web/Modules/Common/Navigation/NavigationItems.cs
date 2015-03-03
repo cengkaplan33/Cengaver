@@ -27,6 +27,7 @@ using Administration = Cengaver.Administration.Pages;
 [assembly: Serenity.Navigation.NavigationLink(3001, "TvHastanesi/Unit", typeof(Cengaver.TvHastanesi.Pages.UnitController))]
 [assembly: Serenity.Navigation.NavigationLink(3002, "TvHastanesi/City", typeof(Cengaver.TvHastanesi.Pages.CityController))]
 [assembly: Serenity.Navigation.NavigationLink(3003, "TvHastanesi/County", typeof(Cengaver.TvHastanesi.Pages.CountyController))]
+[assembly: Serenity.Navigation.NavigationLink(3004, "TvHastanesi/Users", typeof(Administration.UserController), Cengaver.TvHastanesi.PermissionKeys.Admin)]
 
 
 

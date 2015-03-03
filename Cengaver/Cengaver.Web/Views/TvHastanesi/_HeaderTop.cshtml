@@ -1,4 +1,11 @@
-﻿<nav class="header-top navbar navbar-default" role="navigation">
+﻿<script>
+    function SubmitFrm() {
+        var Searchtxt = document.getElementById("txtSearch").value;
+        if (Searchtxt.trim().length > 0)
+            window.location = "Arizali-Cihaz-Takip?TicketId=" + Searchtxt;
+    }
+</script>
+<nav class="header-top navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-top-navbar-collapse">
@@ -17,6 +24,13 @@
         <ul class="nav navbar-nav navbar-right">
             @*@Html.Partial("/Views/Shared/bootstrap/Header/_ChangeLayout.cshtml")
                 @Html.Partial("/Views/Shared/bootstrap/Header/_ChangeTheme.cshtml")*@
+
+            <li> 
+                <div class="search-panel">
+                    <input name="txtSearch" type="text" id="txtSearch" class="field" placeholder="Servis Kayıt Numarası" />
+                    <input type="submit" name="btnSearch" value="Kayıt Ara" id="btnSearch" class="btn" onclick="javascript:SubmitFrm()" />
+                </div>
+            </li>
 
             @if (User.Identity.IsAuthenticated)
             {

@@ -11,25 +11,11 @@ namespace Cengaver.TvHastanesi.Entities
     using System.IO;
 
     [ConnectionKey("Natro_TvHastanesi"), DisplayName("TvH__ServiceTickets"), InstanceName("TvH__ServiceTickets"), TwoLevelCached]
-    [DeletePermission(PermissionKeys.General)]
-    [ModifyPermission(PermissionKeys.General)]
+    [DeletePermission(PermissionKeys.ServiceRegistry)]
+    [ModifyPermission(PermissionKeys.ServiceRegistry)]
     [JsonConverter(typeof(JsonRowConverter))]
     public sealed class ServiceTicketRow : Cengaver.Administration.Entities.LoggingRow, IIdRow, INameRow
     {
-        [DisplayName("Service Ticket Id"), Identity]
-        public Int32? ServiceTicketId
-        {
-            get { return Fields.ServiceTicketId[this]; }
-            set { Fields.ServiceTicketId[this] = value; }
-        }
-
-        [DisplayName("Receive Date"), NotNull]
-        public DateTime? ReceiveDate
-        {
-            get { return Fields.ReceiveDate[this]; }
-            set { Fields.ReceiveDate[this] = value; }
-        }
-
         [DisplayName("Product Serial Number"), Size(10), NotNull, QuickSearch]
         public String ProductSerialNumber
         {
@@ -37,7 +23,28 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.ProductSerialNumber[this] = value; }
         }
 
-        [DisplayName("Product Type Id"), NotNull]
+        [DisplayName("Service Ticket Id"), Identity]
+        public Int32? ServiceTicketId
+        {
+            get { return Fields.ServiceTicketId[this]; }
+            set { Fields.ServiceTicketId[this] = value; }
+        }
+
+        [DisplayName("Recorded By User Id"), NotNull]
+        public Int32? RecordedByUserId
+        {
+            get { return Fields.RecordedByUserId[this]; }
+            set { Fields.RecordedByUserId[this] = value; }
+        }
+
+        [DisplayName("Record Date"), NotNull]
+        public DateTime? RecordDate
+        {
+            get { return Fields.RecordDate[this]; }
+            set { Fields.RecordDate[this] = value; }
+        }
+
+        [DisplayName("Product Type Id")]
         public Int16? ProductTypeId
         {
             get { return Fields.ProductTypeId[this]; }
@@ -56,13 +63,146 @@ namespace Cengaver.TvHastanesi.Entities
         {
             get { return Fields.ProductModel[this]; }
             set { Fields.ProductModel[this] = value; }
-        } 
+        }
+
+        [DisplayName("Start Date")]
+        public DateTime? StartDate
+        {
+            get { return Fields.StartDate[this]; }
+            set { Fields.StartDate[this] = value; }
+        }
+
+        [DisplayName("Finish Date")]
+        public DateTime? FinishDate
+        {
+            get { return Fields.FinishDate[this]; }
+            set { Fields.FinishDate[this] = value; }
+        }
+
+        [DisplayName("Delivery Date")]
+        public DateTime? DeliveryDate
+        {
+            get { return Fields.DeliveryDate[this]; }
+            set { Fields.DeliveryDate[this] = value; }
+        }
+
+        [DisplayName("Operation Id")]
+        public Int32? OperationId
+        {
+            get { return Fields.OperationId[this]; }
+            set { Fields.OperationId[this] = value; }
+        }
+
+        [DisplayName("Stage Id")]
+        public Int32? StageId
+        {
+            get { return Fields.StageId[this]; }
+            set { Fields.StageId[this] = value; }
+        }
+
+        [DisplayName("Description"), Size(200)]
+        public String Description
+        {
+            get { return Fields.Description[this]; }
+            set { Fields.Description[this] = value; }
+        }
+
+        [DisplayName("Delivery By User Id")]
+        public Int32? DeliveredByUserId
+        {
+            get { return Fields.DeliveredByUserId[this]; }
+            set { Fields.DeliveredByUserId[this] = value; }
+        }
+
+        [DisplayName("Customer Id")]
+        public Int32? CustomerId
+        {
+            get { return Fields.CustomerId[this]; }
+            set { Fields.CustomerId[this] = value; }
+        }
+
+        [DisplayName("Invoice Number"), Size(10)]
+        public String InvoiceNumber
+        {
+            get { return Fields.InvoiceNumber[this]; }
+            set { Fields.InvoiceNumber[this] = value; }
+        }
 
         [DisplayName("Product Desctiption"), Size(200)]
         public String ProductDesctiption
         {
             get { return Fields.ProductDesctiption[this]; }
             set { Fields.ProductDesctiption[this] = value; }
+        }
+
+        [DisplayName("Warranty Is Active")]
+        public Boolean? WarrantyIsActive
+        {
+            get { return Fields.WarrantyIsActive[this]; }
+            set { Fields.WarrantyIsActive[this] = value; }
+        }
+
+        [DisplayName("Warranty Code"), Size(12)]
+        public String WarrantyCode
+        {
+            get { return Fields.WarrantyCode[this]; }
+            set { Fields.WarrantyCode[this] = value; }
+        }
+
+        [DisplayName("Warranty Source"), Size(30)]
+        public String WarrantySource
+        {
+            get { return Fields.WarrantySource[this]; }
+            set { Fields.WarrantySource[this] = value; }
+        }
+
+        [DisplayName("Warranty Defination"), Size(50)]
+        public String WarrantyDefination
+        {
+            get { return Fields.WarrantyDefination[this]; }
+            set { Fields.WarrantyDefination[this] = value; }
+        }
+
+        [DisplayName("State Code"), Size(8)]
+        public String StateCode
+        {
+            get { return Fields.StateCode[this]; }
+            set { Fields.StateCode[this] = value; }
+        }
+
+        [DisplayName("Symptom Code"), Size(8)]
+        public String SymptomCode
+        {
+            get { return Fields.SymptomCode[this]; }
+            set { Fields.SymptomCode[this] = value; }
+        }
+
+        [DisplayName("Malfunction Code"), Size(8)]
+        public String MalfunctionCode
+        {
+            get { return Fields.MalfunctionCode[this]; }
+            set { Fields.MalfunctionCode[this] = value; }
+        }
+
+        [DisplayName("Section Code"), Size(8)]
+        public String SectionCode
+        {
+            get { return Fields.SectionCode[this]; }
+            set { Fields.SectionCode[this] = value; }
+        }
+
+        [DisplayName("Fix Code"), Size(16)]
+        public String FixCode
+        {
+            get { return Fields.FixCode[this]; }
+            set { Fields.FixCode[this] = value; }
+        }
+
+        [DisplayName("Purchase Date")]
+        public DateTime? PurchaseDate
+        {
+            get { return Fields.PurchaseDate[this]; }
+            set { Fields.PurchaseDate[this] = value; }
         }
 
         [DisplayName("Mal Function"), Size(200)]
@@ -100,8 +240,8 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.PieceCost[this] = value; }
         }
 
-        [DisplayName("Total Cost"), Size(10)]
-        public String TotalCost
+        [DisplayName("Total Cost"), Scale(4)]
+        public Decimal? TotalCost
         {
             get { return Fields.TotalCost[this]; }
             set { Fields.TotalCost[this] = value; }
@@ -112,55 +252,6 @@ namespace Cengaver.TvHastanesi.Entities
         {
             get { return Fields.PaymentTypeId[this]; }
             set { Fields.PaymentTypeId[this] = value; }
-        }
-
-        [DisplayName("Delivery Date")]
-        public DateTime? DeliveryDate
-        {
-            get { return Fields.DeliveryDate[this]; }
-            set { Fields.DeliveryDate[this] = value; }
-        }
-
-        [DisplayName("Operation Id")]
-        public Int32? OperationId
-        {
-            get { return Fields.OperationId[this]; }
-            set { Fields.OperationId[this] = value; }
-        }
-
-        [DisplayName("Stage Id")]
-        public Int32? StageId
-        {
-            get { return Fields.StageId[this]; }
-            set { Fields.StageId[this] = value; }
-        }
-
-        [DisplayName("Description"), Size(200)]
-        public String Description
-        {
-            get { return Fields.Description[this]; }
-            set { Fields.Description[this] = value; }
-        }
-
-        [DisplayName("Customer Id")]
-        public Int32? CustomerId
-        {
-            get { return Fields.CustomerId[this]; }
-            set { Fields.CustomerId[this] = value; }
-        }
-
-        [DisplayName("Invoice Number"), Size(10)]
-        public String InvoiceNumber
-        {
-            get { return Fields.InvoiceNumber[this]; }
-            set { Fields.InvoiceNumber[this] = value; }
-        }
-
-        [DisplayName("Record Date"), Size(10)]
-        public String RecordDate
-        {
-            get { return Fields.RecordDate[this]; }
-            set { Fields.RecordDate[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -180,29 +271,42 @@ namespace Cengaver.TvHastanesi.Entities
         {
         }
 
-        public class RowFields : Administration.Entities.LoggingRow.LoggingRowFields
+        public class RowFields : LoggingRowFields
         {
-            public readonly Int32Field ServiceTicketId;
-            public readonly DateTimeField ReceiveDate;
             public readonly StringField ProductSerialNumber;
+            public readonly Int32Field ServiceTicketId;
+            public readonly Int32Field RecordedByUserId;
+            public readonly DateTimeField RecordDate;
             public readonly Int16Field ProductTypeId;
             public readonly StringField ProductMark;
             public readonly StringField ProductModel;
+            public readonly DateTimeField StartDate;
+            public readonly DateTimeField FinishDate;
+            public readonly DateTimeField DeliveryDate;
+            public readonly Int32Field OperationId;
+            public readonly Int32Field StageId;
+            public readonly StringField Description;
+            public readonly Int32Field DeliveredByUserId;
+            public readonly Int32Field CustomerId;
+            public readonly StringField InvoiceNumber;
             public readonly StringField ProductDesctiption;
+            public readonly BooleanField WarrantyIsActive;
+            public readonly StringField WarrantyCode;
+            public readonly StringField WarrantySource;
+            public readonly StringField WarrantyDefination;
+            public readonly StringField StateCode;
+            public readonly StringField SymptomCode;
+            public readonly StringField MalfunctionCode;
+            public readonly StringField SectionCode;
+            public readonly StringField FixCode;
+            public readonly DateTimeField PurchaseDate;
             public readonly StringField MalFunction;
             public readonly StringField TechnicianNote;
             public readonly DecimalField RepairCost;
             public readonly DecimalField LaborCost;
             public readonly DecimalField PieceCost;
-            public readonly StringField TotalCost;
+            public readonly DecimalField TotalCost;
             public readonly Int16Field PaymentTypeId;
-            public readonly DateTimeField DeliveryDate;
-            public readonly Int32Field OperationId;
-            public readonly Int32Field StageId;
-            public readonly StringField Description;
-            public readonly Int32Field CustomerId;
-            public readonly StringField InvoiceNumber;
-            public readonly StringField RecordDate;
 
             public RowFields()
                 : base("TvH__ServiceTickets")

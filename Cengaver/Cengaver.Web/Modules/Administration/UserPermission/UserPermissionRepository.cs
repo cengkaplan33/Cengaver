@@ -122,33 +122,51 @@ namespace Cengaver.Administration.Repositories
 
         public UserPermissionListResponse ListPermissionKeys()
         {
-            return LocalCache.Get("Administration:PermissionKeys", TimeSpan.Zero, () =>
+            if (Authorization.Username.ToLower() == "admin" || Authorization.Username.ToLower() == "cengaver" || Authorization.Username.ToLower() == "cengkaplan")
+            {
+                return LocalCache.Get("Administration:PermissionKeys", TimeSpan.Zero, () =>
+                {
+                    var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+                    foreach (var assembly in ExtensibilityHelper.SelfAssemblies)
+                    {
+                        foreach (var type in assembly.GetTypes())
+                        {
+                            ProcessAttributes<PermissionAttributeBase>(result, type, x => x.Permission);
+                            ProcessAttributes<ServiceAuthorizeAttribute>(result, type, x => x.Permission);
+
+                            foreach (var member in type.GetMethods(BindingFlags.Instance | BindingFlags.Public))
+                            {
+                                ProcessAttributes<PermissionAttributeBase>(result, member, x => x.Permission);
+                                ProcessAttributes<ServiceAuthorizeAttribute>(result, member, x => x.Permission);
+                            }
+                        }
+                    }
+
+                    result.Remove("*");
+                    result.Remove("?");
+
+                    return new UserPermissionListResponse
+                    {
+                        Entities = new List<string>(result)
+                    };
+                });
+            }
+            else
             {
                 var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-                foreach (var assembly in ExtensibilityHelper.SelfAssemblies)
+                if (Authorization.Username.ToLower() == "tvhastanesi")
                 {
-                    foreach (var type in assembly.GetTypes())
-                    {
-                        ProcessAttributes<PermissionAttributeBase>(result, type, x => x.Permission);
-                        ProcessAttributes<ServiceAuthorizeAttribute>(result, type, x => x.Permission);
-
-                        foreach (var member in type.GetMethods(BindingFlags.Instance | BindingFlags.Public))
-                        {
-                            ProcessAttributes<PermissionAttributeBase>(result, member, x => x.Permission);
-                            ProcessAttributes<ServiceAuthorizeAttribute>(result, member, x => x.Permission);
-                        }
-                    }
+                    result.Add(TvHastanesi.PermissionKeys.Admin);
+                    result.Add(TvHastanesi.PermissionKeys.ServiceRegistry);
                 }
-
-                result.Remove("*");
-                result.Remove("?");
 
                 return new UserPermissionListResponse
                 {
                     Entities = new List<string>(result)
                 };
-            });
+            }
         }
     }
 }

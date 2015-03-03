@@ -10,7 +10,7 @@ namespace Cengaver.TvHastanesi.Endpoints
     using MyRow = Entities.CustomerRow;
 
     [RoutePrefix("Services/TvHastanesi/Customer"), Route("{action}")]
-    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.General)]
+    [ConnectionKey("Natro_TvHastanesi"), ServiceAuthorize(PermissionKeys.ServiceRegistry)]
     public class CustomerController : ServiceEndpoint
     {
         [HttpPost]

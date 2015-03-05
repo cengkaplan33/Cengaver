@@ -14,8 +14,10 @@ namespace Cengaver.TvHastanesi.Entities
     [DeletePermission(PermissionKeys.ServiceRegistry)]
     [ModifyPermission(PermissionKeys.ServiceRegistry)]
     [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("TvHastanesi.Customer")]
-    public sealed class CustomerRow : Administration.Entities.LoggingRow, IIdRow, INameRow
+    [LookupScript("TvHastanesi.Customer")] // burasıda az önce yazdığınız la aynı değil mi? bu lookup key i editör tipi değil
+    // lookup da default olarak id ve name alanı olur, şimdi artık adı soyadı gelir
+
+        public sealed class CustomerRow : Administration.Entities.LoggingRow, IIdRow, INameRow
     {
         [DisplayName("Customer Id"), Identity]
         public Int32? CustomerId
@@ -36,6 +38,13 @@ namespace Cengaver.TvHastanesi.Entities
         {
             get { return Fields.Surname[this]; }
             set { Fields.Surname[this] = value; }
+        }
+
+        [DisplayName("Full Name"), Expression("(t0.Name + ' ' + t0.Surname)")]
+        public String FullName
+        {
+            get { return Fields.FullName[this]; }
+            set { Fields.FullName[this] = value; }
         }
 
         [DisplayName("Identification Number"), Size(11)]
@@ -73,7 +82,7 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.MobileNumber[this] = value; }
         }
 
-        [DisplayName("Phone Number"), Size(15)]
+        [DisplayName("Phone Number"), Size(15), LookupInclude] // bunu yazarak lookup dataasında bu da olsun diyorsun
         public String PhoneNumber
         {
             get { return Fields.PhoneNumber[this]; }
@@ -115,7 +124,7 @@ namespace Cengaver.TvHastanesi.Entities
 
         StringField INameRow.NameField
         {
-            get { return Fields.Name; }
+            get { return Fields.FullName; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
@@ -144,6 +153,7 @@ namespace Cengaver.TvHastanesi.Entities
             public readonly Int32Field CountyCityId;
             public readonly StringField County;
 
+            public readonly StringField FullName;
 
             public RowFields()
                 : base("TvH__Customers")

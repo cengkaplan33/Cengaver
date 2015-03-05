@@ -82,6 +82,8 @@ namespace Cengaver.TvHastanesi
         public CustomerEditorAttribute()
             : base("Cengaver.TvHastanesi.CustomerEditor")
         {
+            //peki abi ben ad soyad bve tel numaras?n? nas?l birle?tirece?im burada her?ey otomatik oldu ve sadece 
+            //ad bilgisini getirecek 
         }
     }
 }

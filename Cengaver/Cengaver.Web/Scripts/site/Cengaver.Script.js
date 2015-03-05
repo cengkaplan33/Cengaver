@@ -1229,8 +1229,9 @@
 	global.Cengaver.TvHastanesi.CustomerDialog = $Cengaver_TvHastanesi_CustomerDialog;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CustomerEditor
-	var $Cengaver_TvHastanesi_CustomerEditor = function(select) {
-		ss.makeGenericType(Serenity.LookupEditorBase$2, [Object, Object]).call(this, select, new Object());
+	var $Cengaver_TvHastanesi_CustomerEditor = function(hidden) {
+		ss.makeGenericType(Serenity.LookupEditorBase$1, [Object]).call(this, hidden);
+		Q.alert('ççç');
 	};
 	$Cengaver_TvHastanesi_CustomerEditor.__typeName = 'Cengaver.TvHastanesi.CustomerEditor';
 	global.Cengaver.TvHastanesi.CustomerEditor = $Cengaver_TvHastanesi_CustomerEditor;
@@ -2467,7 +2468,24 @@
 	ss.initClass($Cengaver_TvHastanesi_CountyGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_CountyService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_CustomerDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
-	ss.initClass($Cengaver_TvHastanesi_CustomerEditor, $asm, {}, ss.makeGenericType(Serenity.LookupEditorBase$2, [Object, Object]), [Serenity.IStringValue]);
+	ss.initClass($Cengaver_TvHastanesi_CustomerEditor, $asm, {
+		getItemText: function(item, lookup) {
+			return ss.makeGenericType(Serenity.LookupEditorBase$2, [Object, Object]).prototype.getItemText.call(this, item, lookup) + '(' + item.PhoneNumber + ')';
+		},
+		getLookupKey: function() {
+			return 'TvHastanesi.Customer';
+			// burayla aynı olacak o 
+			// editör keyin in Cengaver.TvHastanesi.CustomerEditor
+			// veya Cengaver root namespace olduğundan
+			// TvHastanesi.CustomerEditor
+			//TvHastanesi.Customer
+			// Customer da olabilir
+			// ama en garantisi full namespace
+			// bunların hepsi çalışır
+			// fakat sen string yazma
+			// .tt yi kullan
+		}
+	}, ss.makeGenericType(Serenity.LookupEditorBase$1, [Object]), [Serenity.IStringValue]);
 	ss.initClass($Cengaver_TvHastanesi_CustomerForm, $asm, {
 		get_name: function() {
 			return this.byId(Serenity.StringEditor).call(this, 'Name');
@@ -2716,7 +2734,7 @@
 	ss.setMetadata($Cengaver_TvHastanesi_CountyEditor, { attr: [new Serenity.EditorAttribute()], members: [{ attr: [new Serenity.ComponentModel.OptionAttribute()], name: 'CityEditorID', type: 16, returnType: String, getter: { name: 'get_CityEditorID', type: 8, sname: 'get_cityEditorID', returnType: String, params: [] }, setter: { name: 'set_CityEditorID', type: 8, sname: 'set_cityEditorID', returnType: Object, params: [String] } }] });
 	ss.setMetadata($Cengaver_TvHastanesi_CountyGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.County'), new Serenity.IdPropertyAttribute('CountyId'), new Serenity.NamePropertyAttribute('County'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CountyDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.County'), new Serenity.ServiceAttribute('TvHastanesi/County')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CustomerDialog, { attr: [new Serenity.IdPropertyAttribute('CustomerId'), new Serenity.NamePropertyAttribute('Name'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Customer'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Customer'), new Serenity.ServiceAttribute('TvHastanesi/Customer')] });
-	ss.setMetadata($Cengaver_TvHastanesi_CustomerEditor, { attr: [new Serenity.EditorAttribute(), new System.ComponentModel.DisplayNameAttribute('Kampüs')] });
+	ss.setMetadata($Cengaver_TvHastanesi_CustomerEditor, { attr: [new Serenity.EditorAttribute()] });
 	ss.setMetadata($Cengaver_TvHastanesi_CustomerGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Customer'), new Serenity.IdPropertyAttribute('CustomerId'), new Serenity.NamePropertyAttribute('Name'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CustomerDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Customer'), new Serenity.ServiceAttribute('TvHastanesi/Customer')] });
 	ss.setMetadata($Cengaver_TvHastanesi_MenuDialog, { attr: [new Serenity.IdPropertyAttribute('MenuId'), new Serenity.NamePropertyAttribute('Menu'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Menu'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Menu'), new Serenity.ServiceAttribute('TvHastanesi/Menu')] });
 	ss.setMetadata($Cengaver_TvHastanesi_MenuGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Menu'), new Serenity.IdPropertyAttribute('MenuId'), new Serenity.NamePropertyAttribute('Menu'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_MenuDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Menu'), new Serenity.ServiceAttribute('TvHastanesi/Menu')] });

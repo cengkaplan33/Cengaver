@@ -38,7 +38,8 @@ namespace Cengaver.TvHastanesi.Forms
         [TextAreaEditor]
         public String Description { get; set; }
 
-        [LookupEditor(typeof(Entities.CustomerRow)), Required]
+        [CustomerEditor, Required] // abi burada bir edittor var user editor buraya gelen verilede 
+            //ad soyad ve telefon bilgisinin gelmesini istiyorum ve bir editor yazdım 
         public Int32 CustomerId { get; set; }
 
         [LookupEditor(typeof(Administration.Entities.UserRow)), Required]

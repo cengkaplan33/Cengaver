@@ -44,23 +44,6 @@ namespace Cengaver.Common
     }
 }
 
-namespace Cengaver.Northwind
-{
-    public partial class PhoneEditorAttribute : CustomEditorAttribute
-    {
-        public PhoneEditorAttribute()
-            : base("Cengaver.Northwind.PhoneEditor")
-        {
-        }
-    
-        public Boolean Multiple
-        {
-            get { return GetOption<Boolean>("multiple"); }
-            set { SetOption("multiple", value); }
-        }
-    }
-}
-
 namespace Cengaver.TvHastanesi
 {
     public partial class CountyEditorAttribute : CustomEditorAttribute
@@ -82,8 +65,6 @@ namespace Cengaver.TvHastanesi
         public CustomerEditorAttribute()
             : base("Cengaver.TvHastanesi.CustomerEditor")
         {
-            //peki abi ben ad soyad bve tel numaras?n? nas?l birle?tirece?im burada her?ey otomatik oldu ve sadece 
-            //ad bilgisini getirecek 
         }
     }
 }

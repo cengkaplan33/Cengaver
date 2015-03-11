@@ -30,11 +30,18 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.ServiceTicketId[this] = value; }
         }
 
-        [DisplayName("Recorded By User Id"), NotNull]
+        [DisplayName("Recorded By User Id"), NotNull, ForeignKey("Users", "UserId"), LeftJoin("jRecordedByUser")]
         public Int32? RecordedByUserId
         {
             get { return Fields.RecordedByUserId[this]; }
             set { Fields.RecordedByUserId[this] = value; }
+        }
+
+        [DisplayName("RecordedByUser DisplayName"), Expression("jRecordedByUser.DisplayName")]
+        public String RecordedByUserDisplayName
+        {
+            get { return Fields.RecordedByUserDisplayName[this]; }
+            set { Fields.RecordedByUserDisplayName[this] = value; }
         }
 
         [DisplayName("Record Date"), NotNull]
@@ -107,18 +114,39 @@ namespace Cengaver.TvHastanesi.Entities
             set { Fields.Description[this] = value; }
         }
 
-        [DisplayName("Delivery By User Id")]
+        [DisplayName("Delivery By User Id"), ForeignKey("Users", "UserId"), LeftJoin("jDeliveredByUser")]
         public Int32? DeliveredByUserId
         {
             get { return Fields.DeliveredByUserId[this]; }
             set { Fields.DeliveredByUserId[this] = value; }
         }
 
-        [DisplayName("Customer Id")]
+        [DisplayName("DeliveredByUser DisplayName"), Expression("jDeliveredByUser.DisplayName")]
+        public String DeliveredByUserDisplayName
+        {
+            get { return Fields.DeliveredByUserDisplayName[this]; }
+            set { Fields.DeliveredByUserDisplayName[this] = value; }
+        }
+
+        [DisplayName("Customer Id"), ForeignKey("TvH__Customers", "CustomerId"), LeftJoin("jCustomer")]
         public Int32? CustomerId
         {
             get { return Fields.CustomerId[this]; }
             set { Fields.CustomerId[this] = value; }
+        }
+
+        [DisplayName("Customer Name"), Expression("jCustomer.Name")]
+        public String CustomerName
+        {
+            get { return Fields.CustomerName[this]; }
+            set { Fields.CustomerName[this] = value; }
+        }
+
+        [DisplayName("Customer Surname"), Expression("jCustomer.Surname")]
+        public String CustomerSurname
+        {
+            get { return Fields.CustomerSurname[this]; }
+            set { Fields.CustomerSurname[this] = value; }
         }
 
         [DisplayName("Invoice Number"), Size(10)]
@@ -275,7 +303,6 @@ namespace Cengaver.TvHastanesi.Entities
         {
             public readonly StringField ProductSerialNumber;
             public readonly Int32Field ServiceTicketId;
-            public readonly Int32Field RecordedByUserId;
             public readonly DateTimeField RecordDate;
             public readonly Int16Field ProductTypeId;
             public readonly StringField ProductMark;
@@ -286,8 +313,6 @@ namespace Cengaver.TvHastanesi.Entities
             public readonly Int32Field OperationId;
             public readonly Int32Field StageId;
             public readonly StringField Description;
-            public readonly Int32Field DeliveredByUserId;
-            public readonly Int32Field CustomerId;
             public readonly StringField InvoiceNumber;
             public readonly StringField ProductDesctiption;
             public readonly BooleanField WarrantyIsActive;
@@ -307,6 +332,17 @@ namespace Cengaver.TvHastanesi.Entities
             public readonly DecimalField PieceCost;
             public readonly DecimalField TotalCost;
             public readonly Int16Field PaymentTypeId;
+
+            public readonly Int32Field RecordedByUserId;
+            public readonly StringField RecordedByUserDisplayName;
+
+            
+            public readonly Int32Field CustomerId;
+            public readonly StringField CustomerName;
+            public readonly StringField CustomerSurname;
+
+            public readonly Int32Field DeliveredByUserId;
+            public readonly StringField DeliveredByUserDisplayName;
 
             public RowFields()
                 : base("TvH__ServiceTickets")

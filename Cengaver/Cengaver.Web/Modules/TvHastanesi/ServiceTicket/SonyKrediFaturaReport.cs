@@ -36,6 +36,12 @@ namespace Cengaver.TvHastanesi.Models
         public Entities.CustomerRow Customer { get; set; }
     }
 
+    public class ServiceTicketFormModel
+    {
+        public Entities.ServiceTicketRow ServiceTicket { get; set; }
+        public Entities.CustomerRow Customer { get; set; }
+    }
+
     public class MaintenanceProductModel
     {
         public Entities.ServiceTicketRow ServiceTicket { get; set; }

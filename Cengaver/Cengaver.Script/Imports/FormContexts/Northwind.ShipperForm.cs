@@ -9,14 +9,13 @@ namespace Cengaver.Northwind
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
     using Cengaver.TvHastanesi;
-    using Cengaver.Northwind;
 
     public partial class ShipperForm : PrefixedContext
     {
         public ShipperForm(string idPrefix) : base(idPrefix) {}
     
         public StringEditor CompanyName { get { return ById<StringEditor>("CompanyName"); } }
-        public PhoneEditor Phone { get { return ById<PhoneEditor>("Phone"); } }
+        public StringEditor Phone { get { return ById<StringEditor>("Phone"); } }
     }
 }
 

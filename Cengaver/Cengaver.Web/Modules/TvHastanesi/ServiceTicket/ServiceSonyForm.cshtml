@@ -1,0 +1,469 @@
+﻿@model Cengaver.TvHastanesi.Models.ServiceTicketFormModel
+
+@{
+    Layout = "";
+}
+
+<html>
+<head>
+    <title>@Model.ServiceTicket.ServiceTicketId (Servis Faturası)</title>
+    <style type="text/css" media="all">
+        body, table, td
+        {
+            font-family: Tahoma, Arial, Helvetica;
+            font-size: 10pt;
+        }
+
+        .w200px {
+            width:200px;
+        }
+
+        table.table-header {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+            border: 1px solid black;
+        }
+
+        table.table-header .tr-top { }
+        table.table-header .tr-top .td-right { }
+        table.table-header .tr-top .td-left { }
+        table.table-header .tr-top .td-center { }
+
+        table.table-header .tr-bottom {
+            height:30px;
+        }
+
+        table.table-header .tr-bottom .td-right {
+            border: 1px solid black;
+        }
+
+        table.table-header .tr-bottom .td-left {
+            border: 1px solid black;
+        }
+
+        table.table-header .tr-bottom .td-center {
+            border: 1px solid black;
+            text-align: center;
+            font-weight:bold;
+        }
+                     
+        table.form-info {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+        }
+
+        table.form-info.grid {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+            border: 1px solid #000;
+        }
+
+        table.form-info th
+        {
+            text-align: left;
+            width:30%;
+            background-color: #eee9e9;
+        }
+        
+        table.form-info thead th
+        {
+            text-align: center;
+            background-color: gray;
+            color: White;
+        }
+            table.form-info td
+            {
+               width:10%; 
+            }
+
+            table.form-info td.caption {
+                width: 10%;
+                padding-left: 4px;
+                font-weight: bold;
+            }
+
+            table.form-info.grid td, table.form-info.grid th {
+                border: 1px solid #333;
+            }
+
+        div.full
+        {
+            width: 100%;
+        }
+        .clear
+        {
+            clear: both;
+            display: block;
+        }
+        
+        .page-break
+        {
+            display: block;
+            page-break-inside: avoid;
+        }
+        
+        .header
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        .box_rotate
+        {
+            -moz-transform: rotate(-90deg); /* FF3.5+ */
+            -o-transform: rotate(-90deg); /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg); /* Saf3.1+, Chrome */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90)"; /* IE8 */
+        }
+    </style>
+    <style type="text/css" media="print">
+        body, table, td
+        {
+            font-family: Tahoma, Arial, Helvetica;
+            font-size: 7pt;
+        }
+        
+        table.form-info
+        {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+        }
+
+            table.form-info.grid {
+                border-collapse: collapse;
+                table-layout: fixed;
+                margin-top: 3px;
+                border: 1px solid #000;
+            }
+
+        table.form-info th
+        {
+            text-align: left;
+            width:30%;
+            background-color: #eee9e9;
+            -webkit-print-color-adjust: exact;
+        }
+        table.form-info thead th
+        {
+            text-align: center;
+            background-color: gray;
+            color: White;
+            -webkit-print-color-adjust: exact;
+        }
+        table.form-info td {
+            width: 10%;
+        }
+        table.form-info td.caption {
+            width: 10%;
+            padding-left: 4px;
+            font-weight: bold;
+        }
+        table.form-info.grid td, table.form-info.grid th {
+            border: 1px solid #333;
+        }
+        div.full
+        {
+            width: 100%;
+        }
+        .clear
+        {
+            clear: both;
+            display: block;
+        }
+        .page-break
+        {
+            display: block;
+            page-break-inside: avoid;
+        }
+        .header
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 9pt;
+        }
+        .box_rotate
+        {
+            -moz-transform: rotate(-90deg); /* FF3.5+ */
+            -o-transform: rotate(-90deg); /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg); /* Saf3.1+, Chrome */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.90)"; /* IE8 */
+        }
+    </style>
+</head>
+<body>
+    <div class="page-break">
+        <div>
+            <table width="98.4%" border="0" class="table-header">
+                <tbody>
+                    <tr class="tr-top">
+                        <td class="td-left w200px" style=" height:50px; text-align: center; "> <img style=" width:150px; height:50px;" src="~/Content/themes/Meca/image/lg-icon.png" />  </td>
+                        <td class="td-center" style="text-align:center; ">
+                            TELEVİZYON HASTANESİ <br />
+                            <p>KURT İSMAİL PAŞA 7.SOK GENÇKAPLAN APT. NO:9 </p>
+                            <p>YENİŞEHİR / DİYARBAKIR / TÜRKİYE </p>
+                            <p>http://www.TvHastanesi.com.tr </p>
+                        </td>
+                        <td class="td-right w200px"  >  </td>
+                    </tr>
+                    <tr class="tr-bottom">
+                        <td class="td-left w200px" > Tarih : @DateTime.Now </td>
+                        <td class="td-center"> KREDİ FATURA </td>
+                        <td class="td-right w200px" style=" width: 200px;"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+    
+        <div>
+            <table width="49%" border="0" class="form-info  " style="float:left">
+                <tbody>
+                    <tr>
+                        <td class="caption"> Onarim No </td>
+                        <td>@Model.ServiceTicket.FixCode</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Tahsilat No </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Fatura No </td>
+                        <td>@Model.ServiceTicket.InvoiceNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Ürün Alım </td>
+                        <td>@Model.ServiceTicket.RecordDate</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Model No </td>
+                        <td>@Model.ServiceTicket.ProductModel</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Seri No </td>
+                        <td>@Model.ServiceTicket.ProductSerialNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Onarim Tipi </td>
+                        <td>
+                        @if (Model.ServiceTicket.WarrantyIsActive == true)
+                            {
+                                <span>Garantili</span>
+                            }
+                            else
+                            {
+                                <span>Garantilisiz</span>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Garanti No </td>
+                        <td>@Model.ServiceTicket.WarrantyCode</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Garanti Kaynağı </td>
+                        <td>@Model.ServiceTicket.WarrantySource</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Önceki Onarım </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Aksesuarlar </td>
+                        <td>@Model.ServiceTicket.ProductDesctiption</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Referans </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Onay Limiti </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Satın Alma Tarihi </td>
+                        <td>@Model.ServiceTicket.PurchaseDate</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Oluşturan </td>
+                        <td>@Model.ServiceTicket.RecordedByUserId</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Onarım Detayı </td>
+                        <td>@Model.ServiceTicket.TechnicianNote</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="49%" border="0" class="form-info info" style="float:left">
+                <tbody>
+                    <tr>
+                        <td class="caption"> Tüketici İsmi</td>
+                        <td> @Model.Customer.Name  @Model.Customer.Surname </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Adresler </td>
+                        <td> @Model.Customer.Address</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Tüketici </td>
+                        <td> sssss</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Yedek Telefon No </td>
+                        <td> @Model.Customer.PhoneNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Cep Telefonu </td>
+                        <td> @Model.Customer.MobileNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Fax </td>
+                        <td>  </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> E-Posta </td>
+                        <td> @Model.Customer.EmailAddress </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Sorunlar </td>
+                        <td> sssss</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Ürünün Durumu </td>
+                        <td> sssss</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Ev Telefonu </td>
+                        <td> @Model.Customer.PhoneNumber </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear"> </div>
+        <br />
+        @* ek parça ve fiyatlandırma *@
+        <div class="full">
+            <table width="98.4%" border="0" class="form-info grid info">
+                <thead>
+                    <tr>
+                        <th style =" width:20px; "> Si.No</th>
+                        <th style =" width:60px; "> Parça </th>
+                        <th> Parça Açıklaması</th>
+                        <th style=" width:20px; "> Adet</th>
+                        <th style=" width:40px; "> Parça</th>
+                        <th style=" width:40px; "> Tutar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>21114443212</td>
+                        <td>cldf 122 işsa daiçidasd dsaid çsaid sças acsaxzc xc </td>
+                        <td>1</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>21114443212</td>
+                        <td>cldf 122 işsa daiçidasd dsaid çsaid sças acsaxzc xc </td>
+                        <td>1</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>21114443212</td>
+                        <td>cldf 122 işsa daiçidasd dsaid çsaid sças acsaxzc xc </td>
+                        <td>1</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="caption" style="text-align: right; padding-right:10px; height:30px; "> Yedek parça alt</td>
+                        <td> 123</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" rowspan="11" >
+                            <table width="99.8%" border="0" class="form-info">
+                                <tr> 
+                                    <td colspan="2" style="height:140px"> @Model.ServiceTicket.TechnicianNote </td> 
+                                </tr>
+                                <tr>
+                                    <td style="height:60px;" class="caption" > Ödemeyi Alan </td>
+                                    <td class="caption"> Tüketici İmza </td>
+                                </tr>
+                            </table> 
+                        </td>
+                        <td colspan="2">Yedek Parça</td>
+                        <td>132.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Onarım Ödemeleri</td>
+                        <td>63.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">İndirim</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Taşıma Ödemeleri</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Diğer</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">KDV</td>
+                        <td>53.42</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Pul Vergisi</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Vergi</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Diğer</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Peşinat</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Toplam Tutar</td>
+                        <td>350.39</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        @*<div style="text-align: center;">
+            <span>Yukarıda teknik şartları belirlenen ürün için birim fiyatımız aşağıdadır. Teknik
+                şartlarda bir değişiklik olursa değişiklik fiyata yansıtılacaktır.</span><br />
+            <span>Siparişiniz için birim fiyat :</span>
+        </div>*@
+        <div class="clear">
+        </div>
+        <div style="text-align: center;">
+            <span>Bu döküman <b> @DateTime.Now.ToShortDateString() </b>  tarihinde, 
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <b>  @User.Identity.Name  </b>
+                }
+             kullanıcısı tarafından alınmıştır.</span></div>
+    </div>
+</body>
+</html>

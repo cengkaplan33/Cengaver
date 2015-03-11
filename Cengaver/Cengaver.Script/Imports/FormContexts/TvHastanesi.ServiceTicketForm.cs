@@ -9,7 +9,6 @@ namespace Cengaver.TvHastanesi
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
     using Cengaver.TvHastanesi;
-    using Cengaver.Northwind;
 
     public partial class ServiceTicketForm : PrefixedContext
     {
@@ -30,7 +29,7 @@ namespace Cengaver.TvHastanesi
         public IntegerEditor OperationId { get { return ById<IntegerEditor>("OperationId"); } }
         public IntegerEditor StageId { get { return ById<IntegerEditor>("StageId"); } }
         public TextAreaEditor Description { get { return ById<TextAreaEditor>("Description"); } }
-        public LookupEditor CustomerId { get { return ById<LookupEditor>("CustomerId"); } }
+        public CustomerEditor CustomerId { get { return ById<CustomerEditor>("CustomerId"); } }
         public LookupEditor RecordedByUserId { get { return ById<LookupEditor>("RecordedByUserId"); } }
         public LookupEditor DeliveredByUserId { get { return ById<LookupEditor>("DeliveredByUserId"); } }
         public TextAreaEditor MalFunction { get { return ById<TextAreaEditor>("MalFunction"); } }
@@ -45,7 +44,7 @@ namespace Cengaver.TvHastanesi
         public DecimalEditor LaborCost { get { return ById<DecimalEditor>("LaborCost"); } }
         public DecimalEditor PieceCost { get { return ById<DecimalEditor>("PieceCost"); } }
         public StringEditor TotalCost { get { return ById<StringEditor>("TotalCost"); } }
-        public StringEditor PaymentTypeId { get { return ById<StringEditor>("PaymentTypeId"); } }
+        public EnumEditor PaymentTypeId { get { return ById<EnumEditor>("PaymentTypeId"); } }
     }
 }
 

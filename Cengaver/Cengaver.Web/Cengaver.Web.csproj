@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\lib\EPPlus\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="FluentMigrator, Version=1.3.1.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\FluentMigrator.1.3.1.0\lib\40\FluentMigrator.dll</HintPath>
@@ -534,6 +537,11 @@
     <Content Include="Content\site\site.TvHastanesi.less" />
     <Content Include="Modules\TvHastanesi\ServiceTicket\SonyKrediFatura.cshtml" />
     <Content Include="Modules\TvHastanesi\ServiceTicket\SonyKrediFatura - Copy.cshtml" />
+    <Content Include="Modules\Common\Reporting\ReportIndex.cshtml" />
+    <Content Include="Content\site\site.pages.report.less" />
+    <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceRegistrationUserForm.cshtml" />
+    <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceSonyForm.cshtml" />
+    <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceRegistrationTechnicianForm.cshtml" />
     <None Include="Properties\PublishProfiles\Cengaver_TvHastanesi.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Readme.CodeGenerator.txt" />
@@ -828,6 +836,13 @@
     </Compile>
     <Compile Include="Modules\Common\Navigation\NavigationItems.cs" />
     <Compile Include="Modules\Common\Navigation\NavigationModel.cs" />
+    <Compile Include="Modules\Common\Reporting\CommandLineTools.cs" />
+    <Compile Include="Modules\Common\Reporting\GenerateExcelFileHelper.cs" />
+    <Compile Include="Modules\Common\Reporting\HtmlToPdfConverter.cs" />
+    <Compile Include="Modules\Common\Reporting\ReportEndpoint.cs" />
+    <Compile Include="Modules\Common\Reporting\ReportPage.cs" />
+    <Compile Include="Modules\Common\Reporting\ReportRepository.cs" />
+    <Compile Include="Modules\Common\Reporting\SiteBaseReport.cs" />
     <Compile Include="Modules\FrontPage\AboutUs\AboutUsPage.cs" />
     <Compile Include="Modules\FrontPage\AnaSayfa\AnaSayfaPage.cs" />
     <Compile Include="Modules\FrontPage\Computer\ComputerPage.cs" />
@@ -874,6 +889,7 @@
     <Compile Include="Modules\TvHastanesi\Customer\CustomerForm.cs" />
     <Compile Include="Modules\TvHastanesi\Customer\CustomerPage.cs" />
     <Compile Include="Modules\TvHastanesi\Customer\CustomerRepository.cs" />
+    <Compile Include="Modules\TvHastanesi\Customer\CustomerReport.cs" />
     <Compile Include="Modules\TvHastanesi\Customer\CustomerRow.cs" />
     <Compile Include="Modules\TvHastanesi\Menu\MenuColumns.cs" />
     <Compile Include="Modules\TvHastanesi\Menu\MenuEndpoint.cs" />
@@ -883,6 +899,8 @@
     <Compile Include="Modules\TvHastanesi\Menu\MenuRow.cs" />
     <Compile Include="Modules\TvHastanesi\PermissionKeys.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\FrontPageEndpoint.cs" />
+    <Compile Include="Modules\TvHastanesi\Enums.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketFormEndpoint.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\SonyKrediFaturaReport.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketRepository.cs" />
     <Compile Include="Modules\TvHastanesi\Unit\UnitColumns.cs" />
@@ -993,8 +1011,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Modules\TvHastanesi\Report\" />
-    <Folder Include="Views\ServiceTicketReport\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

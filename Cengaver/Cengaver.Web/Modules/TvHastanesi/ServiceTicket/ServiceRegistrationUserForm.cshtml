@@ -1,0 +1,359 @@
+﻿
+@model Cengaver.TvHastanesi.Models.ServiceTicketFormModel
+
+@{
+    Layout = "";
+}
+
+<html>
+<head>
+    <title>@Model.ServiceTicket.ServiceTicketId (Müşteri Formu)</title>
+    <style type="text/css" media="all">
+        page {
+            size: A5;
+        }
+
+        .report-announcement {
+            font-size :9px;
+            margin: 0;
+            padding: 0 0 0 20px;
+        }
+
+        ul.report-sign { text-align:center; font-weight:bold; }
+        .report-sign li { float:left;  width: 50%; }
+
+        body, table, td
+        {
+            font-family: Tahoma, Arial, Helvetica;
+            font-size: 10pt;
+        }
+
+        .mw60px {
+            min-width:60px;
+        }
+
+        table.table-header {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+            border: 1px solid black;
+        }
+
+        table.table-header .tr-top { }
+        table.table-header .tr-top .td-right { }
+        table.table-header .tr-top .td-left { }
+        table.table-header .tr-top .td-center { }
+
+        table.table-header .tr-bottom {
+            height:30px;
+        }
+
+        table.table-header .tr-bottom .td-right {
+            border: 1px solid black;
+        }
+
+        table.table-header .tr-bottom .td-left {
+            border: 1px solid black;
+        }
+
+        table.table-header .tr-bottom .td-center {
+            border: 1px solid black;
+            text-align: center;
+            font-weight:bold;
+        }
+                     
+        table.form-info {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+        }
+
+        table.form-info.grid {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+            border: 1px solid #000;
+        }
+
+        table.form-info th
+        {
+            text-align: left;
+            width:30%;
+            background-color: #eee9e9;
+        }
+        
+        table.form-info thead th
+        {
+            text-align: center;
+            background-color: gray;
+            color: White;
+        }
+            table.form-info td
+            {
+               width:10%; 
+            }
+
+            table.form-info td.caption {
+                width: 5%;
+                padding-left: 4px;
+                font-weight: bold;
+            }
+
+            table.form-info.grid td, table.form-info.grid th {
+                border: 1px solid #333;
+            }
+
+        div.full
+        {
+            width: 100%;
+        }
+        .clear
+        {
+            clear: both;
+            display: block;
+        }
+        
+        .page-break
+        {
+            display: block;
+            page-break-inside: avoid;
+        }
+        
+        .header
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+    </style>
+    <style type="text/css" media="print">
+        .report-announcement {
+            font-size :9px;
+            margin: 0;
+            padding: 0 0 0 20px;
+        }
+
+        body, table, td
+        {
+            font-family: Tahoma, Arial, Helvetica;
+            font-size: 7pt;
+        }
+        
+        table.form-info
+        {
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 3px;
+        }
+
+            table.form-info.grid {
+                border-collapse: collapse;
+                table-layout: fixed;
+                margin-top: 3px;
+                border: 1px solid #000;
+            }
+
+        table.form-info th
+        {
+            text-align: left;
+            width:30%;
+            background-color: #eee9e9;
+            -webkit-print-color-adjust: exact;
+        }
+        table.form-info thead th
+        {
+            text-align: center;
+            background-color: gray;
+            color: White;
+            -webkit-print-color-adjust: exact;
+        }
+        table.form-info td {
+            width: 10%;
+        }
+        table.form-info td.caption {
+            width: 10%;
+            padding-left: 4px;
+            font-weight: bold;
+        }
+        table.form-info.grid td, table.form-info.grid th {
+            border: 1px solid #333;
+        }
+        div.full
+        {
+            width: 100%;
+        }
+        .clear
+        {
+            clear: both;
+            display: block;
+        }
+        .page-break
+        {
+            display: block;
+            page-break-inside: avoid;
+        }
+        .header
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 9pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-break">
+        <div>
+            <table width="98.4%" border="0" class="table-header">
+                <tbody>
+                    <tr class="tr-top">
+                        <td class="td-left mw60px" style=" height:50px; text-align: center; "> <img style=" width:120px; height:40px;" src="~/Content/themes/Meca/image/lg-icon.png" />  </td>
+                        <td class="td-center" style="text-align:center; ">
+                            TELEVİZYON HASTANESİ <br />
+                            KURT İSMAİL PAŞA 7.SOK GENÇKAPLAN APT. NO:9   YENİŞEHİR / DİYARBAKIR / TÜRKİYE <br />
+                            http://www.TvHastanesi.com.tr <br />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+    
+        <div>
+            <table width="49%" border="0" class="form-info  " style="float:left">
+                <tbody>
+                    <tr>
+                        <td class="caption"> Servis Kayıt Tarihi</td>
+                        <td>@Model.ServiceTicket.RecordDate</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Model No </td>
+                        <td>@Model.ServiceTicket.ProductModel</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Seri No </td>
+                        <td>@Model.ServiceTicket.ProductSerialNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Onarim Tipi </td>
+                        <td>
+                        @if (Model.ServiceTicket.WarrantyIsActive == true)
+                            {
+                                <span>Garantili</span>
+                            }
+                            else
+                            {
+                                <span>Garantisiz</span>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Garanti No </td>
+                        <td>@Model.ServiceTicket.WarrantyCode</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Garanti Kaynağı </td>
+                        <td>@Model.ServiceTicket.WarrantySource</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Önceki Onarım </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Aksesuarlar </td>
+                        <td>@Model.ServiceTicket.ProductDesctiption</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Satın Alma Tarihi </td>
+                        <td>@Model.ServiceTicket.PurchaseDate</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Oluşturan </td>
+                        <td>@Model.ServiceTicket.RecordedByUserDisplayName</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="49%" border="0" class="form-info info" style="float:left">
+                <tbody>
+                    <tr>
+                        <td class="caption"> Tüketici İsmi</td>
+                        <td> @Model.Customer.Name  @Model.Customer.Surname </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Adresler </td>
+                        <td> @Model.Customer.Address</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Tüketici </td>
+                        <td> sssss</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Yedek Telefon No </td>
+                        <td> @Model.Customer.PhoneNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Cep Telefonu </td>
+                        <td> @Model.Customer.MobileNumber</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Fax </td>
+                        <td>  </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> E-Posta </td>
+                        <td> @Model.Customer.EmailAddress </td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Sorunlar </td>
+                        <td> sssss</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Ürünün Durumu </td>
+                        <td> sssss</td>
+                    </tr>
+                    <tr>
+                        <td class="caption"> Ev Telefonu </td>
+                        <td> @Model.Customer.PhoneNumber </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clear"> </div>
+        <br /> 
+        @* ek parça ve fiyatlandırma *@
+        <div class="full">
+            <ol class="report-announcement">
+                <li>Kullanım hatası ve elektrik şebekesinden kaynaklanan arızalar garanti kapsamı dışındadır.</li>
+                <li>Garanti kapsamı dışında kalan ve arıza olmaksızın yapılan servis taleplerinde müşteriden servis talepleri alınır.</li>
+                <li>Garanti belgesi ve fatura ibraz edilmeyen ürüne garanti dahili işlem yapılmaz.</li>
+                <li>Cihaza yetkili servis dışındaki  kişiler tarafından müdahale edilmesi halinde garanti sona erer.</li>
+                <li>Bu belge fiş, makbuz,fatura veya irsaliye yerine geçerli değildir.</li>
+                <li>Garanti harici tamir için kullanılan malzemeler 6 ay içerisinde arızalanır ise malzeme ücretsiz değiştirilir.</li>
+                <li>Tamir süresi en fazla 20 gündür.</li>
+                <li>Tamir süresine müteakiben 90 gün içerisinde teslim alınmayan ürünlerden firmamız sorumlu değildir.</li>
+                <li>Tüketicinin bulunduğu yerde servis istasyonunun olmaması halinde satış sonrası hizmetlerin verilmesinden ,tüketiciye en yakın yerdeki servis istasyonu sorumludur.<br />
+                    -Tüketiciye en yakın yerdeki servis istasyonunda satış sonrası hizmet  verilmesinin mümkün olmaması durumunda ;malın firma merkezine ya da diğer bir servis istasyonuna ulaştırılması ve geri gönderilmesi ile  ilgli olarak nakliye,kargo,posta veya benzeri herhangi bir ulaşım gideri talep edilmez.<br />
+                    - Kullanım ömrü süresince malın bakım ve/veya onarım süresi ,  garanti süresi içerisinde mala ilişkin arızanın servis istasyonuna bildirimi ,garanti süresi dışında ise malın teslim tarihinden itibaren 20 işgününü geçmez.<br />
+                    -Servis istasyonları tarfından verilen montaj ,bakım ve onarım hizmetleriyle ilgli olarak, bir yıl içerinde aynı arızanın tekrarı halinde herhangi bir servis ücreti alınmaz.Tüketicinin malı kullanım kılavuzunda yer alan hususlara aykırı kullanmasından kaynaklanan arızalar bu madde kapsamı dışındadır.<br />
+                    -Malın garanti süresi dışında ,garanti belgesi ile satılması zorunlu olmayan bir parçasının  servis istasyonu tarafından değiştirilmesi ve/veya satılması durumunda  değişen parça için altı aydan aşağı olmamak üzere bir garanti süresi verilir.<br />
+                </li>
+                <li>Malın garanti süresi içerisinde yetkili servis istasyonuna veya satıcıya tesliminden itibaren arızanın on işgünü içerisinde giderilmemesi halinde ,üretici veya ithalatçının ;malın tamiri tamanlayıncaya kadar,benzer özelliklere sahip başka bir malı tüketicinin kullanımına tahsis etmesi zronludur.Benzer özelliklere sahip başka bir malın tüketici tarafından istenmemesi halinde üretici veya ithalatçılar bu yükümlülükten kurtulur.</li>
+                <li>Servise bırakılan cihazın kişisel veri yedeklenmesi ile ilgili LG yetkili servisin hiçbir yükümlüğü bulunmamaktadır.Kişisel verilerin yedeklenmesi kullanıcı yükümlüğündedir.</li>
+            </ol>
+            <ul class="report-sign">
+                <li> Ürünü Teslim Alan İmza (@Model.ServiceTicket.RecordedByUserDisplayName)</li>
+                <li> Müşteri İmza (@(Model.ServiceTicket.CustomerName + " "+ Model.ServiceTicket.CustomerSurname))</li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        <div style="text-align: center; font-size:10px;">
+            <span>Bu döküman <b> @DateTime.Now.ToShortDateString() </b>  tarihinde, 
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <b>  @User.Identity.Name  </b>
+                }
+             kullanıcısı tarafından alınmıştır.</span></div>
+    </div>
+</body>
+</html>

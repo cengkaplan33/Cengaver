@@ -9,7 +9,6 @@ namespace Cengaver.TvHastanesi
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
     using Cengaver.TvHastanesi;
-    using Cengaver.Northwind;
 
     public partial class CustomerForm : PrefixedContext
     {
@@ -21,8 +20,8 @@ namespace Cengaver.TvHastanesi
         public TextAreaEditor Address { get { return ById<TextAreaEditor>("Address"); } }
         public LookupEditor CityId { get { return ById<LookupEditor>("CityId"); } }
         public CountyEditor CountyId { get { return ById<CountyEditor>("CountyId"); } }
-        public Serenity.PhoneEditor MobileNumber { get { return ById<Serenity.PhoneEditor>("MobileNumber"); } }
-        public Serenity.PhoneEditor PhoneNumber { get { return ById<Serenity.PhoneEditor>("PhoneNumber"); } }
+        public PhoneEditor MobileNumber { get { return ById<PhoneEditor>("MobileNumber"); } }
+        public PhoneEditor PhoneNumber { get { return ById<PhoneEditor>("PhoneNumber"); } }
         public EmailEditor EmailAddress { get { return ById<EmailEditor>("EmailAddress"); } }
     }
 }

@@ -25,6 +25,7 @@ namespace Cengaver.TvHastanesi
         public String City { get; set; }
         public Int32? CountyCityId { get; set; }
         public String County { get; set; }
+        public String FullName { get; set; }
         public Int32? InsertUserId { get; set; }
         public String InsertDate { get; set; }
         public Int32? UpdateUserId { get; set; }
@@ -47,6 +48,7 @@ namespace Cengaver.TvHastanesi
             [InlineConstant] public const string City = "City";
             [InlineConstant] public const string CountyCityId = "CountyCityId";
             [InlineConstant] public const string County = "County";
+            [InlineConstant] public const string FullName = "FullName";
             [InlineConstant] public const string InsertUserId = "InsertUserId";
             [InlineConstant] public const string InsertDate = "InsertDate";
             [InlineConstant] public const string UpdateUserId = "UpdateUserId";

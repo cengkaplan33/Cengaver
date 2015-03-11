@@ -1095,6 +1095,224 @@ div.s-Toolbar .s-PopupToolButton .button-outer > span > b {
 .s-ServiceTicketDialog .s-PropertyGrid .categories {
   height: 500px;
 }
+.s-ReportDialog .caption {
+  width: 200px;
+}
+.s-ReportDialog .editor {
+  width: 600px;
+}
+.s-ReportDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-ReportDialog .s-Form .editor.dateQ {
+  width: 583px;
+}
+.s-ReportDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-ReportDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 523px;
+}
+.s-ReportDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-ReportDialog .s-Form .editor.has-inplace-button {
+  width: 578px;
+}
+.s-ReportDialog .s-Form .emaildomain {
+  width: 415px;
+}
+.s-ReportDialog .caption {
+  width: 200px;
+}
+.s-ReportDialog .editor {
+  width: 600px;
+}
+.s-ReportDialog .fieldset {
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+.s-ReportDialog .s-Form .ui-dropdownchecklist {
+  width: 100%;
+}
+.s-ReportDialog .s-Form .ui-dropdownchecklist-text {
+  width: 574px !important;
+}
+.s-ReportDialog .s-Form .editor.datePI {
+  width: 100px;
+  background-color: #DFF2FC;
+}
+.s-ReportDialog .design-panel {
+  float: right;
+  margin: 2px 2px 0 0;
+}
+.s-ReportDesignPanel .lbl {
+  display: block;
+  float: left;
+  margin: 3px 0 0 0;
+}
+.s-ReportDesignPanel select {
+  display: block;
+  float: left;
+  min-width: 60px;
+  max-width: 90px;
+}
+.s-ReportDesignPanel a {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 2px 0 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.s-ReportDesignPanel a.add {
+  background-image: url(../serenity/images/report-plus.png);
+}
+.s-ReportDesignPanel a.edit {
+  background-image: url(../serenity/images/report-pencil.png);
+}
+.s-ReportDesignPanel a.delete {
+  background-image: url(../serenity/images/report-minus.png);
+}
+.s-ReportDesignDialog .tab-pane {
+  height: 200px;
+}
+.s-ReportDesignDialog .caption {
+  width: 110px;
+}
+.s-ReportDesignDialog .editor {
+  width: 400px;
+}
+.s-ReportDesignDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-ReportDesignDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-ReportDesignDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-ReportDesignDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-ReportDesignDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-ReportDesignDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-ReportDesignDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-ReportDesignDialog .File .value-box {
+  width: 394px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  margin: 0 0 4px 0;
+  padding: 2px;
+}
+.s-ReportPage {
+  padding: 8px 16px 16px 16px;
+}
+.s-ReportPage .page-title {
+  height: 72px;
+  color: #333;
+  line-height: 64px;
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+  font-size: 36px;
+  background: url(../serenity/images/report64.png) right top no-repeat;
+  border-bottom: 2px solid #333;
+  margin-bottom: 16px;
+}
+.s-ReportPage .report-box {
+  height: 100%;
+}
+.s-ReportPage div.report-list ul ul {
+  margin-left: 20px;
+}
+.s-ReportPage div.report-list li {
+  margin-top: 1px;
+}
+.s-ReportPage div.report-list li.category > .line {
+  position: relative;
+  padding: 4px 0 4px 20px;
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+  display: block;
+  cursor: pointer;
+  color: #666;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 14px;
+}
+.s-ReportPage div.report-list li.category.expanded > .line {
+  box-shadow: none;
+}
+.s-ReportPage div.report-list .line {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffffff), color-stop(100%, #eaeaea));
+  background: -webkit-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+  background: -o-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+  background: -ms-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+  background: linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0);
+}
+.s-ReportPage div.report-list li {
+  background-color: #eaeaea;
+  box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 0px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.s-ReportPage div.report-list ul.has-reports {
+  background-color: #fff;
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
+}
+.s-ReportPage li > .line > span.toggle {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  display: block;
+  height: 11px;
+  width: 11px;
+  background: transparent url(../serenity/images/accordion-arrows.png) no-repeat 0px -22px;
+}
+.s-ReportPage li.expanded > .line > span.toggle {
+  background-position: 0px 0px;
+}
+.s-ReportPage div.report-list li.report-item {
+  background-color: #fff;
+  box-shadow: none;
+  margin-top: 0px;
+  font-size: 12px;
+  padding: 4px;
+  border-bottom: 1px solid #eee;
+}
+.s-ReportPage div.report-list li.report-item.even {
+  background-color: #f7f7f7;
+}
+.s-ReportPage .report-item a {
+  background: url(../serenity/images/spreadsheet.png) no-repeat 0 center;
+  padding: 0 0 0 18px;
+  line-height: 16px;
+  display: inline-block;
+}
+.s-ReportPage ul ul {
+  display: none;
+}
+.s-ReportPage #QuickSearchBar {
+  float: right;
+  margin: 8px 66px;
+}
+.s-ReportPage #QuickSearchBar input {
+  border: 1px solid #ccc;
+  font-size: 13px;
+  height: 20px;
+  padding: 2px 4px;
+}
 a,
 .slick-cell > a {
   color: #0000be;

@@ -1,6 +1,4 @@
-﻿
-
-namespace Cengaver.TvHastanesi
+﻿namespace Cengaver.TvHastanesi
 {
     using jQueryApi;
     using Serenity;

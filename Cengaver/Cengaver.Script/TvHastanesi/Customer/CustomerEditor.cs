@@ -1,35 +1,4 @@
-﻿//using jQueryApi;
-//using Serenity;
-//using System.Collections.Generic;
-
-//namespace Cengaver.TvHastanesi
-//{
-//    [Editor]
-//    [ColumnsKey("TvHastanesi.Customer"), IdProperty("CustomerId"), NameProperty("Name")]
-//    [DialogType(typeof(TvHastanesi.CustomerDialog)), LocalTextPrefix("TvHastanesi.Customer"), Service("TvHastanesi/Customer")]
-//    public class CustomerEditor : SelectEditor
-//    {
-//        public CustomerEditor(jQueryObject hidden, SelectEditorOptions opt)
-//            :base (hidden,opt)
-//        {
-
-//          //  Q.Alert("asdsadas");
-
-//        }
-
-//        protected override List<object> GetItems()
-//        {
-//            //TODO::OK::Check:: bu yemedi nedeni öğrenilecek
-//            //var permissions = Q.GetRemoteData<ListResponse<CustomerRow>>("TvHastanesi.Customer").Entities;
-
-//            var permissions = Q.GetLookup<CustomerRow>("TvHastanesi.Customer").Items;
-//            var rrrrrrrrrr = "";
-//            return new List<object>() { permissions };
-//        }
-//    }
-//}
-
-namespace Cengaver.TvHastanesi
+﻿namespace Cengaver.TvHastanesi
 {
     using jQueryApi;
     using Serenity;
@@ -44,12 +13,12 @@ namespace Cengaver.TvHastanesi
         public CustomerEditor(jQueryObject hidden)
             : base(hidden)
         {
-            Q.Alert("ççç");
+           // Q.Alert("ççç");
         }
 
         protected override string GetItemText(CustomerRow item, Lookup<CustomerRow> lookup)
         {
-            return base.GetItemText(item, lookup) + "(" + item.PhoneNumber + ")";
+            return base.GetItemText(item, lookup) + " - (" + item.PhoneNumber + ")";
         } // bu kadar  
         //hazır buradasın abi bir teste edeyim  :)
 
@@ -68,6 +37,15 @@ namespace Cengaver.TvHastanesi
             // fakat sen string yazma
             // .tt yi kullan
 
+        }
+
+        protected override Select2Options GetSelect2Options()
+        {
+
+            //search item ların sayısına göre search kutusunu gösterir.
+            var opt = base.GetSelect2Options();
+            opt.MinimumResultsForSearch = 0;
+            return opt;
         }
     }
 }

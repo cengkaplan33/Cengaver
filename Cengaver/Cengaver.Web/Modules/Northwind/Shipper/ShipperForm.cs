@@ -13,7 +13,7 @@ namespace Cengaver.Northwind.Forms
     public class ShipperForm
     {
         public String CompanyName { get; set; }
-        [Northwind.PhoneEditor]
+        //[Northwind.PhoneEditor]
         public String Phone { get; set; }
     }
 }

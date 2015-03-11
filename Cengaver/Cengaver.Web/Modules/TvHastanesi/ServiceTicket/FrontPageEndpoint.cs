@@ -14,6 +14,7 @@ namespace Cengaver.TvHastanesi.Endpoints
     {
         public ActionResult Index(int serviceTicketId)
         {
+            //test amaçlıdır silinebilir
             var model = new Models.SonyKrediFaturaModel();
 
             using (var connection = SqlConnections.NewByKey("Natro_TvHastanesi"))
@@ -28,6 +29,7 @@ namespace Cengaver.TvHastanesi.Endpoints
 
         public ActionResult Sample(int serviceTicketId)
         {
+            //test amaçlıdır silinebilir
             var model = new Models.SonyKrediFaturaModel();
 
             using (var connection = SqlConnections.NewByKey("Natro_TvHastanesi"))

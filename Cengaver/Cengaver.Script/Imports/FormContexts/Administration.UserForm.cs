@@ -9,7 +9,6 @@ namespace Cengaver.Administration
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
     using Cengaver.TvHastanesi;
-    using Cengaver.Northwind;
 
     public partial class UserForm : PrefixedContext
     {

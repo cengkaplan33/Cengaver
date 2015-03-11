@@ -8,6 +8,7 @@ namespace Cengaver.TvHastanesi.Forms
     using System.ComponentModel;
     using System.Collections.Generic;
     using System.IO;
+    using Cengaver.TvHastanesi.Enums;
 
     [FormScript("TvHastanesi.ServiceTicket")]
     [BasedOnRow(typeof(Entities.ServiceTicketRow))]
@@ -31,9 +32,9 @@ namespace Cengaver.TvHastanesi.Forms
         [Category("General"),CssClass("eeeeeeeeeeeeeeee")]
         public String InvoiceNumber { get; set; }
         public DateTime RecordDate { get; set; }
-        public DateTime DeliveryDate { get; set; } 
-        public Int32 OperationId { get; set; }    //Hizmet TİPİ
-        public Int32 StageId { get; set; }        //SERVİS TİPİ
+        public DateTime DeliveryDate { get; set; }
+        public ServiceTicketOperationType OperationId { get; set; }    //Hizmet TİPİ
+        public ServiceTicketStageType StageId { get; set; }        //SERVİS TİPİ
 
         [TextAreaEditor]
         public String Description { get; set; }
@@ -68,6 +69,8 @@ namespace Cengaver.TvHastanesi.Forms
         public Decimal LaborCost { get; set; }
         public Decimal PieceCost { get; set; }
         public String TotalCost { get; set; }
-        public Int16 PaymentTypeId { get; set; }
+
+        //[EnumFormatter(EnumKey ="PaymentType")]
+        public PaymentType PaymentTypeId { get; set; }
     }
 }

@@ -32,7 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Administration\RolePermission\RolePermissionDialog.cs" />
-    <Compile Include="Administration\UserRole\RoleCheckEditor - Copy.cs" />
+    <Compile Include="Imports\ServiceContracts\Serenity.Web.GenerateCsvRequest.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\Serenity.Web.GenerateExcelFileRequest.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.PaymentType.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.ServiceTicketFormType.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.ServiceTicketOperationType.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.ServiceTicketStageType.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TvHastanesi\Customer\CustomerEditor.cs" />
     <Compile Include="Administration\UserRole\RoleCheckEditor.cs" />
     <Compile Include="Administration\UserPermission\PermissionModuleEditor.cs" />
     <Compile Include="Administration\UserPermission\PermissionCheckEditor.cs" />
@@ -308,7 +326,6 @@
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Membership\LoginPanel.cs" />
-    <Compile Include="Northwind\Shared\PhoneEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptInitialization.cs" />
     <Compile Include="Administration\User\UserGrid.cs" />
@@ -354,6 +371,7 @@
     <Compile Include="TvHastanesi\Customer\CustomerGrid.cs" />
     <Compile Include="TvHastanesi\Menu\MenuDialog.cs" />
     <Compile Include="TvHastanesi\Menu\MenuGrid.cs" />
+    <Compile Include="TvHastanesi\Enums.cs" />
     <Compile Include="TvHastanesi\Unit\UnitDialog.cs" />
     <Compile Include="TvHastanesi\Unit\UnitGrid.cs" />
     <Compile Include="TvHastanesi\ServiceTicket\ServiceTicketGrid.cs" />
@@ -414,6 +432,9 @@
       <Project>{56e9e208-55d9-4a50-a5b9-6eb22df6af0e}</Project>
       <Name>Serenity.Script.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Northwind\Shared\" />
   </ItemGroup>
   <Import Project="$(SolutionDir)Serenity\tools\Saltarelle\Saltarelle.Compiler.targets" />
   <Import Project="$(SolutionDir)Serenity\tools\Submodule\Serenity.Submodule.Script.targets" />

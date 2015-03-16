@@ -796,6 +796,8 @@
     <Content Include="Modules\Administration\Translation\TranslationIndex.cshtml" />
     <Content Include="Modules\Administration\Role\RoleIndex.cshtml" />
     <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketIndex.cshtml" />
+    <Content Include="Modules\TvHastanesi\Charge\ChargeIndex.cshtml" />
+    <Content Include="Modules\TvHastanesi\ServiceCharge\ServiceChargeIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1008,6 +1010,18 @@
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketForm.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketEndpoint.cs" />
     <Compile Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketPage.cs" />
+    <Compile Include="Modules\TvHastanesi\Charge\ChargeRow.cs" />
+    <Compile Include="Modules\TvHastanesi\Charge\ChargeColumns.cs" />
+    <Compile Include="Modules\TvHastanesi\Charge\ChargeForm.cs" />
+    <Compile Include="Modules\TvHastanesi\Charge\ChargeRepository.cs" />
+    <Compile Include="Modules\TvHastanesi\Charge\ChargeEndpoint.cs" />
+    <Compile Include="Modules\TvHastanesi\Charge\ChargePage.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceCharge\ServiceChargeRow.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceCharge\ServiceChargeColumns.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceCharge\ServiceChargeForm.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceCharge\ServiceChargeRepository.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceCharge\ServiceChargeEndpoint.cs" />
+    <Compile Include="Modules\TvHastanesi\ServiceCharge\ServiceChargePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

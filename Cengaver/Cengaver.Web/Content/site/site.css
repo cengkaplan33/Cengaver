@@ -1095,6 +1095,82 @@ div.s-Toolbar .s-PopupToolButton .button-outer > span > b {
 .s-ServiceTicketDialog .s-PropertyGrid .categories {
   height: 500px;
 }
+.s-ChargeDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-ChargeDialog .tab-pane {
+  height: auto;
+}
+.s-ChargeDialog .caption {
+  width: 150px;
+}
+.s-ChargeDialog .editor {
+  width: 400px;
+}
+.s-ChargeDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-ChargeDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-ChargeDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-ChargeDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-ChargeDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-ChargeDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-ChargeDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-ChargeDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
+.s-ServiceChargeDialog > .size {
+  min-width: 650px;
+  width: 650px;
+}
+.s-ServiceChargeDialog .tab-pane {
+  height: auto;
+}
+.s-ServiceChargeDialog .caption {
+  width: 150px;
+}
+.s-ServiceChargeDialog .editor {
+  width: 400px;
+}
+.s-ServiceChargeDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-ServiceChargeDialog .s-Form .editor.dateQ {
+  width: 383px;
+}
+.s-ServiceChargeDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-ServiceChargeDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 323px;
+}
+.s-ServiceChargeDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 56px;
+  margin-left: 4px;
+}
+.s-ServiceChargeDialog .s-Form .editor.has-inplace-button {
+  width: 378px;
+}
+.s-ServiceChargeDialog .s-Form .emaildomain {
+  width: 215px;
+}
+.s-ServiceChargeDialog .s-PropertyGrid .categories {
+  height: 260px;
+}
 .s-ReportDialog .caption {
   width: 200px;
 }

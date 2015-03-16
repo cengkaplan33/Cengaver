@@ -376,6 +376,10 @@
     <Compile Include="TvHastanesi\Unit\UnitGrid.cs" />
     <Compile Include="TvHastanesi\ServiceTicket\ServiceTicketGrid.cs" />
     <Compile Include="TvHastanesi\ServiceTicket\ServiceTicketDialog.cs" />
+    <Compile Include="TvHastanesi\Charge\ChargeGrid.cs" />
+    <Compile Include="TvHastanesi\Charge\ChargeDialog.cs" />
+    <Compile Include="TvHastanesi\ServiceCharge\ServiceChargeGrid.cs" />
+    <Compile Include="TvHastanesi\ServiceCharge\ServiceChargeDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Imports\FormContexts\FormContexts.log">

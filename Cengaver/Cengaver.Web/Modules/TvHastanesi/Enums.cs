@@ -50,4 +50,15 @@ namespace Cengaver.TvHastanesi.Enums
         [Description("Tamirde")]
         Workshop = 3,
     }
+
+    [ScriptInclude]
+    public enum ChargeType
+    {
+        [Description("Yedek Parça")]
+        Spare = 1,
+        [Description("İşçilik")]
+        Labor = 2,
+        [Description("Diğer")]
+        Extra = 3,
+    }
 }

@@ -1008,6 +1008,20 @@
 	};
 	global.Cengaver.Northwind.TerritoryService = $Cengaver_Northwind_TerritoryService;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ChargeDialog
+	var $Cengaver_TvHastanesi_ChargeDialog = function() {
+		ss.makeGenericType(Serenity.EntityDialog$1, [Object]).call(this);
+	};
+	$Cengaver_TvHastanesi_ChargeDialog.__typeName = 'Cengaver.TvHastanesi.ChargeDialog';
+	global.Cengaver.TvHastanesi.ChargeDialog = $Cengaver_TvHastanesi_ChargeDialog;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ChargeGrid
+	var $Cengaver_TvHastanesi_ChargeGrid = function(container) {
+		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
+	};
+	$Cengaver_TvHastanesi_ChargeGrid.__typeName = 'Cengaver.TvHastanesi.ChargeGrid';
+	global.Cengaver.TvHastanesi.ChargeGrid = $Cengaver_TvHastanesi_ChargeGrid;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CityDialog
 	var $Cengaver_TvHastanesi_CityDialog = function() {
 		ss.makeGenericType(Serenity.EntityDialog$1, [Object]).call(this);
@@ -1218,6 +1232,20 @@
 		return Q.serviceRequest('TvHastanesi/Menu/List', request, onSuccess, options);
 	};
 	global.Cengaver.TvHastanesi.MenuService = $Cengaver_TvHastanesi_MenuService;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceChargeDialog
+	var $Cengaver_TvHastanesi_ServiceChargeDialog = function() {
+		ss.makeGenericType(Serenity.EntityDialog$1, [Object]).call(this);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeDialog.__typeName = 'Cengaver.TvHastanesi.ServiceChargeDialog';
+	global.Cengaver.TvHastanesi.ServiceChargeDialog = $Cengaver_TvHastanesi_ServiceChargeDialog;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceChargeGrid
+	var $Cengaver_TvHastanesi_ServiceChargeGrid = function(container) {
+		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeGrid.__typeName = 'Cengaver.TvHastanesi.ServiceChargeGrid';
+	global.Cengaver.TvHastanesi.ServiceChargeGrid = $Cengaver_TvHastanesi_ServiceChargeGrid;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.ServiceTicketDialog
 	var $Cengaver_TvHastanesi_ServiceTicketDialog = function() {
@@ -2284,6 +2312,8 @@
 		}
 	}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid, Serenity.IAsyncInit]);
 	ss.initClass($Cengaver_Northwind_TerritoryService, $asm, {});
+	ss.initClass($Cengaver_TvHastanesi_ChargeDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_ChargeGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_CityDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
 	ss.initClass($Cengaver_TvHastanesi_CityForm, $asm, {
 		get_city: function() {
@@ -2446,6 +2476,8 @@
 	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_MenuGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_MenuService, $asm, {});
+	ss.initClass($Cengaver_TvHastanesi_ServiceChargeDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_ServiceChargeGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_ServiceTicketDialog, $asm, {
 		afterLoadEntity: function() {
 			ss.makeGenericType(Serenity.EntityDialog$2, [Object, Object]).prototype.afterLoadEntity.call(this);
@@ -2657,6 +2689,8 @@
 	ss.setMetadata($Cengaver_Northwind_SupplierGrid, { attr: [new Serenity.ColumnsKeyAttribute('Northwind.Supplier'), new Serenity.FilterableAttribute(), new Serenity.IdPropertyAttribute('SupplierID'), new Serenity.NamePropertyAttribute('CompanyName'), new Serenity.DialogTypeAttribute($Cengaver_Northwind_SupplierDialog), new Serenity.LocalTextPrefixAttribute('Northwind.Supplier'), new Serenity.ServiceAttribute('Northwind/Supplier')] });
 	ss.setMetadata($Cengaver_Northwind_TerritoryDialog, { attr: [new Serenity.IdPropertyAttribute('ID'), new Serenity.NamePropertyAttribute('TerritoryID'), new Serenity.FormKeyAttribute('Northwind.Territory'), new Serenity.LocalTextPrefixAttribute('Northwind.Territory'), new Serenity.ServiceAttribute('Northwind/Territory')] });
 	ss.setMetadata($Cengaver_Northwind_TerritoryGrid, { attr: [new Serenity.ColumnsKeyAttribute('Northwind.Territory'), new Serenity.IdPropertyAttribute('ID'), new Serenity.NamePropertyAttribute('TerritoryID'), new Serenity.DialogTypeAttribute($Cengaver_Northwind_TerritoryDialog), new Serenity.LocalTextPrefixAttribute('Northwind.Territory'), new Serenity.ServiceAttribute('Northwind/Territory')] });
+	ss.setMetadata($Cengaver_TvHastanesi_ChargeDialog, { attr: [new Serenity.IdPropertyAttribute('ChargeId'), new Serenity.NamePropertyAttribute('Charge'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Charge'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Charge'), new Serenity.ServiceAttribute('TvHastanesi/Charge')] });
+	ss.setMetadata($Cengaver_TvHastanesi_ChargeGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Charge'), new Serenity.IdPropertyAttribute('ChargeId'), new Serenity.NamePropertyAttribute('Charge'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_ChargeDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Charge'), new Serenity.ServiceAttribute('TvHastanesi/Charge')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CityDialog, { attr: [new Serenity.IdPropertyAttribute('CityId'), new Serenity.NamePropertyAttribute('City'), new Serenity.FormKeyAttribute('TvHastanesi.City'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.City'), new Serenity.ServiceAttribute('TvHastanesi/City')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CityGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.City'), new Serenity.IdPropertyAttribute('CityId'), new Serenity.NamePropertyAttribute('City'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CityDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.City'), new Serenity.ServiceAttribute('TvHastanesi/City')] });
 	ss.setMetadata($Cengaver_TvHastanesi_CountyDialog, { attr: [new Serenity.IdPropertyAttribute('CountyId'), new Serenity.NamePropertyAttribute('County'), new Serenity.FormKeyAttribute('TvHastanesi.County'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.County'), new Serenity.ServiceAttribute('TvHastanesi/County')] });
@@ -2667,6 +2701,8 @@
 	ss.setMetadata($Cengaver_TvHastanesi_CustomerGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Customer'), new Serenity.IdPropertyAttribute('CustomerId'), new Serenity.NamePropertyAttribute('Name'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_CustomerDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Customer'), new Serenity.ServiceAttribute('TvHastanesi/Customer')] });
 	ss.setMetadata($Cengaver_TvHastanesi_MenuDialog, { attr: [new Serenity.IdPropertyAttribute('MenuId'), new Serenity.NamePropertyAttribute('Menu'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Menu'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Menu'), new Serenity.ServiceAttribute('TvHastanesi/Menu')] });
 	ss.setMetadata($Cengaver_TvHastanesi_MenuGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Menu'), new Serenity.IdPropertyAttribute('MenuId'), new Serenity.NamePropertyAttribute('Menu'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_MenuDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Menu'), new Serenity.ServiceAttribute('TvHastanesi/Menu')] });
+	ss.setMetadata($Cengaver_TvHastanesi_ServiceChargeDialog, { attr: [new Serenity.IdPropertyAttribute('ServiceChargeId'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.ServiceCharge'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceCharge'), new Serenity.ServiceAttribute('TvHastanesi/ServiceCharge')] });
+	ss.setMetadata($Cengaver_TvHastanesi_ServiceChargeGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.ServiceCharge'), new Serenity.IdPropertyAttribute('ServiceChargeId'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_ServiceChargeDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceCharge'), new Serenity.ServiceAttribute('TvHastanesi/ServiceCharge')] });
 	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketDialog, { attr: [new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.ServiceTicket'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTicket'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTicket')] });
 	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.ServiceTicket'), new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_ServiceTicketDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTicket'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTicket')] });
 	ss.setMetadata($Cengaver_TvHastanesi_UnitDialog, { attr: [new Serenity.IdPropertyAttribute('UnitId'), new Serenity.NamePropertyAttribute('Unit'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Unit'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Unit'), new Serenity.ServiceAttribute('TvHastanesi/Unit')] });

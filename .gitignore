@@ -16,7 +16,6 @@ Thumbs.db
 *.ilk
 *.log
 *.bak
-[Bb]in
 obj/
 [Dd]ebug*/
 [Rr]elease/
@@ -41,3 +40,4 @@ Sinerji.js
 *.ldf
 *.mdf
 packages/
+Cengaver/Cengaver.Web/bin/

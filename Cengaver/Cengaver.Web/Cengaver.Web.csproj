@@ -542,7 +542,7 @@
     <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceRegistrationUserForm.cshtml" />
     <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceSonyForm.cshtml" />
     <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceRegistrationTechnicianForm.cshtml" />
-    <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketDialog.cshtml" />
+    <Content Include="Modules\TvHastanesi\ServiceTicket\ServiceTicketDialog.Template.html" />
     <None Include="Properties\PublishProfiles\Cengaver_TvHastanesi.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Readme.CodeGenerator.txt" />

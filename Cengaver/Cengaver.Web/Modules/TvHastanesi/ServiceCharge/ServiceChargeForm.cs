@@ -8,6 +8,7 @@ namespace Cengaver.TvHastanesi.Forms
     using System.ComponentModel;
     using System.Collections.Generic;
     using System.IO;
+    using Cengaver.TvHastanesi.Enums;
 
     [FormScript("TvHastanesi.ServiceCharge")]
     [BasedOnRow(typeof(Entities.ServiceChargeRow))]
@@ -25,6 +26,6 @@ namespace Cengaver.TvHastanesi.Forms
         public Decimal UnitPrice { get; set; }
         public Decimal TotalTaxAmount { get; set; }
         public Decimal TotalAmount { get; set; }
-        public Int16 Type { get; set; }
+        public ChargeType Type { get; set; }
     }
 }

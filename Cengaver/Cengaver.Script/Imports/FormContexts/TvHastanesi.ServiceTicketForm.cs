@@ -26,8 +26,8 @@ namespace Cengaver.TvHastanesi
         public StringEditor InvoiceNumber { get { return ById<StringEditor>("InvoiceNumber"); } }
         public DateEditor RecordDate { get { return ById<DateEditor>("RecordDate"); } }
         public DateEditor DeliveryDate { get { return ById<DateEditor>("DeliveryDate"); } }
-        public IntegerEditor OperationId { get { return ById<IntegerEditor>("OperationId"); } }
-        public IntegerEditor StageId { get { return ById<IntegerEditor>("StageId"); } }
+        public EnumEditor OperationId { get { return ById<EnumEditor>("OperationId"); } }
+        public EnumEditor StageId { get { return ById<EnumEditor>("StageId"); } }
         public TextAreaEditor Description { get { return ById<TextAreaEditor>("Description"); } }
         public CustomerEditor CustomerId { get { return ById<CustomerEditor>("CustomerId"); } }
         public LookupEditor RecordedByUserId { get { return ById<LookupEditor>("RecordedByUserId"); } }

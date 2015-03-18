@@ -32,10 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Administration\RolePermission\RolePermissionDialog.cs" />
+    <Compile Include="Imports\FormContexts\TvHastanesi.ChargeForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FormContexts\TvHastanesi.ServiceChargeForm.cs">
+      <DependentUpon>FormContexts.tt</DependentUpon>
+    </Compile>
     <Compile Include="Imports\ServiceContracts\Serenity.Web.GenerateCsvRequest.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\Serenity.Web.GenerateExcelFileRequest.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ChargeRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ChargeService.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.ChargeType.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.PaymentType.cs">
@@ -48,6 +63,12 @@
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="Imports\ServiceContracts\TvHastanesi.Enums.ServiceTicketStageType.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceChargeRow.cs">
+      <DependentUpon>ServiceContracts.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ServiceContracts\TvHastanesi.ServiceChargeService.cs">
       <DependentUpon>ServiceContracts.tt</DependentUpon>
     </Compile>
     <Compile Include="TvHastanesi\Customer\CustomerEditor.cs" />

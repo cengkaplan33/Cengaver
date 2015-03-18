@@ -52,8 +52,8 @@ namespace Cengaver.TvHastanesi
         {
             if (!this.IsEditMode)
             {
-                ById("StartDate").Closest("div.category").Remove();
-                ById("RepairCost").Closest("div.category").Remove();
+                ById("StartDate").Closest("div.category").Hide();
+                ById("RepairCost").Closest("div.category").Hide();
             }
         }
 

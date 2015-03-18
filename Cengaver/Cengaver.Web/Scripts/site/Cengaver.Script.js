@@ -1015,12 +1015,43 @@
 	$Cengaver_TvHastanesi_ChargeDialog.__typeName = 'Cengaver.TvHastanesi.ChargeDialog';
 	global.Cengaver.TvHastanesi.ChargeDialog = $Cengaver_TvHastanesi_ChargeDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ChargeForm
+	var $Cengaver_TvHastanesi_ChargeForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_ChargeForm.__typeName = 'Cengaver.TvHastanesi.ChargeForm';
+	global.Cengaver.TvHastanesi.ChargeForm = $Cengaver_TvHastanesi_ChargeForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.ChargeGrid
 	var $Cengaver_TvHastanesi_ChargeGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
 	};
 	$Cengaver_TvHastanesi_ChargeGrid.__typeName = 'Cengaver.TvHastanesi.ChargeGrid';
 	global.Cengaver.TvHastanesi.ChargeGrid = $Cengaver_TvHastanesi_ChargeGrid;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ChargeService
+	var $Cengaver_TvHastanesi_ChargeService = function() {
+	};
+	$Cengaver_TvHastanesi_ChargeService.__typeName = 'Cengaver.TvHastanesi.ChargeService';
+	$Cengaver_TvHastanesi_ChargeService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Charge/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ChargeService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Charge/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ChargeService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Charge/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ChargeService.undelete = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Charge/Undelete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ChargeService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Charge/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ChargeService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/Charge/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.ChargeService = $Cengaver_TvHastanesi_ChargeService;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.CityDialog
 	var $Cengaver_TvHastanesi_CityDialog = function() {
@@ -1240,12 +1271,43 @@
 	$Cengaver_TvHastanesi_ServiceChargeDialog.__typeName = 'Cengaver.TvHastanesi.ServiceChargeDialog';
 	global.Cengaver.TvHastanesi.ServiceChargeDialog = $Cengaver_TvHastanesi_ServiceChargeDialog;
 	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceChargeForm
+	var $Cengaver_TvHastanesi_ServiceChargeForm = function(idPrefix) {
+		Serenity.PrefixedContext.call(this, idPrefix);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeForm.__typeName = 'Cengaver.TvHastanesi.ServiceChargeForm';
+	global.Cengaver.TvHastanesi.ServiceChargeForm = $Cengaver_TvHastanesi_ServiceChargeForm;
+	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.ServiceChargeGrid
 	var $Cengaver_TvHastanesi_ServiceChargeGrid = function(container) {
 		ss.makeGenericType(Serenity.EntityGrid$1, [Object]).call(this, container);
 	};
 	$Cengaver_TvHastanesi_ServiceChargeGrid.__typeName = 'Cengaver.TvHastanesi.ServiceChargeGrid';
 	global.Cengaver.TvHastanesi.ServiceChargeGrid = $Cengaver_TvHastanesi_ServiceChargeGrid;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.ServiceChargeService
+	var $Cengaver_TvHastanesi_ServiceChargeService = function() {
+	};
+	$Cengaver_TvHastanesi_ServiceChargeService.__typeName = 'Cengaver.TvHastanesi.ServiceChargeService';
+	$Cengaver_TvHastanesi_ServiceChargeService.create = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceCharge/Create', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeService.update = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceCharge/Update', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeService.delete$1 = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceCharge/Delete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeService.undelete = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceCharge/Undelete', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeService.retrieve = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceCharge/Retrieve', request, onSuccess, options);
+	};
+	$Cengaver_TvHastanesi_ServiceChargeService.list = function(request, onSuccess, options) {
+		return Q.serviceRequest('TvHastanesi/ServiceCharge/List', request, onSuccess, options);
+	};
+	global.Cengaver.TvHastanesi.ServiceChargeService = $Cengaver_TvHastanesi_ServiceChargeService;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.ServiceTicketDialog
 	var $Cengaver_TvHastanesi_ServiceTicketDialog = function() {
@@ -1336,6 +1398,12 @@
 		return Q.serviceRequest('TvHastanesi/Unit/List', request, onSuccess, options);
 	};
 	global.Cengaver.TvHastanesi.UnitService = $Cengaver_TvHastanesi_UnitService;
+	////////////////////////////////////////////////////////////////////////////////
+	// Cengaver.TvHastanesi.Enums.ChargeType
+	var $Cengaver_TvHastanesi_Enums_ChargeType = function() {
+	};
+	$Cengaver_TvHastanesi_Enums_ChargeType.__typeName = 'Cengaver.TvHastanesi.Enums.ChargeType';
+	global.Cengaver.TvHastanesi.Enums.ChargeType = $Cengaver_TvHastanesi_Enums_ChargeType;
 	////////////////////////////////////////////////////////////////////////////////
 	// Cengaver.TvHastanesi.Enums.PaymentType
 	var $Cengaver_TvHastanesi_Enums_PaymentType = function() {
@@ -2313,7 +2381,28 @@
 	}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid, Serenity.IAsyncInit]);
 	ss.initClass($Cengaver_Northwind_TerritoryService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_ChargeDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_ChargeForm, $asm, {
+		get_charge: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Charge');
+		},
+		get_code: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'Code');
+		},
+		get_taxRate: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'TaxRate');
+		},
+		get_taxIncluded: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'TaxIncluded');
+		},
+		get_price: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'Price');
+		},
+		get_type: function() {
+			return this.byId(Serenity.EnumEditor).call(this, 'Type');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_ChargeGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_ChargeService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_CityDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
 	ss.initClass($Cengaver_TvHastanesi_CityForm, $asm, {
 		get_city: function() {
@@ -2477,7 +2566,49 @@
 	ss.initClass($Cengaver_TvHastanesi_MenuGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_MenuService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_ServiceChargeDialog, $asm, {}, ss.makeGenericType(Serenity.EntityDialog$1, [Object]), [Serenity.IDialog, Serenity.IEditDialog]);
+	ss.initClass($Cengaver_TvHastanesi_ServiceChargeForm, $asm, {
+		get_chargeId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'ChargeId');
+		},
+		get_serviceTicketId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'ServiceTicketId');
+		},
+		get_insertUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'InsertUserId');
+		},
+		get_insertDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'InsertDate');
+		},
+		get_isActive: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'IsActive');
+		},
+		get_updateUserId: function() {
+			return this.byId(Serenity.IntegerEditor).call(this, 'UpdateUserId');
+		},
+		get_updateDate: function() {
+			return this.byId(Serenity.DateEditor).call(this, 'UpdateDate');
+		},
+		get_taxRate: function() {
+			return this.byId(Serenity.StringEditor).call(this, 'TaxRate');
+		},
+		get_taxIncluded: function() {
+			return this.byId(Serenity.BooleanEditor).call(this, 'TaxIncluded');
+		},
+		get_unitPrice: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'UnitPrice');
+		},
+		get_totalTaxAmount: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'TotalTaxAmount');
+		},
+		get_totalAmount: function() {
+			return this.byId(Serenity.DecimalEditor).call(this, 'TotalAmount');
+		},
+		get_type: function() {
+			return this.byId(Serenity.EnumEditor).call(this, 'Type');
+		}
+	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_ServiceChargeGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
+	ss.initClass($Cengaver_TvHastanesi_ServiceChargeService, $asm, {});
 	ss.initClass($Cengaver_TvHastanesi_ServiceTicketDialog, $asm, {
 		afterLoadEntity: function() {
 			ss.makeGenericType(Serenity.EntityDialog$2, [Object, Object]).prototype.afterLoadEntity.call(this);
@@ -2497,8 +2628,8 @@
 		},
 		$afterLoadEntity_ShowHideFields: function() {
 			if (!this.get_isEditMode()) {
-				this.byId$1('StartDate').closest('div.category').remove();
-				this.byId$1('RepairCost').closest('div.category').remove();
+				this.byId$1('StartDate').closest('div.category').hide();
+				this.byId$1('RepairCost').closest('div.category').hide();
 			}
 		},
 		getToolbarButtons: function() {
@@ -2566,10 +2697,10 @@
 			return this.byId(Serenity.DateEditor).call(this, 'DeliveryDate');
 		},
 		get_operationId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'OperationId');
+			return this.byId(Serenity.EnumEditor).call(this, 'OperationId');
 		},
 		get_stageId: function() {
-			return this.byId(Serenity.IntegerEditor).call(this, 'StageId');
+			return this.byId(Serenity.EnumEditor).call(this, 'StageId');
 		},
 		get_description: function() {
 			return this.byId(Serenity.TextAreaEditor).call(this, 'Description');
@@ -2648,6 +2779,7 @@
 	}, Serenity.PrefixedContext);
 	ss.initClass($Cengaver_TvHastanesi_UnitGrid, $asm, {}, ss.makeGenericType(Serenity.EntityGrid$1, [Object]), [Serenity.IDataGrid]);
 	ss.initClass($Cengaver_TvHastanesi_UnitService, $asm, {});
+	ss.initEnum($Cengaver_TvHastanesi_Enums_ChargeType, $asm, { Spare: 1, Labor: 2, Extra: 3 });
 	ss.initEnum($Cengaver_TvHastanesi_Enums_PaymentType, $asm, { Cash: 1, CreditCard: 2, Transfer: 3, Check: 4, Voucher: 5 });
 	ss.initEnum($Cengaver_TvHastanesi_Enums_ServiceTicketFormType, $asm, { Registation: 10, RegistationUser: 11, RegistrationTechnician: 14, Sony: 20 });
 	ss.initEnum($Cengaver_TvHastanesi_Enums_ServiceTicketOperationType, $asm, { Repair: 1, Change: 2, Return: 3 });
@@ -2707,6 +2839,7 @@
 	ss.setMetadata($Cengaver_TvHastanesi_ServiceTicketGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.ServiceTicket'), new Serenity.IdPropertyAttribute('ServiceTicketId'), new Serenity.NamePropertyAttribute('ProductSerialNumber'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_ServiceTicketDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.ServiceTicket'), new Serenity.ServiceAttribute('TvHastanesi/ServiceTicket')] });
 	ss.setMetadata($Cengaver_TvHastanesi_UnitDialog, { attr: [new Serenity.IdPropertyAttribute('UnitId'), new Serenity.NamePropertyAttribute('Unit'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.FormKeyAttribute('TvHastanesi.Unit'), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Unit'), new Serenity.ServiceAttribute('TvHastanesi/Unit')] });
 	ss.setMetadata($Cengaver_TvHastanesi_UnitGrid, { attr: [new Serenity.ColumnsKeyAttribute('TvHastanesi.Unit'), new Serenity.IdPropertyAttribute('UnitId'), new Serenity.NamePropertyAttribute('Unit'), new Serenity.IsActivePropertyAttribute('IsActive'), new Serenity.DialogTypeAttribute($Cengaver_TvHastanesi_UnitDialog), new Serenity.LocalTextPrefixAttribute('TvHastanesi.Unit'), new Serenity.ServiceAttribute('TvHastanesi/Unit')] });
+	ss.setMetadata($Cengaver_TvHastanesi_Enums_ChargeType, { attr: [new Serenity.EnumKeyAttribute('Cengaver.TvHastanesi.Enums.ChargeType')] });
 	ss.setMetadata($Cengaver_TvHastanesi_Enums_PaymentType, { attr: [new Serenity.EnumKeyAttribute('Cengaver.TvHastanesi.Enums.PaymentType')] });
 	ss.setMetadata($Cengaver_TvHastanesi_Enums_ServiceTicketFormType, { attr: [new Serenity.EnumKeyAttribute('Cengaver.TvHastanesi.Enums.ServiceTicketFormType')] });
 	ss.setMetadata($Cengaver_TvHastanesi_Enums_ServiceTicketOperationType, { attr: [new Serenity.EnumKeyAttribute('Cengaver.TvHastanesi.Enums.ServiceTicketOperationType')] });
